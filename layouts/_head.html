@@ -6,16 +6,17 @@
 <meta property="og:title" content="<%= @item[:title] %>">
 <meta itemprop="description" name="description" property="og:description" content="<%= @item[:description] %>">
 <% tag = "" %>
+<% if @item[:tags] %>
 <% @item[:tags].each do |t|  %>
   <% tag << t  %>
   <% tag << ","  %>
 <% end  %>
+<% end  %>
 <meta name="keywords" content="<%= tag %>松江">
-<% end %>
-<meta property="og:url" content="<%= nanoc[:base_url] %><%= @item.identifier %>">
+<meta property="og:url" content="<%= config[:base_url] %><%= @item.identifier %>">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ja_JP">
 <meta property="fb:app_id" content="192977000850845">
-<meta itemprop="name" content="<%= @item[:title] %> - Uchibe.net">
+<meta itemprop="name" content="<%= @item[:title] %> - Matsue.rb">
 <title><%= @item[:title] %> - Matsue.rb</title>
 <link rel="alternate" type="application/atom+xml" title="Atom" href="/feed.xml">

@@ -18,7 +18,7 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
-compile '/(sitemap|google000000000000000)/' do
+compile '/(feed|sitemap|google000000000000000)/' do
   filter :erb
 end
 

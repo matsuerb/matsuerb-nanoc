@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 
 # A few helpful tips about the Rules file:
 #
@@ -17,11 +18,15 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile '/(sitemap|google000000000000000)/' do
+  filter :erb
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    filter :kramdown
     layout 'default'
   end
 end

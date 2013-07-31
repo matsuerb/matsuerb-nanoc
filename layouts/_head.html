@@ -1,5 +1,9 @@
-<meta charset="utf-8">
-<link href="/style.css" rel="stylesheet" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/base.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="css/home.css" type="text/css" media="screen,print">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="js/jquery-rollover.js" ></script>
+<title><%= @item[:title] %></title>
 <!-- you don't need to keep this, but it's cool for stats! -->    
 <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
 <meta property="og:site_name" content="Matsue.rb">
@@ -12,11 +16,10 @@
   <% tag << ","  %>
 <% end  %>
 <% end  %>
-<meta name="keywords" content="<%= tag %>松江">
+<meta name="keywords" content="<%= tag %>松江Ruby">
 <meta property="og:url" content="<%= config[:base_url] %><%= @item.identifier %>">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ja_JP">
 <meta property="fb:app_id" content="192977000850845">
-<meta itemprop="name" content="<%= @item[:title] %> - Matsue.rb">
-<title><%= @item[:title] %> - Matsue.rb</title>
+<meta itemprop="name" content="<%= @item[:title] %> - 松江Ruby">
 <link rel="alternate" type="application/atom+xml" title="Atom" href="/feed.xml">

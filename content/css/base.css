@@ -1,0 +1,60 @@
+@charset "utf-8";
+body {
+	margin:0px;
+	padding:0px;
+	color: #333;
+	font-size: 80%;
+	text-align: center;
+}
+h1,h2,h3,h4 {
+	font-size: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+form {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	/*color: #ADCB07;*/		/*黄緑*/
+	/*color: #0000FF;*/		/*青*/
+	/*color: #666;*/		/*黒*/
+	/*color: #F49527;*/		/*オレンジ*/
+	/*color: #3CBBF2;*/		/*薄い青*/
+	/*color: #0071BC;*/
+	/*color: #4D8911;*/			/*緑*/
+	/*text-decoration: none;*/
+}
+*html a{ position:relative;}
+a:link{}
+a:hover{
+	color: #FF0000;
+	text-decoration: underline;
+}
+img{
+    border: none;
+}
+
+/* clearfix */
+
+.clearfix:after {
+	content:",";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+	display:inline-table;
+}
+
+/*\*//* */
+*html .clearfix{
+	height:1%;
+}
+*+html .clearfix{
+	height:1%;
+}
+.clearfix{
+	display:block;
+}

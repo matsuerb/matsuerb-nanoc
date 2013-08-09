@@ -1,24 +1,58 @@
-<!DOCTYPE HTML>
-<html lang="ja">
-  <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
     <%= render('_head') %>
-  </head>
-  <body>
-    <div id="main">
-      <%= yield %>
-    </div>
-    <div id="sidebar">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="http://nanoc.ws/docs/">Documentation</a></li>
-        <li><a href="http://nanoc.ws/docs/tutorial/">Getting Started</a></li>
-      </ul>
-      <h2>Community</h2>
-      <ul>
-        <li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>
-        <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
-        <li><a href="http://github.com/nanoc/nanoc/wiki/">Wiki</a></li>
-      </ul>
-    </div>
-  </body>
+</head>
+<body id="home">
+  <div id="site">
+
+    <div id="header">
+      <div class="head_wrp" class="clearfix">
+        <div class="h_logo">
+          <a href="/"><img src="/images/h_logo.gif" alt="松江Ruby" /></a>
+        </div>
+        <div class="h_link">
+          <a href="/1.html"><img src="/images/bnr_facebook.gif" alt="サイトマップ" /></a>
+          <a href="/1.html"><img src="/images/bnr_twitter.gif" alt="アクセス" /></a>
+        </div>
+          <div class="h_btn_waku clearfix">
+          <div class="hb01"><a href="/"><img src="/images/h_btn01.jpg" alt="トップ" /></a></div>
+          <div class="hb01"><a href="/articles/"><img src="/images/h_btn02.jpg" alt="お知らせ" /></a></div>
+          <div class="hb01"><a href="/1.html"><img src="/images/h_btn03.jpg" alt="松江RUBYとは" /></a></div>
+          <div class="hb01"><a href="/1.html"><img src="/images/h_btn04.jpg" alt="スケジュール" /></a></div>
+          <div class="hb01"><a href="/1.html"><img src="/images/h_btn05.jpg" alt="お問い合わせ" /></a></div>
+        </div>
+      </div>
+    </div><!-- End of head -->
+
+
+    <% if @item.identifier.size == 1 %>
+      <div class="main_img_wrp1"><div class="main_img_wrp2"><div class="main_img_wrp3">
+        <div class="main_img">
+          <img src="/images/main_img.jpg" />
+        </div>
+      </div></div></div>
+      <div id="con-top" class="clearfix">
+    <% else %>
+      <div id="content" class="clearfix">
+    <% end %>
+
+      <% if @item[:kind] == "article" %>
+        <div class="page-title"><h1><%= @item[:title] %></h1></div>
+        <div class="body">
+          <%= yield %>
+        </div>
+      <% else  %>
+          <%= yield %>
+      <% end %>
+
+
+    </div><!-- cont-top end -->
+
+    <div id="footer">
+      <div class="copy">Copyright. All Rights Reserved.</div>
+    </div><!--footer end-->
+
+  </div><!-- site end -->
+</body>
 </html>

@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* layout */
+#site{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    margin: 0;
+    padding: 0;
+    background: url("../images/h_btn_bg.jpg") repeat-x left bottom;
+}
+#con-top {
+    margin: 20px auto;
+    padding: 10px 0 0 0;
+    clear: both;
+    width: 960px;
+    text-align: left;
+    background: url("../images/contents_bg.gif") repeat-y left center;
+}
+#content{
+    width: 960px;
+    margin: 20px auto;
+    text-align: left;
+}
+#content .page-title{
+    border-bottom: 1px solid #ccc;
+}
+#content h1{
+    font-size: 130%;
+    border-left: 5px solid #FF0000;
+    padding: 3px 5px 3px 5px;
+    margin: 5px;
+}
+#content .body{
+    padding: 10px;
+}
+
+#main-left{
+    float: left;
+    width: 350px;
+    margin: 0 40px 0 0;
+    display: inline;
+}
+#main-center{
+    float: left;
+    width: 265px;
+}
+#main-right{
+    float: right;
+    width: 265px;
+}
+
+#footer{}
+
+/* header */
+.head_wrp{
+    width: 960px;
+    text-align: left;
+    margin: 0 auto;
+}
+.h_logo{
+	float: left;
+    width: 240px;
+	margin: 0px 0px 0px 0px;
+	display: inline;
+}
+
+.h_link{
+    float: right;
+	margin: 20px 0px 0px 0px;
+	text-align: right;
+}
+.h_link img{
+	margin-left: 25px;
+}
+.h_btn_waku{
+	clear: both;
+	margin: 0 auto;
+	padding: 0;
+}
+.hb01{
+	font-size: 1px;
+	float: left;
+}
+
+/* main-img */
+.main_img_wrp1{
+    border-bottom: 1px solid #eee;
+}
+.main_img_wrp2{
+    border-bottom: 1px solid #ccc;
+}
+.main_img_wrp3{
+    border-bottom: 1px solid #bbb;
+    margin: 0px auto;
+    text-align: center;
+}
+.main_img{
+}
+
+/* contents title */
+h2.m_title{
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0 5px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* news */
+.pickup{
+	margin: 15px 5px 20px 5px;
+}
+.pickup .wrp{
+    border-bottom: 1px dotted #ccc;
+}
+.pickup .wrp .date{
+    padding: 10px;
+}
+.pickup .wrp .title{
+    font-weight: bold;
+    font-size: 120%;
+}
+.pickup .wrp .body{}
+.pickup .wrp .link{
+    text-align: right;
+    padding: 10px;
+}
+
+/* footer */
+.copy{
+    background: url("../images/f_copy_bg.gif") repeat-x left center;
+	color: #fff;
+	line-height: 30px;
+}
+.copy a{color: #fff; text-decoration: none;}
+
+/**********************************/

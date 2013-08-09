@@ -14,12 +14,30 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
+preprocess do 
+  tag_page
+end
+
+compile '/css/*' do
   # don’t filter or layout
 end
 
-compile '/(feed|sitemap|google000000000000000)/' do
+compile '/js/*' do
+  # don’t filter or layout
+end
+
+compile '/(feed|sitemap)/' do
   filter :erb
+end
+
+compile '/(index|tags|articles)/' do
+  filter :erb
+  layout 'default'
+end
+
+compile '/tags/*/' do
+  filter :erb
+  layout 'default'
 end
 
 compile '*' do
@@ -31,12 +49,20 @@ compile '*' do
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
-end
-
 route '/sitemap/' do
   '/sitemap.xml'
+end
+
+route '/feed/' do 
+  '/feed.xml'
+end
+
+route '/css/*' do
+    item.identifier.chop + '.' + item[:extension]
+end
+
+route '/js/*' do
+    item.identifier.chop + '.' + item[:extension]
 end
 
 route '*' do

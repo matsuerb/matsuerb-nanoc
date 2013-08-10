@@ -9,14 +9,26 @@
 <meta property="og:site_name" content="Matsue.rb">
 <meta property="og:title" content="<%= @item[:title] %>">
 <meta itemprop="description" name="description" property="og:description" content="<%= @item[:description] %>">
-<% tag = "" %>
-<% if @item[:tags] %>
-<% @item[:tags].each do |t|  %>
-  <% tag << t  %>
-  <% tag << ","  %>
-<% end  %>
-<% end  %>
-<meta name="keywords" content="<%= tag %>松江Ruby">
+<% if @item[:kind] == "article" %>
+  <% tag = "" %>
+  <% if @item[:tags] %>
+  <% @item[:tags].each do |t|  %>
+    <% tag << t  %>
+    <% tag << ","  %>
+  <% end  %>
+  <% end  %>
+  <meta name="keywords" content="<%= tag %>松江Ruby">
+<% else %>
+  <% keyword = "" %>
+  <% if @item[:keywords] %>
+  <% @item[:keywords].each do |k|  %>
+    <% keyword << k  %>
+    <% keyword << ","  %>
+  <% end  %>
+  <% end  %>
+  <meta name="keywords" content="<%= keyword %>松江Ruby">
+<% end %>
+
 <meta property="og:url" content="<%= config[:base_url] %><%= @item.identifier %>">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ja_JP">

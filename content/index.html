@@ -8,32 +8,18 @@ keywords:
   <h2 class="m_title"><a href="#"><img src="images/title_news.gif" alt="お知らせ" /></a></h2>
   <div class="pickup">
 
-    <div class="wrp">
-      <div class="date">2013/07/20</div>
-      <div class="title">テキストテキスト</div>
-      <div class="body">
-        <p>ああああああああああああああああああああああああああああああああああああ</p>
-      </div>
-      <div class="link"><a href="#">続きはこちら</a></div>
-    </div>
+<% sorted_articles.each do |item| %>
 
     <div class="wrp">
-      <div class="date">2013/07/20</div>
-      <div class="title">テキストテキスト</div>
+      <div class="date"><%= item[:created_at] %></div>
+      <div class="title"><%= item[:title] %></div>
       <div class="body">
-        <p>ああああああああああああああああああああああああああああああああああああ</p>
+        <p><%= strip_html(item.reps.first.compiled_content).slice(0,100) %></p>
       </div>
-      <div class="link"><a href="#">続きはこちら</a></div>
+      <div class="link"><a href="<%= item.identifier %>">続きはこちら</a></div>
     </div>
 
-    <div class="wrp">
-      <div class="date">2013/07/20</div>
-      <div class="title">テキストテキスト</div>
-      <div class="body">
-        <p>ああああああああああああああああああああああああああああああああああああ</p>
-      </div>
-      <div class="link"><a href="#">続きはこちら</a></div>
-    </div>
+<% end %>
 
   </div>
 </div>

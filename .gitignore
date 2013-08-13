@@ -1,5 +1,9 @@
+.ruby-version
+.ruby-gemset
+
+*.log
+*.diff
+
 tmp/
 output/
-crash.log
-output.diff
 vendor/bundle

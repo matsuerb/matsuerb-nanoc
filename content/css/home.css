@@ -61,28 +61,32 @@
     margin: 0 auto;
 }
 .h_logo{
-	float: left;
+    float: left;
     width: 240px;
-	margin: 0px 0px 0px 0px;
-	display: inline;
+    margin: 0px 0px 0px 0px;
+    display: inline;
 }
 
 .h_link{
     float: right;
-	margin: 20px 0px 0px 0px;
-	text-align: right;
+    margin: 8px 0px 0px 0px;
+    text-align: right;
 }
+.h_link p{
+    margin: 2px;
+}
+
 .h_link img{
-	margin-left: 25px;
+    margin-left: 25px;
 }
 .h_btn_waku{
-	clear: both;
-	margin: 0 auto;
-	padding: 0;
+    clear: both;
+    margin: 0 auto;
+    padding: 0;
 }
 .hb01{
-	font-size: 1px;
-	float: left;
+    font-size: 1px;
+    float: left;
 }
 
 /* main-img */
@@ -109,7 +113,7 @@ h2.m_title{
 
 /* news */
 .pickup{
-	margin: 15px 5px 20px 5px;
+    margin: 15px 5px 20px 5px;
 }
 .pickup .wrp{
     border-bottom: 1px dotted #ccc;
@@ -130,8 +134,8 @@ h2.m_title{
 /* footer */
 .copy{
     background: url("../images/f_copy_bg.gif") repeat-x left center;
-	color: #fff;
-	line-height: 30px;
+    color: #fff;
+    line-height: 30px;
 }
 .copy a{color: #fff; text-decoration: none;}
 

@@ -6,6 +6,7 @@ include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::XMLSitemap
 include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::Text
+include Nanoc::Helpers::LinkTo
 
 module Nanoc::Helpers::Tagging
   def link_for_tag(tag, base_url)

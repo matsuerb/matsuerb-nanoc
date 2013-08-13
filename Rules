@@ -49,6 +49,7 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
+    filter :erb
     filter :kramdown
     layout 'default'
   end

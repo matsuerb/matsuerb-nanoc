@@ -56,3 +56,7 @@ def article_list
   end
   html_source << "</ul>"
 end
+
+def fbe(id)
+  return %Q'<a href="https://www.facebook.com/events/#{id}/">Facebook</a>'
+end

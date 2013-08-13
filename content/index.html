@@ -11,8 +11,7 @@ keywords:
 <% sorted_articles.each do |item| %>
 
     <div class="wrp">
-      <div class="date"><%= item[:created_at] %></div>
-      <div class="title"><%= item[:title] %></div>
+      <div class="title"><%= item[:title] %><span class="date">(<%= item[:created_at] %>)</span></div>
       <div class="body">
         <p><%= strip_html(item.reps.first.compiled_content).slice(0,100) %></p>
       </div>

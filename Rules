@@ -30,7 +30,7 @@ compile '/(feed|sitemap)/' do
   filter :erb
 end
 
-compile '/(tags|articles)/' do
+compile '/(tags|news)/' do
   filter :erb
   layout 'default'
 end

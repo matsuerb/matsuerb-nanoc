@@ -8,7 +8,7 @@ keywords:
   <h2 class="m_title"><a href="#"><img src="images/title_news.gif" alt="お知らせ" /></a></h2>
   <div class="pickup">
 
-<% sorted_articles.each do |item| %>
+<% sorted_articles[0..4].each do |item| %>
 
     <div class="wrp">
       <div class="title"><%= item[:title] %><span class="date">(<%= item[:created_at] %>)</span></div>

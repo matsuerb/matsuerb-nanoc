@@ -26,7 +26,7 @@ compile '/js/*' do
   # don’t filter or layout
 end
 
-compile '/(feed|sitemap)/' do
+compile '/(feed|sitemap|CNAME)/' do
   filter :erb
 end
 
@@ -53,6 +53,10 @@ compile '*' do
     filter :kramdown
     layout 'default'
   end
+end
+
+route '/CNAME/' do 
+  '/CNAME'
 end
 
 route '/sitemap/' do

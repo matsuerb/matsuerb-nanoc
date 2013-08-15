@@ -18,15 +18,11 @@ preprocess do
   tag_page
 end
 
-compile '/css/*' do
+compile '/static/*' do
   # don’t filter or layout
 end
 
-compile '/js/*' do
-  # don’t filter or layout
-end
-
-compile '/(feed|sitemap|CNAME)/' do
+compile '/(feed|sitemap)/' do
   filter :erb
 end
 
@@ -55,8 +51,8 @@ compile '*' do
   end
 end
 
-route '/CNAME/' do 
-  '/CNAME'
+route '/static/*' do
+  item.identifier[7..-2]
 end
 
 route '/sitemap/' do
@@ -65,14 +61,6 @@ end
 
 route '/feed/' do 
   '/feed.xml'
-end
-
-route '/css/*' do
-    item.identifier.chop + '.' + item[:extension]
-end
-
-route '/js/*' do
-    item.identifier.chop + '.' + item[:extension]
 end
 
 route '*' do

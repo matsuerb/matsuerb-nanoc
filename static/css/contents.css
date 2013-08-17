@@ -1,0 +1,44 @@
+#content .page-title{
+  border-bottom: 1px solid #ccc;
+}
+#content h1{
+  font-size: 130%;
+  border-left: 5px solid #FF0000;
+  padding: 3px 5px 3px 10px;
+  margin: 5px;
+}
+#content .body{
+  padding: 10px;
+}
+#content .body h2{
+  font-size: 140%;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-bottom: 1px dotted #999;
+  margin: 20px 0 15px;
+}
+#content .body p{
+  margin: 10px 10px 20px;
+}
+#content .table_wrapper{
+
+}
+#content .table_wrapper table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+#content .table_wrapper table th{
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 3px 10px;
+  text-align: center;
+}
+#content .table_wrapper table td{
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  padding: 3px 10px;
+}
+}

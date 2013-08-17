@@ -24,18 +24,6 @@
     margin: 20px auto;
     text-align: left;
 }
-#content .page-title{
-    border-bottom: 1px solid #ccc;
-}
-#content h1{
-    font-size: 130%;
-    border-left: 5px solid #FF0000;
-    padding: 3px 5px 3px 5px;
-    margin: 5px;
-}
-#content .body{
-    padding: 10px;
-}
 
 #main-left{
     float: left;

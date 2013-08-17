@@ -20,6 +20,17 @@
 #content .body p{
   margin: 10px 10px 20px;
 }
+#content .body ul{
+  margin: 10px 10px 20px 25px;
+  padding: 0;
+  list-style: none;
+}
+#content .body ul li{
+  padding: 0px 5px 5px 15px;
+  margin: 0 0 3px 0;
+  background: url("../images/li_icon.gif") no-repeat left 3px;
+  list-style: none;
+}
 #content .table_wrapper{
 
 }

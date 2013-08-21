@@ -60,3 +60,15 @@ end
 def fbe(id)
   return %Q'<a href="https://www.facebook.com/events/#{id}/">Facebook</a>'
 end
+
+OFFICIAL_SITE_START_YEAR = 2013
+
+def copyright_year
+  start_year = OFFICIAL_SITE_START_YEAR
+  this_year = Time.now.year
+  if start_year == this_year
+    start_year.to_s
+  else
+    [start_year, this_year].join("-")
+  end
+end

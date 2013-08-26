@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>松江オープンソースラボ</name>
+		<Placemark>
+			<styleUrl>#icon-seq-0-0</styleUrl>
+			<name>松江オープンソースラボ</name>
+			<description><![CDATA[Matsue.rb（松江Ruby）の定例会は「松江オープンソースラボ」で開催しています。
+http://www1.city.matsue.shimane.jp/sangyoushinkou/ruby/rubycity/rabo/open.html]]></description>
+			<Point>
+				<coordinates>133.06199059999994,35.4639771,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-seq-0-0'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=A|FF0000|000000</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+	</Document>
+</kml>

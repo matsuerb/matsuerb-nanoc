@@ -8,3 +8,4 @@
 tmp/
 output/
 vendor/bundle
+.idea/

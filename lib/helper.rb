@@ -1,4 +1,4 @@
-# -*- coding: undecided -*-
+# -*- coding: utf-8 -*-
 def get_tags(items)
   tag_num_hash = Hash.new(0)
   items.each do |item|

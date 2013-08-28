@@ -6,6 +6,6 @@
 *~
 
 tmp/
-output/
+public/
 vendor/bundle
 .idea/

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def get_tags(items)
   tag_num_hash = Hash.new(0)
   items.each do |item|
@@ -71,4 +72,8 @@ def copyright_year
   else
     [start_year, this_year].join("-")
   end
+end
+
+def link_to_osslab(lab = "松江オープンソースラボ")
+  return %Q'<a href="http://matsue.rubyist.net/map/">#{str}</a>'
 end

@@ -1,7 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
-    <%= render('_head') %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/css/base.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/css/home.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/css/contents.css" type="text/css" media="screen,print">
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="/js/jquery-rollover.js" ></script>
+<title>tag: ニュース</title>
+<!-- you don't need to keep this, but it's cool for stats! -->    
+<meta name="generator" content="nanoc 3.6.3">
+<meta property="og:site_name" content="Matsue.rb">
+<meta property="og:title" content="tag: ニュース">
+<meta itemprop="description" name="description" property="og:description" content="">
+
+  
+  
+  <meta name="keywords" content="松江Ruby">
+
+
+<meta property="og:url" content="http://matsue.rubyist.net/tags/ニュース/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+<!-- <meta property="fb:app_id" content=""> -->
+<meta itemprop="name" content="tag: ニュース - 松江Ruby">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="/feed.xml">
+
 </head>
 <body id="home">
   <div id="site">
@@ -27,31 +51,21 @@
     </div><!-- End of head -->
 
 
-    <% if @item.identifier.size == 1 %>
-      <div class="main_img_wrp1"><div class="main_img_wrp2"><div class="main_img_wrp3">
-        <div class="main_img">
-          <img src="/images/main_img.jpg" />
-        </div>
-      </div></div></div>
-      <div id="con-top" class="clearfix">
-    <% else %>
+    
       <div id="content" class="clearfix">
-    <% end %>
+    
 
-      <% if @item[:kind] == "article" %>
-        <div class="page-title"><h1><%= @item[:title] %></h1></div>
-        <div class="body">
-          <%= yield %>
-        </div>
-      <% else  %>
-          <%= yield %>
-      <% end %>
+      
+          
+<blockquote><small><a href='/news/2013/08/14/open/'>公式サイトの公開</a></small><p>　Matsue.rbの公式サイトを公開しました。...</p></blockquote>
+
+      
 
 
     </div><!-- cont-top end -->
 
     <div id="footer">
-      <div class="copy">Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)</a>. All Rights Reserved.</div>
+      <div class="copy">Copyright © 2013 <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)</a>. All Rights Reserved.</div>
     </div><!--footer end-->
 
   </div><!-- site end -->

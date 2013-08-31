@@ -1,0 +1,36 @@
+---
+- :name: Kouji Takao
+  :github: takaokouji
+  :twitter: takaokouji
+  :website: http://d.hatena.ne.jp/kouji0625/
+  :profile: 松江在住のITエンジニア。職業はRubyを活用したSIer。松江周辺のRubyコミュニティMatsue.rbの発起人。松江市の中学生Ruby教室の講師。
+  :gravatar_hash: 0680ae0d795607a6d9d7fb24698710bd
+  :public: true
+- :name: Sho Hashimoto
+  :github: sho-h
+  :twitter: sho_hashimoto
+  :website: http://d.hatena.ne.jp/sho-hashimoto/
+  :profile: Matsue.rb スタッフで会場を確保が主な担当。定例会ではるりまを書いている。
+  :gravatar_hash: 513b970589f1cac3d2934b40f150b52d
+  :public: true
+- :name: Takayuki Yoshioka
+  :github: yoshiokaCB
+  :twitter: murateku
+  :website:
+  :profile: 日々無茶ぶりにさらされるお父さん Rubyist。Matsue.rb 公式サイトではデザインを担当。
+  :gravatar_hash: 08c029f3a9c91db14ddfc3c3fbeafef5
+  :public: true
+- :name: Takashi Uchibe
+  :github: Takashi-U
+  :twitter: Takashi_U
+  :website: http://uchibe.net/
+  :profile: Ruby City Matsueの社会保険労務士。<a href="http://jnanoc.org/">日本nanocユーザ会</a>の会長でもある。
+  :gravatar_hash: 7b2724b86c613568ea9783602f80e2f4
+  :public: true
+- :name: TODO
+  :github: TODO
+  :twitter: TODO
+  :website: TODO
+  :profile: TODO
+  :gravatar_hash: TODO
+  :public: false

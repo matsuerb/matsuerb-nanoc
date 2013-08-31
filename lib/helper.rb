@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+require 'yaml'
+
 def get_tags(items)
   tag_num_hash = Hash.new(0)
   items.each do |item|
@@ -76,4 +79,21 @@ end
 
 def link_to_osslab(lab = "松江オープンソースラボ")
   return link_to(lab, "/map/")
+end
+
+# http://ja.gravatar.com/site/implement/images/ruby/
+def gravatar_image(hash)
+  return %Q!<img src="http://www.gravatar.com/avatar/#{hash}">!
+end
+
+def matsuerb_members_list(public_only = true)
+  members = YAML.load(File.read('resources/members.yml'))
+  members.reject! {|m| !m[:public]} if public_only
+  return members.collect { |member|
+    li_lists = {github: "https://github.com/", twitter: "https://twitter.com/", website: ""}.collect { |sym, url_base|
+      url = member[sym]
+      (!url.nil? && url != "") ? "<li>#{link_to(sym.to_s, url_base + member[sym])}</li>" : ""
+    }.join
+    %Q!<div><div><div>#{gravatar_image(member[:gravatar_hash])}</div><h3>#{member[:name]}</h3><p>#{member[:profile]}</p><ul class="links">#{li_lists}</ul></div></div>!
+  }.join
 end

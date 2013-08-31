@@ -75,5 +75,5 @@ def copyright_year
 end
 
 def link_to_osslab(lab = "松江オープンソースラボ")
-  return %Q'<a href="http://matsue.rubyist.net/map/">#{str}</a>'
+  return %Q'<a href="http://matsue.rubyist.net/map/">#{lab}</a>'
 end

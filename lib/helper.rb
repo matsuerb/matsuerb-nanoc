@@ -86,8 +86,8 @@ def gravatar_image(hash)
   return %Q!<img src="http://www.gravatar.com/avatar/#{hash}">!
 end
 
-def matsuerb_members_list(public_only = true)
-  members = YAML.load(File.read('resources/members.yml'))
+def matsuerb_members_list(path = 'resources/members.yml', public_only = true)
+  members = YAML.load(File.read(path))
   members.reject! {|m| !m[:public]} if public_only
   return members.collect { |member|
     li_lists = {github: "https://github.com/", twitter: "https://twitter.com/", website: ""}.collect { |sym, url_base|

@@ -10,3 +10,8 @@ gem "builder"
 gem "guard"
 gem "guard-nanoc"
 gem "adsf"
+
+group :test do
+  gem "rspec"
+  gem "timecop"
+end

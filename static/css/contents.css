@@ -55,3 +55,45 @@
   padding: 5px 10px;
 }
 
+#member_wrapper{
+  padding: 10px;
+}
+#member_wrapper .wrp{
+  border-bottom: 1px dotted #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#member_wrapper .wrp .img{
+  float: left;
+  display: inline;
+  width: 100px;
+  text-align: center;
+}
+#member_wrapper .wrp .img img{
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#member_wrapper .wrp .text{
+  float: right;
+  width: 770px;
+}
+#member_wrapper .wrp .text h3{
+  font-size: 140%;
+  margin-bottom: 10px;
+}
+#member_wrapper .wrp .text p{
+  margin: 0px 0 10px;
+  line-height: 150%;
+}
+#member_wrapper .wrp .text ul{
+  margin: 10px 5px;
+  padding: 0;
+}
+#member_wrapper .wrp .text ul li{
+  display: inline;
+  margin-right: 10px;
+}
+
+

@@ -94,6 +94,6 @@ def matsuerb_members_list(path = 'resources/members.yml', public_only = true)
       url = member[sym]
       (!url.nil? && url != "") ? "<li>#{link_to(sym.to_s, url_base + member[sym])}</li>" : ""
     }.join
-    %Q!<div><div><div>#{gravatar_image(member[:gravatar_hash])}</div><h3>#{member[:name]}</h3><p>#{member[:profile]}</p><ul class="links">#{li_lists}</ul></div></div>!
+    %Q!<div class="wrp test clearfix"><div class="img">#{gravatar_image(member[:gravatar_hash])}</div><div class="text"><h3>#{member[:name]}</h3><p>#{member[:profile]}</p><ul class="links">#{li_lists}</ul></div></div>\n!
   }.join
 end

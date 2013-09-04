@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://matsue.rubyist.net/news/2013/08/14/open/</loc>
+    <lastmod>2013-08-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://matsue.rubyist.net/news/2013/08/15/matsuerb_h2508/</loc>
+    <lastmod>2013-08-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://matsue.rubyist.net/news/2013/08/18/matsuerb_h2509/</loc>
+    <lastmod>2013-08-24</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

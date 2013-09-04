@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://matsue.rubyist.net/</id>
+  <title>Matsue.rb(松江Ruby)</title>
+  <updated>2013-08-17T15:00:00Z</updated>
+  <link rel="alternate" href="http://matsue.rubyist.net/"/>
+  <link rel="self" href="http://matsue.rubyist.net/feed.xml"/>
+  <author>
+    <name>Matsue.rb</name>
+    <uri>http://matsuerb.github.io/</uri>
+  </author>
+  <entry>
+    <id>tag:matsue.rubyist.net,2013-08-18:/news/2013/08/18/matsuerb_h2509/</id>
+    <title type="html">「Matsue.rb定例会H25.09」開催のお知らせ</title>
+    <published>2013-08-17T15:00:00Z</published>
+    <updated>2013-08-17T15:00:00Z</updated>
+    <link rel="alternate" href="http://matsue.rubyist.net/news/2013/08/18/matsuerb_h2509/"/>
+    <content type="html">&lt;p&gt;　9月21日(土)に&lt;a href="../../../../../about_us/#matsuerb"&gt;松江Ruby(Matsue.rb)定例会&lt;/a&gt;を開催します。場所は&lt;a href="http://www1.city.matsue.shimane.jp/sangyoushinkou/ruby/rubycity/rabo/open.html"&gt;松江オープンソースラボ&lt;/a&gt;で、時間は09:30から17:30までです。&lt;/p&gt;
+&lt;p&gt;　また、当日は定例会の後にMatsue.rbグループのメンバーが講師やアシスタントを努める中高生プログラミング教室の&lt;a href="http://www1.city.matsue.shimane.jp/sangyoushinkou/ruby/rubycity/rubyjr/rubyjr.html"&gt;Ruby.Jr(松江市主催)&lt;/a&gt;も行われる予定です。お近くに興味のある中学・高校生がおられましたら、リンク先よりお申し込みください。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:matsue.rubyist.net,2013-08-15:/news/2013/08/15/matsuerb_h2508/</id>
+    <title type="html">「Matsue.rb定例会H25.08」開催のお知らせ</title>
+    <published>2013-08-14T15:00:00Z</published>
+    <updated>2013-08-14T15:00:00Z</updated>
+    <link rel="alternate" href="http://matsue.rubyist.net/news/2013/08/15/matsuerb_h2508/"/>
+    <content type="html">&lt;p&gt;　8月17日(土)に&lt;a href="../../../../../about_us/#matsuerb"&gt;松江Ruby(Matsue.rb)定例会&lt;/a&gt;を開催します。場所は松江オープンソースラボで、時間は09:30から17:30までです。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:matsue.rubyist.net,2013-08-14:/news/2013/08/14/open/</id>
+    <title type="html">公式サイトの公開</title>
+    <published>2013-08-13T15:00:00Z</published>
+    <updated>2013-08-13T15:00:00Z</updated>
+    <link rel="alternate" href="http://matsue.rubyist.net/news/2013/08/14/open/"/>
+    <content type="html">&lt;p&gt;　Matsue.rbの公式サイトを公開しました。&lt;/p&gt;
+</content>
+  </entry>
+</feed>

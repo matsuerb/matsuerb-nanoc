@@ -27,6 +27,13 @@
   :profile: Ruby City Matsueの社会保険労務士。<a href="http://jnanoc.org/">日本nanocユーザ会</a>の会長でもある。
   :gravatar_hash: 7b2724b86c613568ea9783602f80e2f4
   :public: true
+- :name: Hiroyuki Inoue
+  :github: inoh
+  :twitter: ino_h
+  :website: http://ino-h.com
+  :profile: RubyとHTML5を愛するレガシーエンジニアです。日々刺激と進化を求めて活動に参加してます。
+  :gravatar_hash: b355b7a5e1d689073c2d554f4c0ec775
+  :public: true
 - :name: TODO
   :github: TODO
   :twitter: TODO

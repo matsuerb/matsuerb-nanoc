@@ -66,26 +66,28 @@
 
 しばらくすると、Matsue.rb公式Webサイトの管理者から連絡があり、修正が取り込まれたり、取り込むために作業を依頼されたりするでしょう。
 
-## 運用・更新手順
+なお、Matsue.rbのサイトはGitHub Pagesを利用して公開しています。[matsuerb.github.io](https://github.com/matsuerb/matsuerb.github.io)リポジトリのmasterブランチがウェブサイトとして公開されます。
 
-Matsue.rbのサイトの運用・更新手順メモです。
+## Tips
 
-簡単な確認では「git clone」しましたが、実際の運用時コードの変更はpull requestを受け取る方法で行います。ですので、各人がforkしてください。
+### グループのメンバー 一覧の更新
 
-### Tips
-
-    bundle exec guard
-
-先ほどはcoコマンドでコンパイルしていましたが、都度コマンドを打つのは面倒かもしれません。guardを利用するとファイルの更新を検知して自動でコンパイルしてくれます。
+Matsue.rbのメンバーの一覧を http://matsue.rubyist.net/about_us/ で公開しています。
+メンバーの情報は、 [/resources/members.yml](https://github.com/matsuerb/matsuerb-nanoc/blob/master/resources/members.yml) で管理していますので、上記の「コンテンツ制作への貢献」を参考にして、このファイルを修正してpull requestを送ってください。
 
 ### お知らせの追加
 
 * お知らせの追加は「content/news/yyyy/mm/dd/」以下にファイルを作成してください
-* 定例会のファイルは、例えば平成25年8月の定例会の場合「matsuerb_h2508.html」としてください
-* 作成するファイルのテンプレートは「template」にサンプルを置いていますので参照してください
-* あるいは、前回までのファイルをコピーして使ってください
+* お知らせのテンプレートを「template」に置いていますので参照してください
+* ただし、定例会のお知らせは、専用のサブコマンド(create-matsuerb)を用意しているのでそちらを使ってください。(詳細は後述)
 
-## Matsue.rbのサイト公開について
+#### 定例会のお知らせの追加
 
-Matsue.rbのサイトはGitHub Pagesを利用して公開しています。[matsuerb.github.io](https://github.com/matsuerb/matsuerb.github.io)リポジトリのmasterブランチがウェブサイトとして公開されます。
+    (2013-10-19に開催する場合)
+    bundle exec nanoc create-matsuerb 2013-10-19
 
+### guardの利用
+
+手元での確認のため、都度コマンドを打つのは面倒かもしれません。以下のようにして、guardを利用するとファイルの更新を検知して自動でコンパイルしてくれます。
+
+    bundle exec guard

@@ -51,7 +51,15 @@
     </div><!-- cont-top end -->
 
     <div id="footer">
-      <div class="copy">Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)</a>. All Rights Reserved.</div>
+      <div class="f_link">
+        <%= link_to("トップ", "/index.html") %>｜
+        <%= link_to("お知らせ", "/news/") %>｜
+        <%= link_to("松江Rubyとは", "/about_us/") %>｜
+        <%= link_to("スケジュール", "/schedule/")%>｜
+        <%= link_to("お問い合わせ", "/contact/")%>｜
+        <%= link_to("アクセス", "/map/")%>
+      </div>
+      <div class="copy">Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span></div>
     </div><!--footer end-->
 
   </div><!-- site end -->

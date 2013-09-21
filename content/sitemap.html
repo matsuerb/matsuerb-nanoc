@@ -1,4 +1,4 @@
 ---
 title: "Matsue.rb"
 ---
-<%= xml_sitemap :items => @items.reject{ |i| !i[:publish] || i.binary? } %>
+<%= xml_sitemap :items => @items.reject{ |i| i.binary? } %>

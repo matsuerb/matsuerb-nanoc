@@ -131,11 +131,16 @@ h2.m_title{
 }
 
 /* footer */
+.f_link{padding: 10px;}
+.f_link a{text-decoration: none;}
+.f_link a:hover{text-decoration: underline;}
 .copy{
     background: url("../images/f_copy_bg.gif") repeat-x left center;
     color: #fff;
     line-height: 30px;
 }
+.copy a:hover{text-decoration: underline;}
+.copy span{padding-left: 10px;}
 .copy a{color: #fff; text-decoration: none;}
 
 /**********************************/

@@ -41,6 +41,13 @@
   :profile: キーボード中心のUIが好きなプログラマ。いろんなサービスが出ていきつつあるboron.rubyist.netのお守りもしている。
   :gravatar_hash: 00000000000000000000000000000000
   :public: true
+- :name: Akihiro Sada
+  :github: sada
+  :twitter: sada4
+  :website:
+  :profile: Matsue.rb に参加している松江市在住のITエンジニア。主に使用しているのはRubyとJavaScript。
+  :gravatar_hash: ed009bd803ad84352205f2eb4a978cb5
+  :public: true
 - :name: TODO
   :github: TODO
   :twitter: TODO

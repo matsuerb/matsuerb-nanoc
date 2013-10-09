@@ -72,7 +72,7 @@
 
 ### グループのメンバー 一覧の更新
 
-Matsue.rbのメンバーの一覧を http://matsue.rubyist.net/about_us/ で公開しています。
+Matsue.rbのメンバーの一覧を http://matsue.rubyist.net/members/ で公開しています。
 メンバーの情報は、 [/resources/members.yml](https://github.com/matsuerb/matsuerb-nanoc/blob/master/resources/members.yml) で管理していますので、上記の「コンテンツ制作への貢献」を参考にして、このファイルを修正してpull requestを送ってください。
 
 ### お知らせの追加

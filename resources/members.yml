@@ -60,6 +60,13 @@
   :profile: Matsue.rb に参加している松江市在住のITエンジニア。主に使用しているのはRubyとJavaScript。
   :gravatar_hash: ed009bd803ad84352205f2eb4a978cb5
   :public: true
+- :name: motoakira
+  :github: motoakira
+  :twitter: motoakira
+  :website: 
+  :profile: 元プログラマー（68k、C）。Rubyで書けるようになりたいと思っている。
+  :gravatar_hash: c59e6e5faf7a531b2d7d753c5d9b9ce5
+  :public: true
 - :name: TODO
   :github: TODO
   :twitter: TODO

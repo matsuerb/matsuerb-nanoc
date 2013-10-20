@@ -1,15 +1,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="/css/base.css" type="text/css" media="screen,print">
-<link rel="stylesheet" href="/css/home.css" type="text/css" media="screen,print">
-<link rel="stylesheet" href="/css/contents.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/css/base.css" type="text/css" media="screen,print" />
+<link rel="stylesheet" href="/css/home.css" type="text/css" media="screen,print" />
+<link rel="stylesheet" href="/css/contents.css" type="text/css" media="screen,print" />
+<link rel="canonical" href="<%= File.join("http://http://matsue.rubyist.net", @item.path) %>" />
 <script type="text/javascript" src="/js/jquery-1.10.2.min.js" ></script>
 <script type="text/javascript" src="/js/jquery-rollover.js" ></script>
 <title><%= (t = @item[:title]) ? "#{t}|" : '' %>松江Ruby(Matsue.rb)</title>
 <!-- you don't need to keep this, but it's cool for stats! -->    
-<meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
-<meta property="og:site_name" content="Matsue.rb">
-<meta property="og:title" content="<%= @item[:title] %>">
-<meta itemprop="description" name="description" property="og:description" content="Matsue.rb(松江Ruby)は、島根県松江市周辺で活動するプログラミング言語Rubyのコミュニティです。<%= @item[:description] %>">
+<meta name="generator" content="nanoc <%= Nanoc::VERSION %>" />
+<meta property="og:site_name" content="Matsue.rb" />
+<meta property="og:title" content="<%= @item[:title] %>" />
+<meta itemprop="description" name="description" property="og:description" content="Matsue.rb(松江Ruby)は、島根県松江市周辺で活動するプログラミング言語Rubyのコミュニティです。<%= @item[:description] %>" />
 <% main_keywords = "Ruby, 松江, ルビー, まつえ, Matuse.rb, #Matuserb, 勉強会, オープンソースラボ" %>
 <% if @item[:kind] == "article" %>
   <% tag = "" %>
@@ -19,7 +20,7 @@
     <% tag << ","  %>
   <% end  %>
   <% end  %>
-  <meta name="keywords" content="<%= tag %>松江Ruby, <%= main_keywords %>">
+  <meta name="keywords" content="<%= tag %>松江Ruby, <%= main_keywords %>" />
 <% else %>
   <% keyword = "" %>
   <% if @item[:keywords] %>
@@ -28,12 +29,12 @@
     <% keyword << ","  %>
   <% end  %>
   <% end  %>
-  <meta name="keywords" content="<%= keyword %>松江Ruby, <%= main_keywords %>">
+  <meta name="keywords" content="<%= keyword %>松江Ruby, <%= main_keywords %>" />
 <% end %>
 
-<meta property="og:url" content="<%= config[:base_url] %><%= @item.identifier %>">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="<%= config[:base_url] %><%= @item.identifier %>" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ja_JP" />
 <!-- <meta property="fb:app_id" content=""> -->
-<meta itemprop="name" content="<%= @item[:title] %> - 松江Ruby">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="/feed.xml">
+<meta itemprop="name" content="<%= @item[:title] %> - 松江Ruby" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="/feed.xml" />

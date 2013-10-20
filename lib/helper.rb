@@ -83,7 +83,7 @@ end
 
 # http://ja.gravatar.com/site/implement/images/ruby/
 def gravatar_image(hash)
-  return %Q!<img src="http://www.gravatar.com/avatar/#{hash}">!
+  return %Q!<img src="http://www.gravatar.com/avatar/#{hash}" alt="">!
 end
 
 def matsuerb_members_list(path = 'resources/members.yml', public_only = true)

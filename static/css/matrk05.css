@@ -1,0 +1,46 @@
+dl.gaiyou_table{
+  padding: 10px 20px;
+}
+dl.gaiyou_table dt{
+  float: left;
+  padding-bottom: 8px;
+}
+dl.gaiyou_table dd{
+  margin-left: 100px;
+  padding-bottom: 8px;
+}
+
+dl.news_table{
+  padding: 10px 20px;
+}
+dl.news_table dt{
+  float: left;
+  padding-bottom: 8px;
+}
+dl.news_table dd{
+  margin-left: 100px;
+  padding-bottom: 8px;
+}
+
+dl.time_table{
+}
+dl.time_table dt{
+  float: left;
+  padding-bottom: 8px;
+}
+dl.time_table dd{
+  margin-left: 200px;
+  padding-bottom: 8px;
+}
+
+dl.entry_table{
+  padding: 10px 20px;
+}
+dl.entry_table dt{
+  float: left;
+  padding-bottom: 8px;
+}
+dl.entry_table dd{
+  margin-left: 100px;
+  padding-bottom: 8px;
+}

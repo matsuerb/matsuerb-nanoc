@@ -65,7 +65,7 @@ priority: 0.5
 ---
 
 
-　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= link_to("松江Ruby(Matsue.rb)定例会", "/about_us/#matsuerb") %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:30までです。
+　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= link_to("松江Ruby(Matsue.rb)定例会", "/about_us/#matsuerb") %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:00までです。
     EOS
   end
   puts("create: #{relative_path}")

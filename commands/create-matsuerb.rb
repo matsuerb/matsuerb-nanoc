@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'date'
 require 'fileutils'
+require 'minigit'
 
 usage 'create-matsuerb EVENT_DATE [options]'
 aliases :cm
@@ -53,6 +54,16 @@ run do |opts, args, cmd|
     6 => '土',
     7 => '日',
   }
+
+  git = MiniGit::Capturing.new(File.expand_path('..', File.dirname(__FILE__)))
+  branch_name =
+    "add-teirei-#{event_date.year}-#{"%02d" % event_date.month}-news"
+  begin
+    git.checkout(b: branch_name)
+  rescue MiniGit::GitError
+    exit(1)
+  end
+
   File.open(output_path, "w") do |f|
     f.write(<<-EOS)
 ---
@@ -76,4 +87,10 @@ priority: 0.5
     end
   end
   puts("create: #{relative_path}")
+  begin
+    git.add(relative_path)
+    git.commit({m: "#{event_date.month}/#{event_date.day}(#{wday_s[event_date.wday]})のお知らせを追加。"}, relative_path)
+  rescue MiniGit::GitError
+    exit(1)
+  end
 end

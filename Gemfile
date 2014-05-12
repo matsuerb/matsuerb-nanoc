@@ -10,6 +10,7 @@ gem "builder"
 gem "guard"
 gem "guard-nanoc"
 gem "adsf"
+gem "minigit"
 
 group :test do
   gem "rspec"

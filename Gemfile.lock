@@ -28,6 +28,7 @@ GEM
     lumberjack (1.0.4)
     method_source (0.8.2)
     mime-types (1.25)
+    minigit (0.0.4)
     nanoc (3.6.4)
       cri (~> 2.3)
     pry (0.9.12.2)
@@ -63,6 +64,7 @@ DEPENDENCIES
   kramdown
   listen
   mime-types
+  minigit
   nanoc
   rack
   rb-fsevent

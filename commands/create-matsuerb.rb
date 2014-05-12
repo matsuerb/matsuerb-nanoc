@@ -20,6 +20,8 @@ flag(:h, :help, 'show help for this command') do |value, cmd|
   exit(0)
 end
 
+flag(:j, :rubyjr, 'generate Ruby.Jr, too.')
+
 option(:d, :date, 'specify created date [Default: Today]',
        :argument => :optional)
 
@@ -65,8 +67,13 @@ priority: 0.5
 ---
 
 
-　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= link_to("松江Ruby(Matsue.rb)定例会", "/about_us/#matsuerb") %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:00までです。
+<p>　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= link_to("松江Ruby(Matsue.rb)定例会", "/about_us/#matsuerb") %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:00までです。</p>
     EOS
+    if opts[:rubyjr]
+      f.write(<<-EOS)
+<p>　また、当日は定例会の後にMatsue.rbグループのメンバーが講師やアシスタントを努める中高生プログラミング教室の<%= link_to("Ruby.Jr(松江市主催)", "http://www1.city.matsue.shimane.jp/sangyoushinkou/ruby/rubycity/rubyjr/rubyjr.html") %>も行われる予定です。</p>
+      EOS
+    end
   end
   puts("create: #{relative_path}")
 end

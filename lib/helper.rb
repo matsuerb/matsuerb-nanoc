@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 require 'yaml'
+require 'icalendar'
+require 'date'
 
 def get_tags(items)
   tag_num_hash = Hash.new(0)
@@ -96,4 +98,40 @@ def matsuerb_members_list(path = 'resources/members.yml', public_only = true)
     }.join
     %Q!<div class="wrp test clearfix"><div class="img">#{gravatar_image(member[:gravatar_hash])}</div><div class="text"><h3>#{member[:name]}</h3><p>#{member[:profile]}</p><ul class="links">#{li_lists}</ul></div></div>\n!
   }.join
+end
+
+def generate_calendar
+  matsuerb_items = []
+  # https://github.com/icalendar/icalendar/
+  cal = Icalendar::Calendar.new
+  cal.timezone do |t|
+    t.tzid = "Asia/Tokyo"
+    t.standard do |s|
+      s.tzoffsetfrom = "+0900"
+      s.tzoffsetto = "+0900"
+      s.tzname = "JST"
+      s.dtstart = "19700101T000000"
+    end
+  end
+
+  articles.each do |item|
+    # :calendarの内容は考慮していないので注意
+    if item[:calendar] != nil
+      calendar = item[:calendar]
+      start_hour = calendar[:start_time].split(":")[0].to_i
+      start_min = calendar[:start_time].split(":")[1].to_i
+      end_hour = calendar[:end_time].split(":")[0].to_i
+      end_min = calendar[:end_time].split(":")[1].to_i
+
+      event = Icalendar::Event.new
+      event.dtstart = DateTime.new(calendar[:year], calendar[:month], calendar[:day], start_hour, start_min)
+      event.dtend = DateTime.new(calendar[:year], calendar[:month], calendar[:day], end_hour, end_min)
+      event.summary = calendar[:summary]
+      event.description = calendar[:description]
+      event.location = calendar[:location]
+      event.uid = Time.now.strftime("%Y%m%dT%H:%M:%S+09:00_00000000@matsuerb")
+      cal.add_event(event)
+    end
+  end
+  cal.to_ical
 end

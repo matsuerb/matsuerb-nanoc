@@ -11,6 +11,7 @@ gem "guard"
 gem "guard-nanoc"
 gem "adsf"
 gem "minigit"
+gem "icalendar"
 
 group :test do
   gem "rspec"

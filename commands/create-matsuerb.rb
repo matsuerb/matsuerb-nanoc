@@ -75,6 +75,15 @@ publish: true
 tags: ["イベント"]
 changefreq: never
 priority: 0.5
+calendar:
+  year: #{event_date.year}
+  month: #{event_date.month}
+  day: #{event_date.day}
+  summary: Matsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}
+  description: <a href="#{lative_path}">お知らせページ</a>
+  start_time: "9:30"
+  end_time: "17:30"
+  location: 島根県松江市朝日町478番地18　松江テルサ別館2階
 ---
 
 

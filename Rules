@@ -22,7 +22,7 @@ compile '/static/*' do
   # don’t filter or layout
 end
 
-compile '/(feed|sitemap)/' do
+compile '/(feed|sitemap|calendar)/' do
   filter :erb
 end
 
@@ -61,6 +61,10 @@ end
 
 route '/feed/' do 
   '/feed.xml'
+end
+
+route '/calendar/' do
+  '/calendar.ics'
 end
 
 route '*' do

@@ -129,7 +129,8 @@ def generate_calendar
       event.summary = calendar[:summary]
       event.description = calendar[:description]
       event.location = calendar[:location]
-      event.uid = Time.now.strftime("%Y%m%dT%H:%M:%S+09:00_00000000@matsuerb")
+      t = Time.mktime(calendar[:year], calendar[:month], calendar[:day])
+      event.uid = t.strftime("%Y%m%dT%H:%M:%S+09:00_00000000@matsuerb")
       cal.add_event(event)
     end
   end

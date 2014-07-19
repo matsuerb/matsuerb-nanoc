@@ -101,6 +101,8 @@
   :products:
   - :name: Web Picture Book
     :url: http://fstyle.sakura.ne.jp/picturebook/
+  - :name: svg(青空文庫 有名小説表紙絵コンテスト応募作品)
+    :url: https://github.com/KatoAtsue/svg/wiki
   :public: true
 - :name: Toru Kurahashi
   :github: ToruKurahashi

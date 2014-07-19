@@ -96,7 +96,14 @@ def matsuerb_members_list(path = 'resources/members.yml', public_only = true)
       url = member[sym]
       (!url.nil? && url != "") ? "<li>#{link_to(sym.to_s, url_base + member[sym])}</li>" : ""
     }.join
-    %Q!<div class="wrp test clearfix"><div class="img">#{gravatar_image(member[:gravatar_hash])}</div><div class="text"><h3>#{member[:name]}</h3><p>#{member[:profile]}</p><ul class="links">#{li_lists}</ul></div></div>\n!
+    if member[:products] && member[:products].length > 0
+      product_lists = '<h4>プロジェクト</h4><div><ul class="links">'
+      member[:products].each do |h|
+        product_lists += "<li>#{link_to(h[:name], h[:url])}</li>"
+      end
+      product_lists += "</ul></div>"
+    end
+    %Q!<div class="wrp test clearfix"><div class="img">#{gravatar_image(member[:gravatar_hash])}</div><div class="text"><h3>#{member[:name]}</h3><p>#{member[:profile]}</p><h4>ウェブサイト</h4><ul class="links">#{li_lists}</ul>#{product_lists}</div></div>\n!
   }.join
 end
 

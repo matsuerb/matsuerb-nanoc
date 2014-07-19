@@ -5,6 +5,11 @@
   :website: http://takaokouji.hatenablog.com/
   :profile: 松江在住のITエンジニア。職業はRubyを活用したSIer。松江周辺のRubyコミュニティMatsue.rbの発起人。松江市の中学生Ruby教室の講師。
   :gravatar_hash: 0680ae0d795607a6d9d7fb24698710bd
+  :products:
+  - :name: RubyによるMac OS Xデスクトップアプリケーション開発入門執筆
+    :url: http://www.amazon.co.jp/Ruby%E3%81%AB%E3%82%88%E3%82%8BMac-OS-X%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E5%85%A5%E9%96%80-~Ruby%C3%97RubyCocoa-MacRuby%C3%97HotCocoa~/dp/483993178X
+  - :name: Matsue Ruby Radio(まつえ・るびー・らじお)
+    :url: http://matsuerbradio.seesaa.net/
   :public: true
 - :name: Sho Hashimoto
   :github: sho-h
@@ -12,6 +17,9 @@
   :website: http://d.hatena.ne.jp/sho-hashimoto/
   :profile: Matsue.rb スタッフで会場を確保が主な担当。定例会ではるりまを書いている。
   :gravatar_hash: 513b970589f1cac3d2934b40f150b52d
+  :products:
+  - :name: るりま(メンテナの一人)
+    :url: https://github.com/rurema/doctree
   :public: true
 - :name: Takayuki Yoshioka
   :github: yoshiokaCB
@@ -26,6 +34,9 @@
   :website: http://uchibe.net/
   :profile: Ruby City Matsueの社会保険労務士。<a href="http://jnanoc.org/">日本nanocユーザ会</a>の会長でもある。
   :gravatar_hash: 7b2724b86c613568ea9783602f80e2f4
+  :products:
+  - :name: calc_working_hours
+    :url: https://github.com/Takashi-U/calc_working_hours
   :public: true
 - :name: Hiroyuki Inoue
   :github: inoh
@@ -40,11 +51,19 @@
   :website: http://www.j96.org/~yuya/
   :profile: キーボード中心のUIが好きなプログラマ。いろんなサービスが出ていきつつあるboron.rubyist.netのお守りもしている。
   :gravatar_hash: 00000000000000000000000000000000
+  :products:
+  - :name: rd2odt
+    :url: https://github.com/nishidayuya/rd2odt
   :public: true
 - :name: 岩石嶺
   :github: rockzero
   :profile: 気になったことや好きなことをプログラムにしている。Silver資格取得。
   :gravatar_hash: 39a257f4af0a46ebec01e0fd87698edf
+  :products:
+  - :name: Maze
+    :url: https://github.com/rockzero/Maze
+  - :name: num2xevi
+    :url: https://github.com/rockzero/num2zevi
   :public: true
 - :name: Mutsumi IWAISHI
   :github: amidaku
@@ -66,6 +85,10 @@
   :website: 
   :profile: 元プログラマー（68k、C）。Rubyで書けるようになりたいと思っている。
   :gravatar_hash: c59e6e5faf7a531b2d7d753c5d9b9ce5
+  # TODO: もう少し作業が進んでから有効にする。
+  #:products:
+  #- :name: music_player
+  #  :url: https://github.com/motoakira/music_player
   :public: true
 - :name: Atsue Kato
   :github: KatoAtsue
@@ -73,6 +96,9 @@
   :website:
   :profile: FloatとMathが好きです。
   :gravatar_hash: 8afa343c79eec23bab7b33c0ae19821b
+  :products:
+  - :name: Web Picture Book
+    :url: http://fstyle.sakura.ne.jp/picturebook/
   :public: true
 - :name: Toru Kurahashi
   :github: ToruKurahashi

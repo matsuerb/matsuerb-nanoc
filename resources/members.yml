@@ -52,6 +52,8 @@
   :profile: キーボード中心のUIが好きなプログラマ。いろんなサービスが出ていきつつあるboron.rubyist.netのお守りもしている。
   :gravatar_hash: 00000000000000000000000000000000
   :products:
+  - :name: git dust
+    :url: https://github.com/nishidayuya/git-dust
   - :name: rd2odt
     :url: https://github.com/nishidayuya/rd2odt
   :public: true

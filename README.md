@@ -91,3 +91,21 @@ Matsue.rbのメンバーの一覧を http://matsue.rubyist.net/members/ で公�
 手元での確認のため、都度コマンドを打つのは面倒かもしれません。以下のようにして、guardを利用するとファイルの更新を検知して自動でコンパイルしてくれます。
 
     bundle exec guard
+
+### 公式サイトへの反映
+
+公式サイトの公開用のレポジトリは別のレポジトリになっています。
+
+* https://github.com/matsuerb/matsuerb.github.io
+
+上述の手順でコンパイルすると HTML などのファイルが public 以下に生成されます。これらを上記のレポジトリに push するとすぐに公式サイトに反映されます。
+
+  例:
+  bundle exec nanoc compile
+  cp -r public/* /path/to/matsuerb.github.io/
+  cd /path/to/matsuerb.github.io/
+  git add .
+  git commit -m "XXX 時点のファイルを生成。"
+  git push origin master
+
+履歴の管理などは matsuerb-nanoc 上でしているため、Pull Request は作成せず、直接 push して問題ありません。

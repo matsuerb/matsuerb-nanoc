@@ -83,6 +83,24 @@ def link_to_osslab(lab = "松江オープンソースラボ")
   return link_to(lab, "/map/")
 end
 
+def link_to_rubyjr(subject = "Ruby.Jr(松江市主催)")
+  return link_to(subject, "http://www1.city.matsue.shimane.jp/sangyoushinkou/ruby/rubycity/rubyjr/rubyjr.html")
+end
+
+def link_to_doorkeeper(subject, owner, event_id = nil)
+  url = "http://#{owner}.doorkeeper.jp/"
+  url = File.join(url, "events", event_id.to_s) if event_id
+  return link_to(subject, url)
+end
+
+def link_to_dojo(subject: "コーダー道場 松江", event_id: nil)
+  return link_to_doorkeeper(subject, "smalruby", event_id)
+end
+
+def link_to_sproutrb(subject: "スプラウト.rb", event_id: nil)
+  return link_to_doorkeeper(subject, "sproutrb", event_id)
+end
+
 # http://ja.gravatar.com/site/implement/images/ruby/
 def gravatar_image(hash)
   return %Q!<img src="http://www.gravatar.com/avatar/#{hash}" alt="">!

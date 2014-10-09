@@ -22,7 +22,10 @@ flag(:h, :help, 'show help for this command') do |value, cmd|
 end
 
 flag(:j, :rubyjr, 'generate Ruby.Jr, too.')
-
+option(:s, :sproutrb, 'generate Sprout.rb, too. [Default: No Event Page]',
+       argument: :optional, default: nil)
+option(:c, :coderdojo, 'generate CoderDojo, too.  [Default: No Event Page]',
+       argument: :optional, default: nil)
 option(:d, :date, 'specify created date [Default: Today]',
        :argument => :optional)
 
@@ -89,9 +92,37 @@ calendar:
 
 <p>　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= link_to("松江Ruby(Matsue.rb)定例会", "/about_us/#matsuerb") %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:00までです。</p>
     EOS
-    if opts[:rubyjr]
+
+    if [opts[:rubyjr], opts[:sproutrb], opts[:coderdojo]].any?
+      table = ""
+      if opts[:rubyjr]
+        table << <<-EOS
+| <%= link_to_rubyjr %> |Matsue.rbグループのメンバーが講師やアシスタントを努める中高生プログラミング教室 | 18:00-19:30(定例会の後)       |
+        EOS
+      end
+      if opts[:sproutrb]
+        eid = opts[:sproutrb].kind_of?(String) ? opts[:sproutrb] : "nil"
+        table << <<-EOS
+| <%= link_to_sproutrb(event_id: #{eid}) %> |Ruby on Rails勉強会。現在はRuby on Rails チュートリアルの読書会を実施           | 13:00-17:00(定例会と同時開催) |
+        EOS
+      end
+      if opts[:coderdojo]
+        eid = opts[:coderdojo].kind_of?(String) ? opts[:coderdojo] : "nil"
+        table << <<-EOS
+| <%= link_to_dojo(event_id: #{eid}) %>     |子ども(主に小学校3年生から中学校2年生まで)のためのプログラミング教室            | 13:30-16:30(定例会と同時開催) |
+        EOS
+      end
       f.write(<<-EOS)
-<p>　また、当日は定例会の後にMatsue.rbグループのメンバーが講師やアシスタントを努める中高生プログラミング教室の<%= link_to("Ruby.Jr(松江市主催)", "http://www1.city.matsue.shimane.jp/sangyoushinkou/ruby/rubycity/rubyjr/rubyjr.html") %>も行われる予定です。</p>
+<p>　また、当日は以下のイベントもオープンソースラボで開催される予定です。詳細はリンク先をご覧ください。
+
+<div markdown="1" class="table_wrapper" style="width: 95%">
+
+| イベント名                               |説明                                                                            |時間                           |
+|:-----------------------------------------|:-------------------------------------------------------------------------------|:------------------------------|
+#{table}
+</div>
+
+</p>
       EOS
     end
   end

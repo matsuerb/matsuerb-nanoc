@@ -139,6 +139,13 @@
   :profile: スプラウト.rb（sprout.rb）- Ruby on Railsを仲間と一緒に学びたい人のための勉強会を主催しています。
   :gravatar_hash: ea3157949e84054bdd0a79115adfb453
   :public: true
+- :name: Kiyoko Takeda
+  :github: KiyokoTakeda
+  :twitter:
+  :website:
+  :profile: 出雲でRailsアプリケーションを作成してます。まだまだ未熟なので勉強中です。
+  :gravatar_hash: 00000000000000000000000000000000
+  :public: true
 - :name: TODO
   :github: TODO
   :twitter: TODO

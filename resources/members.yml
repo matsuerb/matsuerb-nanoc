@@ -146,6 +146,13 @@
   :profile: 県外の者ですが、よろしくお願いします。
   :gravatar_hash: 4359e394a4f1d361cc4977122e3bd856
   :public: true
+- :name: Kiyoko Takeda
+  :github: KiyokoTakeda
+  :twitter:
+  :website:
+  :profile: 出雲でRailsアプリケーションを作成してます。まだまだ未熟なので勉強中です。
+  :gravatar_hash: 00000000000000000000000000000000
+  :public: true
 - :name: TODO
   :github: TODO
   :twitter: TODO

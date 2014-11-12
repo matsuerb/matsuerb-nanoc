@@ -40,6 +40,11 @@
           <div class="collapse navbar-collapse navbar-ex1-collapse" style="margin-right: 500px;">
             <ul class="nav navbar-nav">
               <li><a href="index.html">ホーム</a></li>
+              <li><a href="#flow">流れ</a></li>
+              <li><a href="#question">問題</a></li>
+              <li><a href="#question1">問1</a></li>
+              <li><a href="#question2">問2</a></li>
+              <li><a href="#question3">問3</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
 
@@ -53,7 +58,7 @@
     <div class="container mark">
       <br>
       <br>
- <div id="guidance" class="container">
+ <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12">
         <blockquote>
@@ -61,11 +66,9 @@
         </blockquote>
       </div>
     </div>
-    <div class="row">
-      <p>詳細については検討中です。</p>
-      <!--
+    <div id="flow" class="row">
       <div class="col-xs-12 col-md-12">
-        <h2 class="font-Fenix" id="message">流れ</h2>
+        <h2 class="font-Fenix" id="message"><i class="glyphicon glyphicon-ok"></i> 流れ</h2>
         <ol>
           <li>司会者がお題を提示</li>
           <li>回答者手を挙げる</li>
@@ -75,7 +78,50 @@
           <li>2へ戻る（数回繰り返す）</li>
         </ol>
       </div>
--->
+    </div>
+    <div id="question" class="row">
+      <div class="col-xs-12 col-md-12">
+        <h2 class="font-Fenix" id="message"><i class="glyphicon glyphicon-ok"></i> 問題</h2>
+      </div>
+      <div id="question1" class="col-xs-12 col-md-12">
+        <h3>問 1 ランダムソート</h3>
+        <div class="ask">
+          <ul>
+            <li>1から10までの配列があります。</li>
+            <li>ランダムに並べ替えてください。</li>
+          </ul>
+          <p>※ただし、Array#shuffle, Array#shuffle!, Array#sample は使用しないでください。</p>
+          <p><script src="https://gist.github.com/inoh/30cf405e249c062f2b75.js"></script></p>
+        </div>
+      </div>
+      <div id="question2" class="col-xs-12 col-md-12">
+        <h3>問 2 配列のソート問題</h3>
+        <div class="ask">
+          <p>
+            以下のようなに名前とそれぞれの項目の得点を記したCSVファイルがあります。<br/>
+            rubyの得点を基準に降順に並べ替え、名前とrubyの数字を出力しなさい。<br/>
+            また、平均点を計算し降順に並べ替え、名前と平均点を出力しなさい。<br/>
+            （平均点が同じ場合はrubyの点数が高い方を先に表示すること）<br/>
+          </p>
+          <p><a href="http://www.tm-21.co.jp/rubykaigi/ruby_1.csv">http://www.tm-21.co.jp/rubykaigi/ruby_1.csv</a></p>
+          <p><script src="https://gist.github.com/inoh/383676e435539f3ae084.js"></script></p>
+        </div>
+      </div>
+      <div id="question3" class="col-xs-12 col-md-12">
+        <h3>問 3 スクレイピング</h3>
+        <div class="ask">
+          <p>以下のアドレスにアクセスしてください。</p>
+          <p><a href="http://www.tm-21.co.jp/rubykaigi/ruby_1.html">http://www.tm-21.co.jp/rubykaigi/ruby_1.html</a></p>
+          <p><iframe class="col-xs-12 col-md-12" src="http://www.tm-21.co.jp/rubykaigi/ruby_1.html"></iframe></p>
+          <p>
+            一見、みんなRubyに見えますが、実は仲間はずれがいます！<br/>
+            上記アドレスをRubyを使用して読込み、仲間はずれをさがしてください。<br/>
+            仲間はずれの理由と何番目のRubyかを出力してください。<br/>
+            ※仲間はずれの理由に特に正解はありません。自由に考えてOKです。
+          </p>
+          <p><script src="https://gist.github.com/inoh/80cdd5f2fbe9a5be3998.js"></script></p>
+        </div>
+      </div>
     </div>
   </div>
       

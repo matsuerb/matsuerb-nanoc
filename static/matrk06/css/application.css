@@ -50,6 +50,28 @@ body {
       margin-bottom: 12px;
     }
 
+// flow
+#flow {
+}
+  #flow ol {
+  }
+    #flow ol li {
+      font-size: 18pt;
+    }
+
+// question
+#question {
+}
+  #question h3 {
+    margin-left: 20px;
+  }
+  #question .ask {
+    font-size: 16pt;
+  }
+  #question pre {
+    margin-left: 50px;
+  }
+
 footer {
     margin: 50px 0 0 0;
     padding: 20px 0;

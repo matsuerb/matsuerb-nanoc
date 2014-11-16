@@ -4,6 +4,12 @@ require 'yaml'
 require 'icalendar'
 require 'date'
 
+MEMBER_DEFAULTS = {
+  github: "https://github.com/",
+  twitter: "https://twitter.com/",
+  website: ""
+}
+
 def get_tags(items)
   tag_num_hash = Hash.new(0)
   items.each do |item|
@@ -106,23 +112,28 @@ def gravatar_image(hash)
   return %Q!<img src="http://www.gravatar.com/avatar/#{hash}" alt="">!
 end
 
-def matsuerb_members_list(path = 'resources/members.yml', public_only = true)
+def get_matsuerb_members(path = 'resources/members.yml', public_only = true)
   members = YAML.load(File.read(path))
   members.reject! {|m| !m[:public]} if public_only
-  return members.collect { |member|
-    li_lists = {github: "https://github.com/", twitter: "https://twitter.com/", website: ""}.collect { |sym, url_base|
-      url = member[sym]
-      (!url.nil? && url != "") ? "<li>#{link_to(sym.to_s, url_base + member[sym])}</li>" : ""
-    }.join
-    if member[:products] && member[:products].length > 0
-      product_lists = '<h4>プロジェクト</h4><div><ul class="links">'
-      member[:products].each do |h|
-        product_lists += "<li>#{link_to(h[:name], h[:url])}</li>"
-      end
-      product_lists += "</ul></div>"
-    end
-    %Q!<div class="wrp test clearfix"><div class="img">#{gravatar_image(member[:gravatar_hash])}</div><div class="text"><h3>#{member[:name]}</h3><p>#{member[:profile]}</p><h4>ウェブサイト</h4><ul class="links">#{li_lists}</ul>#{product_lists}</div></div>\n!
-  }.join
+  return members
+end
+
+def member_websites?(data)
+  return data.keys.any? {|key| MEMBER_DEFAULTS.keys.include?(key) }
+end
+
+def get_member_websites(data)
+  return MEMBER_DEFAULTS.map {|name, url_base|
+    url = data[name]
+    next if url.nil? || url == ""
+    {name: name, url: url_base + url}
+  }.compact
+end
+
+def member_products?(data)
+  return data.key?(:products) &&
+         data[:products].length > 0 &&
+         data[:products].all? {|p| p.key?(:name) && p.key?(:url) }
 end
 
 def generate_calendar

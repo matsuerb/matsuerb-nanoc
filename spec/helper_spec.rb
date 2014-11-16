@@ -28,47 +28,90 @@ describe 'members' do
     @tempfile = Tempfile.open("matsuerb_members")
   end
 
-  it "matsuerb_members_list returns nothing#1" do
+  it "member_websites? returns true" do
+    data = {github: "foo"}
+    member_websites?(data).should eq(true)
+    data[:twitter] = "foo"
+    member_websites?(data).should eq(true)
+    data[:website] = "http://example.com"
+    member_websites?(data).should eq(true)
+  end
+
+  it "member_websites? returns false" do
+    member_websites?({}).should eq(false)
+    data = {name: "foo", profile: "foo", gravatar_hash: "42", public: true}
+    member_websites?(data).should eq(false)
+  end
+
+  it "get_matsuerb_members returns nothing#1" do
     @tempfile.write([].to_yaml)
     @tempfile.close
-    matsuerb_members_list(@tempfile.path).should == ""
+    get_matsuerb_members(@tempfile.path).should == []
   end
 
-  it "matsuerb_members_list returns nothing#2" do
+  it "get_matsuerb_members returns nothing#2" do
     @tempfile.write([{name: "Foo Bar", public: false}].to_yaml)
     @tempfile.close
-    matsuerb_members_list(@tempfile.path).should == ""
+    get_matsuerb_members(@tempfile.path).should == []
   end
 
-  it "matsuerb_members_list returns one#1" do
-    member = {
-      name: "Foo Bar", profile: "foobar is nice guy",
-      gravatar_hash: "0123456789", public: true,
-    }
-    @tempfile.write([member].to_yaml)
+  it "get_matsuerb_members returns one#1" do
+    data = [{
+      name: "Foo Bar",
+      profile: "foobar is nice guy",
+      gravatar_hash: "0123456789",
+      public: true,
+    }]
+    @tempfile.write(data.to_yaml)
     @tempfile.close
-    # TODO: HTML の構成が決まった後で要素にそった確認を行う。
-    html = matsuerb_members_list(@tempfile.path)
-    %i(name profile gravatar_hash).each do |s|
-      html.should match(Regexp.new(member[s]))
+    members = get_matsuerb_members(@tempfile.path)
+    members.length.should eq(1)
+    member = members.first
+    %i(name profile gravatar_hash public).each do |s|
+      member[s].should eq(data[0][s])
     end
-    %w(github twitter website).each do |s|
-      html.should_not match(Regexp.new(s))
+    %i(github twitter website).each do |s|
+      member[s].should eq(nil)
     end
   end
 
-  it "matsuerb_members_list returns one#2" do
-    member = {
-      name: "Foo Bar", github: "foobar", twitter: "foobar",
-      website: "http://www.example.org", profile: "foobar is nice guy",
-      gravatar_hash: "0123456789", public: true,
-    }
-    @tempfile.write([member].to_yaml)
+  it "get_matsuerb_members returns one#2" do
+    data = [{
+      name: "Foo Bar",
+      github: "foobar",
+      twitter: "foobar",
+      website: "http://www.example.org",
+      profile: "foobar is nice guy",
+      gravatar_hash: "0123456789",
+      public: true,
+    }]
+    @tempfile.write(data.to_yaml)
     @tempfile.close
-    # TODO: HTML の構成が決まった後で要素にそった確認を行う。
-    html = matsuerb_members_list(@tempfile.path)
-    (member.keys - [:public]).each do |s|
-      html.should match(Regexp.new(member[s]))
+    members = get_matsuerb_members(@tempfile.path)
+    members.length.should eq(1)
+    member = members.first
+    member.keys.each do |s|
+      member[s].should eq(data[0][s])
     end
+  end
+
+  it "get_member_websites returns urls" do
+    data = {github: "foo", twitter: "foo", website: "http://example.com"}
+    results = get_member_websites(data)
+    results.length.should eq(3)
+    MEMBER_DEFAULTS.each do |name, url_base|
+      result = results.detect {|r| r[:name] == name }
+      result[:url].should eq(url_base + data[name.to_sym])
+    end
+  end
+
+  it "member_products? returns true" do
+    data = {products: [{name: "foo", url: "http://example.com"}]}
+    member_products?(data).should eq(true)
+  end
+
+  it "member_products? returns false" do
+    member_products?({}).should eq(false)
+    member_products?({products: [{name: "foo"}]}).should eq(false)
   end
 end

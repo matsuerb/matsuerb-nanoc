@@ -87,3 +87,8 @@ footer {
 .list-inline img {
     padding-bottom: 20px;
 }
+
+.col-xs-12 .col-xs-3{
+  width: 285px;
+  min-height: 160px;
+}

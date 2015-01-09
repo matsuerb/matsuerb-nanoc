@@ -109,7 +109,7 @@ calendar:
       if opts[:coderdojo]
         eid = opts[:coderdojo].kind_of?(String) ? opts[:coderdojo] : "nil"
         table << <<-EOS
-| <%= link_to_dojo(event_id: #{eid}) %>     |子ども(主に小学校3年生から中学校2年生まで)のためのプログラミング教室            | 13:30-16:30(定例会と同時開催) |
+| <%= link_to_dojo(event_id: #{eid}) %>     |子ども(主に小学校3年生から中学校2年生まで)のためのプログラミング教室            | 10:00-11:30、13:30-16:30<br/>(定例会と同時開催) |
         EOS
       end
       f.write(<<-EOS)

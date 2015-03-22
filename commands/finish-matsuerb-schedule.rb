@@ -47,8 +47,8 @@ run do |opts, args, cmd|
   n = opts[:participants] || 0
   File.open(output_path, "r+") do |f|
     s = f.read
-    s.gsub!(/\| Matsue.rb定例会H#{nendo}\.#{month}    \|参加受付中    \|/,
-            "| Matsue.rb定例会H#{nendo}.#{month}    |終了(#{n}名参加)|")
+    regexp = /(\|\s*Matsue.rb定例会H#{nendo}\.#{month}\s*\|)\s*参加受付中\s*\|/
+    s.gsub!(regexp) { $1 + " 終了(#{n}名参加) |" }
     f.rewind
     f.write(s)
     f.truncate(f.pos)

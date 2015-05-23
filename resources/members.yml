@@ -183,7 +183,8 @@
   :website: 
   :profile: sprout.rbに参加してる学生です。
   :gravatar_hash: 00000000000000000000000000000000
-  :products:
+  :products: []
+  :public: true
 - :name: TODO
   :github: TODO
   :twitter: TODO

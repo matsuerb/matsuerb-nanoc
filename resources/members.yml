@@ -185,6 +185,13 @@
   :gravatar_hash: 00000000000000000000000000000000
   :products: []
   :public: true
+- :name: Kaori Yoshioka
+  :github: YoshiokaKaori
+  :twitter:
+  :website:
+  :profile: 出雲でプログラマーやってます。Rails Rubyは初心者なので、スプラウト.rbで教えてもらっています。
+  :gravatar_hash: 00000000000000000000000000000000
+  :public: true
 - :name: TODO
   :github: TODO
   :twitter: TODO

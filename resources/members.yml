@@ -170,13 +170,10 @@
 - :name: Nobuyuki Honda
   :github: nobyuki
   :twitter: nobyuki
-  :website: 
-  :profile: TODO
-  :gravatar_hash: 00000000000000000000000000000000
-  :products:
-  - :name: smalruby-editor
-    :url: https://github.com/smalruby/smalruby-editor
-  :public: false
+  :website: http://smalruby.jp/
+  :profile: 松江のプログラミング教育おじさん。Rubyプログラミング少年団やってます！
+  :gravatar_hash: 3fc8181c56cfab98b3bc6ef401192040
+  :public: true
 - :name: Sasaki Hikaru 
   :github: sasakihikaru
   :twitter: 

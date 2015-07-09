@@ -107,6 +107,10 @@ def link_to_sproutrb(subject: "スプラウト.rb", event_id: nil)
   return link_to_doorkeeper(subject, "sproutrb", event_id)
 end
 
+def link_to_terrsa(subject = "松江テルサ")
+  return link_to(subject, "http://www.sanbg.com/terrsa/")
+end
+
 # http://ja.gravatar.com/site/implement/images/ruby/
 def gravatar_image(hash)
   return %Q!<img src="http://www.gravatar.com/avatar/#{hash}" alt="">!

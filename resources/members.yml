@@ -87,8 +87,10 @@
   :website: 
   :profile: 元プログラマー（68k、C）。Rubyで書けるようになりたいと思っている。
   :gravatar_hash: c59e6e5faf7a531b2d7d753c5d9b9ce5
+  :products:
+  - :name: midiosx
+    :url: https://github.com/motoakira/midiosx
   # TODO: もう少し作業が進んでから有効にする。
-  #:products:
   #- :name: music_player
   #  :url: https://github.com/motoakira/music_player
   :public: true

@@ -92,3 +92,15 @@ footer {
   width: 285px;
   min-height: 160px;
 }
+
+// sponsor
+#sponser {
+}
+  #sponser .logo-wrapper {
+    height: 100px;
+    width: 285px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+  }
+

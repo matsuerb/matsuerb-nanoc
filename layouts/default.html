@@ -60,7 +60,10 @@
         <%= link_to("お問い合わせ", "/contact/")%>｜
         <%= link_to("アクセス", "/map/")%>
       </div>
-      <p>RubyロゴはRubyアソシエーションの著作物であり、Creative Commons BY-SAライセンスにより http://www.ruby.or.jp/ja/about/logo/ で公開されています。</p>
+
+      <% if @item.identifier.size == 1 %>
+        <%= render('_cc_to_toms_logo') %>
+      <% end %>
       <div class="copy">Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span></div>
     </div><!--footer end-->
 

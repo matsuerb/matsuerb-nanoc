@@ -104,3 +104,6 @@ footer {
     text-align:center;
   }
 
+footer p.text-small{
+  font-size: 11px;
+}

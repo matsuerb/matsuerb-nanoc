@@ -54,15 +54,6 @@ photos = {
   "9" => "https://www.flickr.com/groups/2886131@N22/pool/",
 }
 
-movies = {
-  "1" => "https://youtu.be/XUdS8RYWL3g",
-  "2" => "https://youtu.be/1mobbUMKZ8k",
-  "3" => "https://youtu.be/7g0rWpJ7r7s",
-  "4" => "https://youtu.be/UlVdKi-YVtM",
-  "5" => "https://youtu.be/Fz8wNh8VcV4",
-  "6" => "https://youtu.be/TTn5d-8OmZ8",
-}
-
 def create_links(h)
   h.collect { |s, url| link_to(s, url, target: "_blank") }.join(" ")
 end
@@ -70,7 +61,7 @@ end
 
 | イベント名               |状態          | 日時                  | 会場                   |事前登録|料金|リンク                      |
 |:-------------------------|:------------:|:---------------------:|:----------------------:|:------:|:--:|:--------------------------:|
-| 松江Ruby会議06           |終了(57名参加)| 2014/12/20 13:00-17:45| <%= link_to_osslab %>  | 必要   |無料| <%= link_to("松江Ruby会議06", "/matrk06") %><br/><%= link_to("るびま記事", "http://magazine.rubyist.net/?0051-MatsueRubyKaigi06Report")%><br /><%= link_to("Togetterまとめ", "http://togetter.com/li/760234") %><br />Flickr(<%= create_links(photos) %>)<br />Youtube(<%= create_links(movies) %>) |
+| 松江Ruby会議06           |終了(57名参加)| 2014/12/20 13:00-17:45| <%= link_to_osslab %>  | 必要   |無料| <%= link_to("松江Ruby会議06", "/matrk06") %><br/><%= link_to("るびま記事", "http://magazine.rubyist.net/?0051-MatsueRubyKaigi06Report")%><br /><%= link_to("Togetterまとめ", "http://togetter.com/li/760234") %><br />Flickr(<%= create_links(photos) %>)<br /><%= link_to("YouTube", "https://www.youtube.com/playlist?list=PLbJxhePIoIPDCF_KeFc-U5W4XdmTYWPVd") %> |
 | Matsue.rb定例会H26.11<br/>(<%= link_to_sproutrb(event_id: 17153) %>,<br/><%= link_to_dojo(event_id: 16083) %>と同時開催) |終了(27名参加)| 2014/11/15 9:30-17:00 | <%= link_to_osslab %> | 不要   |無料|<%= fbe(1452701574977672) %> |
 | Matsue.rb定例会H26.10<br/>(<%= link_to_sproutrb(event_id: 16353) %>,<br/><%= link_to_dojo(event_id: 15973) %>と同時開催) |終了(21名参加)| 2014/10/25 9:30-17:00 | <%= link_to_osslab %> | 不要   |無料|<%= fbe(778993778798159) %> |
 | Matsue.rb定例会H26.09<br/>(<%= link_to_sproutrb(event_id: 15390) %> と同時開催)    |終了(18名参加)| 2014/09/27 9:30-17:00 | <%= link_to_osslab %> | 不要   |無料|<%= fbe(732882966770439) %> |

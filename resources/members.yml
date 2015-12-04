@@ -20,6 +20,10 @@
   :products:
   - :name: るりま(メンテナの一人)
     :url: https://github.com/rurema/doctree
+  - :name: brakefast
+    :url: https://github.com/sho-h/brakefast
+  - :name: bundler_gemfile_license_audit
+    :url: https://github.com/sho-h/bundler_gemfile_license_audit
   :public: true
 - :name: Takayuki Yoshioka
   :github: yoshiokaCB
@@ -56,6 +60,8 @@
     :url: https://github.com/nishidayuya/git-dust
   - :name: rd2odt
     :url: https://github.com/nishidayuya/rd2odt
+  - :name: structured_logger
+    :url: https://github.com/nishidayuya/structured_logger
   :public: true
 - :name: 岩石嶺
   :github: rockzero
@@ -84,7 +90,7 @@
 - :name: motoakira
   :github: motoakira
   :twitter: motoakira
-  :website: 
+  :website:
   :profile: 元プログラマー（68k、C）。Rubyで書けるようになりたいと思っている。
   :gravatar_hash: c59e6e5faf7a531b2d7d753c5d9b9ce5
   :products:
@@ -122,17 +128,17 @@
   :public: true
 - :name: Anna Yoshioka
   :github: AnnaYoshioka
-  :twitter: 
+  :twitter:
   :website:
   :profile: 同時開催のSprout.rbに参加中。一応学生。
-  :gravatar_hash: 6b890addfe62e5c993df3eff55f949d0 
+  :gravatar_hash: 6b890addfe62e5c993df3eff55f949d0
   :public: true
 - :name: Renato Tadashi
   :github: TadashiRenato
   :twitter:
   :website:
   :profile: JICAの研修員です。日本語とRubyの勉強のためにブラジルから来ました。ゲームが大好き。
-  :gravatar_hash: 
+  :gravatar_hash:
   :public: true
 - :name: Kaori Matsuoka
   :github: KaoriMatsuoka
@@ -143,8 +149,8 @@
   :public: true
 - :name: Shinichi Kotani
   :github: sn1128
-  :twitter: 
-  :website: 
+  :twitter:
+  :website:
   :profile: 県外の者ですが、よろしくお願いします。
   :gravatar_hash: 4359e394a4f1d361cc4977122e3bd856
   :public: true
@@ -164,9 +170,9 @@
   :public: true
 - :name: Eiji Kosaki
   :github: eijik
-  :twitter: 
-  :website: 
-  :profile: 古民家でプログラミングしてますー、よろしくお願いしますー 
+  :twitter:
+  :website:
+  :profile: 古民家でプログラミングしてますー、よろしくお願いしますー
   :gravatar_hash: 597e16f9437731cdb09c1f8d0fbad791
   :public: true
 - :name: Nobuyuki Honda
@@ -176,10 +182,10 @@
   :profile: 松江のプログラミング教育おじさん。Rubyプログラミング少年団やってます！
   :gravatar_hash: 3fc8181c56cfab98b3bc6ef401192040
   :public: true
-- :name: Sasaki Hikaru 
+- :name: Sasaki Hikaru
   :github: sasakihikaru
-  :twitter: 
-  :website: 
+  :twitter:
+  :website:
   :profile: sprout.rbに参加してる学生です。
   :gravatar_hash: 00000000000000000000000000000000
   :products: []

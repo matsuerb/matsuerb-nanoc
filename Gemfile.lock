@@ -38,7 +38,7 @@ GEM
     minigit (0.0.4)
     nanoc (3.6.11)
       cri (~> 2.3)
-    nio4r (1.0.0)
+    nio4r (1.2.1)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -78,3 +78,6 @@ DEPENDENCIES
   rb-fsevent
   rspec
   timecop
+
+BUNDLED WITH
+   1.11.2

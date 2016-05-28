@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/* seiteindex css */
+body {
+  margin: 0;
+  padding: 3px 50px 10px;
+  color: #000;
+  background-color: #fff;
+}
+/* column */
+ul.column {
+  list-style: none;
+  margin: 10px auto;
+  padding: 0;
+  max-width: 1920px;
+}
+ul.column li {
+  width: 300px;
+  padding: 0 1px;
+  background-color: #fff;
+  color: #000;
+}
+ul.column li img {
+  margin-top: 0;
+  max-width:100%;
+  height:auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+#columncenter {
+  background: -webkit-linear-gradient(top, #f9f9f9, #e6e6e6);
+  background: -moz-linear-gradient(top, #f9f9f9, #e6e6e6);
+  background: -ms-linear-gradient(top, #f9f9f9, #e6e6e6);
+  background: -o-linear-gradient(top, #f9f9f9, #e6e6e6);
+  background: linear-gradient(to bottom, #f9f9f9, #e6e6e6)；
+}
+div#doc {
+  padding: 0 13px 0 0;
+  min-height: 840px;
+}
+div#tw {
+  padding: 0 13px;
+  color: #000;
+  background-color: #fff;
+  min-height: 840px;
+}
+div#fb {
+  padding: 0 0 0 13px;
+  color: #000;
+  background-color: #fff;
+  min-height: 810px;
+}
+p#outline {
+  line-height: 14px;
+  font-size: 13px;
+  text-align: left;
+  color: #505050;
+  background-color: #fff;
+  margin: 0;
+  padding: 3px 0 0;   
+}
+/* grid member image */
+ul.grid {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1920px;
+  max-height: 720px;
+}
+ul.grid li {
+  width: 160px;
+  padding: 0;
+}
+ul.grid li img {
+  margin-top: 0;
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* toc menu */
+ul.menu {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1920px;
+}
+ul.menu li {
+  width: 160px;
+  margin: 0;
+  padding: 0 0 1px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #ddd;
+  font-size: 15px;
+  font-family: Helvetica , "游ゴシック" , "Yu Gothic" , "メイリオ" ,sans-serif;
+}
+ul.menu li img {
+  margin-top: 0;
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin-left: 0;
+  margin-right: auto;
+}
+ul.menu li img:hover {
+  -webkit-filter: saturate(136%);
+  -moz-filter: saturate(136%);
+  -o-filter: saturate(136%);
+  -ms-filter: saturate(136%);
+  filter: saturate(136%);
+}
+.toc {
+  margin: 20px 0 0px;
+  background: -moz-linear-gradient(top,#fff 0%,#fff 3%,#f6f6f6 3%,#fff);
+  background: -ms-linear-gradient(top,#fff 0%,#fff 3%,#f6f6f6 3%,#fff);
+  background: -o-linear-gradient(top,#fff 0%,#fff 3%,#f6f6f6 3%,#fff);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.03,#fff), color-stop(0.03,#f6f6f6), to(#fff));
+  color: #111;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #CCC;
+  border-bottom: 3px solid #999;
+  width: 100%;
+  padding: 8px 0 5px;
+}  
+.toc:hover {
+  background: -moz-linear-gradient(top,#fff 0%,#fff 3%,#e3e3e3 3%,#fff);
+  background: -ms-linear-gradient(top,#fff 0%,#fff 3%,#e3e3e3 3%,#fff);
+  background: -o-linear-gradient(top,#fff 0%,#fff 3%,#e3e3e3 3%,#fff);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.03,#fff), color-stop(0.03,#e3e3e3), to(#fff));
+  text-shadow: 0 1px 1px #bbb;
+}
+h2 a,
+.menu a {
+  text-decoration: none;
+}
+
+/* footer */
+#footer {
+  font-size: 0.9em;
+  list-style: none;
+  margin: 40px auto 0;
+  padding: 2px 0;
+  text-align: center;
+  word-spacing: 1.2em;
+  border-top: dotted 1px #ccc;
+}
+#footer li {
+  display: inline;
+  margin: 0 auto;
+  padding: 0 0 1px;
+  white-space: nowrap;
+}
+#copyright {
+  font-size: 0.9em;
+  margin: 0;
+  padding: 2px 0;
+  text-align: center;
+}
+
+/* elememts */
+h1 {
+  margin:0;
+  padding: 0;
+}
+h2 {
+  font-weight:normal;
+  color: #000;
+  background: #fff;
+  border-width: 0 0 2px;
+  border-style: solid;
+  border-color: #ececec;
+  font-size: 1em;
+  font-family: Helvetica , "游ゴシック" , "Yu Gothic" , "メイリオ" ,sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #ddd;
+}
+h2:hover {
+  color: #300;
+  background: #fff;
+  text-shadow: 1px 1px 1px #999;
+  text-decoration: none;
+  border-color: #bab;
+}
+.title {
+  margin: 15px 0 0;
+  padding: 0;
+}
+.title:before {
+  content:"■";
+  color: #b73030;
+  background: #fff;
+  font-size: 9px;
+  vertical-align: 3px;
+}
+.date {
+  font-size: 0.8em;
+  color: #666;
+  background-color: #fff;
+  padding-left: 5px;  
+}
+.body {
+  font-size: 1em;
+  margin: 5px 0 0;
+}
+p {
+  margin: 0px;
+  line-height: 1.2em;
+}
+.link {
+  text-align: right;
+  margin: 0;
+  padding: 2px 2px 10px;
+  border-bottom: solid 1px #e6e6ea;
+  font-size: 0.9em;
+}
+iframe {
+  margin :0.5em 0 0;
+  padding: 0;
+  width: 100%;
+  min-height: 110px;
+}
+p#facebook {
+  font-size: 1em;
+  padding: 0 0 3px;
+}
+
+@media only screen and (max-width: 1000px){
+  ul.menu li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 900px){
+  ul.menu li {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 800px){
+  body {
+    padding: 3px 15px 0;
+  }
+
+  ul.menu li {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 700px){
+  body {
+  padding: 3px 10px 0;
+}
+
+  ul.menu li {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 600px){
+  body {
+    padding: 3px 23px 20px 18px;
+  }
+  #columncenter {
+    background: #fff;
+    margin: 0 0 10px;
+  }
+  div#tw {
+    min-height: 836px;
+  }
+  div#fb {
+    min-height: 380px;
+  }
+  ul.grid {
+    min-height: 225px;
+    max-height: 240px;
+  }
+  div.doc {
+    padding: 0;
+  }
+  ul.menu li {
+    width: 100%;
+    font-size: 1em;
+  }
+  ul.menu li img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .toc {
+    margin: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+  }
+  #footer {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  div#fb {
+    min-height: 300px;
+  }
+  ul.grid {
+    min-height: 145px;
+    max-height: 150px
+  }
+  #footer {
+    margin: 0 auto;
+  }
+}

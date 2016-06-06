@@ -15,12 +15,12 @@ var MemberList = (function(){
 });
 MemberList();
 
-new AwesomeGrid('ul.menu', {desktop: 601}).gutters(0).grid(1).desktop(17, 0);
+new AwesomeGrid('ul.menu', {desktop: 601}).gutters(0).grid(1).desktop(8, 0);
 new AwesomeGrid('ul.column', {desktop: 601}).gutters(0).grid(1).desktop(3, 0);
 new AwesomeGrid('ul.grid', {desktop: 601}).gutters(0).grid(5).desktop(6, 0);
 
 $(window).load(function(){
-  new AwesomeGrid('ul.menu', {desktop: 601}).gutters(0).grid(1).desktop(17, 0);
+  new AwesomeGrid('ul.menu', {desktop: 601}).gutters(0).grid(1).desktop(8, 0);
   new AwesomeGrid('ul.grid', {desktop: 601}).gutters(0).grid(5).desktop(6, 0);
 });
 

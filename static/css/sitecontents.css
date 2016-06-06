@@ -1,12 +1,13 @@
-
+@charset "UTF-8";
+/* seitecontents css */
 .page-title{
   border-bottom: 1px solid #ccc;
-  margin: 10px 0 0 3px;
+  margin: 1px 0 0 3px;
 }
 .page-title h1{
   font-size: 1.6em;
   border-left: 6px solid #af3a3a;
-  padding: 0 0 0 17px;
+  padding: 1px 0 0 17px;
   margin: 0 0 10px 0;
   line-height: 100%;
 }
@@ -17,14 +18,14 @@
 .body h2{
   font-size: 1.4em;
   font-weight: bold;
-  padding: 0 0 5px 0;
+  padding: 0 0 4px 0;
   border-bottom: 1px dotted #999;
   margin: 20px 0 15px;
   text-shadow: none;
 }
 .body h2:before {
   content:"■";
-  color: #a73f3f;
+  color: #b03333;
   background: #fff;
   font-size: 0.5em;
   vertical-align: 3px;
@@ -48,10 +49,10 @@ h4 {
   padding: 0;
 }
 .body p{
-  margin: 10px 0 20px;
+  margin: 12px 0 10px;
 }
 .body ul{
-  margin: 10px 0 20px 15px;
+  margin: 3px 0 10px 15px;
   padding: 0;
   list-style: none;
 }
@@ -62,8 +63,10 @@ h4 {
   list-style: none;
 }
 .body ul li:before {
-  content: url("/images/li_icon.gif") ;
+  content: url("/images/bn/li.png") ;
   padding-right: 5px;
+  width: 4px;
+  height: 8px;
 }
 .table_wrapper table,
 .table_schedule table {
@@ -152,6 +155,13 @@ h4 {
 }
 
 @media only screen and (max-width: 600px) {
+.page-title{
+  margin: 2px 0 0 0;
+}
+.body{
+  padding: 0;
+  line-height: 150%;
+}
   #member_wrapper .profile h3 {
   margin: 5px 0 0;
  }

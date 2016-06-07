@@ -1,72 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <%= render('_head') %>
+<%= render('_head') %>
 </head>
-<body id="home">
-  <div id="site">
+<body>
 
-    <div id="header">
-      <p class="description">Matsue.rb(松江Ruby)は、島根県松江市周辺で活動するプログラミング言語Rubyのコミュニティです。</p>
-      <div class="head_wrp clearfix">
-        <div class="h_logo">
-          <a href="/"><img src="/images/h_logo.jpg" height="90" alt="松江Ruby" /></a>
-        </div>
-        <div class="h_link">
-          <a href="https://www.facebook.com/groups/matsuerb"><img src="/images/bnr_facebook.gif" alt="facebook" /></a>
-          <a href="https://twitter.com/matsuerb"><img src="/images/bnr_twitter.gif" alt="twitter" /></a>
-        </div>
-        <div class="h_btn_waku clearfix">
-          <div class="hb01"><a href="/"><img src="/images/h_btn01.jpg" alt="トップ" /></a></div>
-          <div class="hb01"><a href="/news/"><img src="/images/h_btn02.jpg" alt="お知らせ" /></a></div>
-          <div class="hb01"><a href="/about_us/"><img src="/images/h_btn03.jpg" alt="松江RUBYとは" /></a></div>
-          <div class="hb01"><a href="/members/"><img src="/images/h_btn04.jpg" alt="メンバー紹介" /></a></div>
-          <div class="hb01"><a href="/schedule/"><img src="/images/h_btn05.jpg" alt="スケジュール" /></a></div>
-          <div class="hb01"><a href="/contact/"><img src="/images/h_btn06.jpg" alt="お問い合わせ" /></a></div>
-        </div>
-      </div>
-    </div><!-- End of head -->
+<ul class="menu">
+<% if @item.identifier.size == 1 %>
+<li data-ag-x="3"><h1><img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a></h1></li>
+<% else %>
+<li data-ag-x="3"><img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a></li>
+<% end %>
+<li><a href="/news/"><div class="toc">お知らせ</div></a></li>
+<li><a href="/about_us/"><div class="toc">松江Rubyとは</div></a></li>
+<li><a href="/members/"><div class="toc">メンバー</div></a></li>
+<li><a href="/schedule/"><div class="toc">スケジュール</div></a></li>
+<li><a href="/contact/"><div class="contact">お問い合わせ</div></a></li>
+<li data-ag-x="5"><p id="outline">Matsue.rb(松江Ruby)は、島根県松江市周辺で活動するプログラミング言語Rubyのコミュニティです。</p></li>
+</ul>
+<!-- End of head -->
 
+<% if @item[:kind] == "article" %>
+  <div class="page-title"><h1><%= @item[:title] %></h1></div>
+  <div class="body">
+  <%= yield %>
+  </div>
+<% else  %>
+  <%= yield %>
+<% end %>
 
-    <% if @item.identifier.size == 1 %>
-      <div class="main_img_wrp1"><div class="main_img_wrp2"><div class="main_img_wrp3">
-        <div class="main_img">
-          <img src="/images/main_img.jpg" alt="Happy Faces of Matsue.rb" />
-        </div>
-      </div></div></div>
-      <div id="con-top" class="clearfix">
-    <% else %>
-      <div id="content" class="clearfix">
-    <% end %>
+<!-- footer -->
+<ul id="footer">
+  <li><%= link_to("トップ", "/index.html") %></li>
+  <li><%= link_to("お知らせ", "/news/") %></li>
+  <li><%= link_to("松江Rubyとは", "/about_us/") %></li>
+  <li><%= link_to("メンバー", "/members/") %></li>
+  <li><%= link_to("スケジュール", "/schedule/")%></li>
+  <li><%= link_to("お問い合わせ", "/contact/")%></li>
+  <li><%= link_to("アクセス", "/map/")%></li>
+</ul>
 
-      <% if @item[:kind] == "article" %>
-        <div class="page-title"><h1><%= @item[:title] %></h1></div>
-        <div class="body">
-          <%= yield %>
-        </div>
-      <% else  %>
-          <%= yield %>
-      <% end %>
+<div id="copyright">Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span></div>
 
+<script src="/js/grid/jquery-2.2.3.min.js"></script>
+<script src="/js/grid/awesome-grid.js"></script>
+<script src="/js/grid/columnset.js"></script>
 
-    </div><!-- cont-top end -->
-
-    <div id="footer">
-      <div class="f_link">
-        <%= link_to("トップ", "/index.html") %>｜
-        <%= link_to("お知らせ", "/news/") %>｜
-        <%= link_to("松江Rubyとは", "/about_us/") %>｜
-        <%= link_to("スケジュール", "/schedule/")%>｜
-        <%= link_to("お問い合わせ", "/contact/")%>｜
-        <%= link_to("アクセス", "/map/")%>
-      </div>
-
-      <% if @item.identifier.size == 1 %>
-        <%= render('_cc_to_toms_logo') %>
-      <% end %>
-      <div class="copy">Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span></div>
-    </div><!--footer end-->
-
-  </div><!-- site end -->
 </body>
 </html>

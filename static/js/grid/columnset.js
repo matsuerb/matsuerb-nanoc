@@ -1,9 +1,9 @@
 /* column set */
 var MemberList = (function(){
-  var items = 31;
+  var items = 32;
   if( window.matchMedia('(max-width:600px)').matches ) {items = 10;}
   var arr = [];
-  for (var i = 0; i < 31; i++) {arr.push(i);}
+  for (var i = 0; i < 32; i++) {arr.push(i);}
   arr.sort(function() {
     return Math.random() - Math.random();
   });

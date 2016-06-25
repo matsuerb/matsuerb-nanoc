@@ -103,7 +103,7 @@ calendar:
       if opts[:sproutrb]
         eid = opts[:sproutrb].kind_of?(String) ? opts[:sproutrb] : "nil"
         table << <<-EOS
-| <%= link_to_sproutrb(event_id: #{eid}) %> |Ruby on Rails勉強会。現在は<%= link_to("Ruby on Rails チュートリアル", "http://railstutorial.jp") %>の読書会を実施           | 13:00-17:00(定例会と同時開催) |
+| <%= link_to_sproutrb(event_id: #{eid}) %> |Ruby/Ruby on Rails勉強会。現在はRubyレシピブックの読書会を実施           | 13:00-17:00(定例会と同時開催) |
         EOS
       end
       if opts[:coderdojo]

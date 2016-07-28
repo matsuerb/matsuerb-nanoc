@@ -99,12 +99,18 @@ def link_to_doorkeeper(subject, owner, event_id = nil)
   return link_to(subject, url)
 end
 
+def link_to_connpass(subject, owner, event_id = nil)
+  url = "http://#{owner}.connpass.com/"
+  url = File.join(url, "event", event_id.to_s) if event_id
+  return link_to(subject, url)
+end
+
 def link_to_dojo(subject: "コーダー道場 松江", event_id: nil)
   return link_to_doorkeeper(subject, "smalruby", event_id)
 end
 
 def link_to_sproutrb(subject: "スプラウト.rb", event_id: nil)
-  return link_to_doorkeeper(subject, "sproutrb", event_id)
+  return link_to_connpass(subject, "sproutrb", event_id)
 end
 
 def link_to_terrsa(subject = "松江テルサ")

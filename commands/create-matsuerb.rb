@@ -21,10 +21,7 @@ flag(:h, :help, 'show help for this command') do |value, cmd|
   exit(0)
 end
 
-flag(:j, :rubyjr, 'generate Ruby.Jr, too.')
 option(:s, :sproutrb, 'generate Sprout.rb, too. [Default: No Event Page]',
-       argument: :optional, default: nil)
-option(:c, :coderdojo, 'generate CoderDojo, too.  [Default: No Event Page]',
        argument: :optional, default: nil)
 option(:d, :date, 'specify created date [Default: Today]',
        :argument => :optional)

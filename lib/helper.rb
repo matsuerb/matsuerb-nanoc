@@ -109,8 +109,13 @@ def link_to_dojo(subject: "コーダー道場 松江", event_id: nil)
   return link_to_doorkeeper(subject, "smalruby", event_id)
 end
 
-def link_to_sproutrb(subject: "スプラウト.rb", event_id: nil)
-  return link_to_connpass(subject, "sproutrb", event_id)
+def link_to_sproutrb(subject: "スプラウト.rb", event_id: nil, site_type: :connpass)
+  owner = "sproutrb"
+  if site_type == :connpass
+    return link_to_connpass(subject, owner, event_id)
+  else
+    return link_to_doorkeeper(subject, owner, event_id)
+  end
 end
 
 def link_to_terrsa(subject = "松江テルサ")

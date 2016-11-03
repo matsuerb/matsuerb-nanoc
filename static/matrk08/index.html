@@ -143,6 +143,9 @@
        <dl class="news_table">
          <dt>2016/09/17</dt><dd>本ページを公開しました。</dd>
        </dl>
+       <dl class="news_table">
+         <dt>2016/11/03</dt><dd>プログラム内容に発表者の紹介文を追加しました。</dd>
+       </dl>
       </div>
     </div>
     <div class="row">
@@ -151,13 +154,142 @@
     </div>
   </div>
 
+<style>
+.keynote-person {
+  text-align: center;
+  margin-bottom: 20px;
+}
+  .keynote-person .person {
+    display: inline-block;
+    position: relative;
+    background-color: #ccc;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    margin-top: 50px;
+  }
+  .keynote-person .person:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: auto;
+    background: red;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    left: -30px;
+    top: 3px;
+    transform: rotate(-30deg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  .keynote-person .matz {
+    background-image: url('img/matz.jpg')
+  }
+  .keynote-person .matz:after {
+    content: "基調講演";
+  }
+  .keynote-person .matsuda {
+    background-image: url('img/matsuda.jpg')
+  }
+  .keynote-person .matsuda:after {
+    content: "ゲスト講演";
+  }
+  .keynote-person .koshikawa {
+    background-image: url('img/koshikawa.jpg')
+  }
+  .keynote-person .koshikawa:after {
+    content: "ゲスト講演";
+  }
+  .keynote-person p {
+    margin-left: 0px;
+  }
+  .profile {
+    width: 100%;
+    display: table;
+    display: table-cell;
+    text-align: center;
+  }
+    .profile .name {
+      display: inline-block;
+      padding: 10px 0;
+    }
+    .profile .social {
+      display: inline-block;
+      vertical-align: middle;
+    }
+      .profile .social a {
+        display: inline-block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        opacity: 0.4;
+      }
+      .profile .social a:hover {
+        opacity: 1.0;
+      }
+      .profile .social .twitter {
+        background-image: url('icon/twitter.png');
+      }
+      .profile .social .github {
+        background-image: url('icon/github.png');
+      }
+    .profile .description {
+      text-align: left;
+    }
+</style>
+
 <div id="program" class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12">
         <blockquote>
           <h2 class="font-Fenix" id="message">プログラム</h2>
         </blockquote>
-        <p class="main-text font-Fenix">参加希望の方は<a href="#register">参加登録</a>をお願いします。</p>
+        <h3 class="font-Fenix" id="message">講演者ご紹介</h3>
+        <div class="row">
+          <div class="keynote-person">
+              <div class="col-xs4 col-md-4">
+                <span class="person matz"></span>
+                <div class="profile">
+                  <span class="name">まつもとゆきひろ氏</span>
+                  <p class="description">
+                    我らがRubyの生みの親。小泉八雲氏と肩を並べて松江市名誉市民でもあり、Rubyを通して地方から世界のソフトウェア業界に多大な影響を与えています。今回も松江ならでは、基調講演でお話をしていただきます。
+                  </p>
+                </div>
+              </div>
+              <div class="col-xs4 col-md-4">
+                <span class="person matsuda"></span>
+                <div class="profile">
+                  <span class="name">松田明氏</span>
+                  <p class="description">
+                    Ruby、Railsのコミッター。RailsでWeb開発をしたことがある人なら誰もが一度は使ったことがある、KaminariやCarrierWaveの開発者でもあります。また、Asakusa.rbの創設者でもあります。
+                  </p>
+                </div>
+              </div>
+              <div class="col-xs4 col-md-4">
+                <span class="person koshikawa"></span>
+                <div class="profile">
+                  <span class="name">越川直人氏</span>
+                  <span class="social">
+                    <a href="https://twitter.com/ppworks" class="twitter"></a>
+                    <a href="https://github.com/ppworks" class="github"></a>
+                  </span>
+                  <p class="description">
+                    家計簿ソフトの定番であるマネーフォワードのエンジニア。社内のエンジニア文化、開発環境の改善、エンジニア採用強化など社内の様々な業務に携わっており、傍でesa.ioの技術顧問としても日々活動しています。
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+          <p class="main-text font-Fenix" style="margin-left: 20px">参加希望の方は<a href="#register">参加登録</a>をお願いします。</p>
+        </div>
         <br>
         <h3 class="font-Fenix" id="message">午前の部</h3>
         <h4>タイムテーブル</h4>
@@ -190,10 +322,13 @@
                 <span>11:10 〜 11:55</span>
               </td>
               <td class="timetable-time">
-                <span>ゲスト講演１</span>
+                <span>
+                  ゲスト講演<br />
+                  「許可を得る前にプルリクしよう（仮）」
+                </span>
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
+                <span>越川直人氏<br />（マネーフォワード）</span>
               </td>
             </tr>
             <tr>
@@ -204,22 +339,9 @@
                 <span>昼休憩（LT）</span>
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
+                <span></span>
               </td>
             </tr>
-              <td class="timetable-time">
-              </td>
-              <td class="timetable-time">
-                <span>
-                  スプラウト.rb<br />
-                  「タイトル調整中」
-                </span>
-              </td>
-              <td class="timetable-time">
-                <span>松岡香里 氏</span>
-              </td>
-            </tr>
-            <tr>
           </tbody>
         </table>
 
@@ -254,10 +376,10 @@
                 <span>14:30 〜 15:20</span>
               </td>
               <td class="timetable-time">
-                <span>ゲスト講演２</span>
+                <span>ゲスト講演</span>
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
+                <span>松田明氏</span>
               </td>
             </tr>
             <tr>
@@ -268,6 +390,7 @@
                 <span>プログラミングコンテスト結果発表</span>
               </td>
               <td class="timetable-time">
+                <span>-</span>
               </td>
             </tr>
             <tr>
@@ -278,7 +401,7 @@
                 <span>ライブコーディング</span>
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
+                <span>佐藤氏（pim）</span>
               </td>
             </tr>
             <tr>
@@ -292,7 +415,6 @@
                 </span
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
               </td>
             </tr>
             <tr>
@@ -303,7 +425,7 @@
                 <span>クロージング</span>
               </td>
               <td class="timetable-time">
-                <span></span>
+                <span>実行委員長</span>
               </td>
             </tr>
           </tbody>
@@ -325,23 +447,6 @@
     </div>
   </div>
 <br><br>
-
-<div id="sponser" class="container">
-<!--
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <blockquote>
-          <h2 class="font-Fenix" id="message">スポンサー</h2>
-        </blockquote>
-
-        <hr class="col-xs-12 col-md-12">
-        <div class="col-xs-12 col-md-12">
-          <p>スポンサーの募集についてはメールにて<a href="#support">お問い合わせ</a>ください。</p>
-        </div>
-      </div>
-    </div>
-   </div>
--->
 
 <div id="support" class="container">
     <div class="row">

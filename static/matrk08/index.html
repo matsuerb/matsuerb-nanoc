@@ -204,9 +204,41 @@
   .keynote-person p {
     margin-left: 0px;
   }
-  .keynote-person .description {
-    text-align: left;
+  .profile {
+    width: 100%;
+    display: table;
+    display: table-cell;
+    text-align: center;
   }
+    .profile .name {
+      display: inline-block;
+      padding: 10px 0;
+    }
+    .profile .social {
+      display: inline-block;
+      vertical-align: middle;
+    }
+      .profile .social a {
+        display: inline-block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        opacity: 0.4;
+      }
+      .profile .social a:hover {
+        opacity: 1.0;
+      }
+      .profile .social .twitter {
+        background-image: url('icon/twitter.png');
+      }
+      .profile .social .github {
+        background-image: url('icon/github.png');
+      }
+    .profile .description {
+      text-align: left;
+    }
 </style>
 
 <div id="program" class="container">
@@ -219,37 +251,35 @@
         <div class="row">
           <div class="keynote-person">
               <div class="col-xs4 col-md-4">
-                <span class="person matz" style=""></span>
-                <p class="discription">
-                  <p class="name">
-                    まつもとゆきひろ氏
-                  </p>
+                <span class="person matz"></span>
+                <div class="profile">
+                  <span class="name">まつもとゆきひろ氏</span>
                   <p class="description">
                     我らがRubyの生みの親。小泉八雲氏と肩を並べて松江市名誉市民でもあり、Rubyを通して地方から世界のソフトウェア業界に多大な影響を与えています。今回も松江ならでは、基調講演でお話をしていただきます。
                   </p>
-                </p>
+                </div>
               </div>
               <div class="col-xs4 col-md-4">
                 <span class="person matsuda"></span>
-                <p class="discription">
-                  <p class="name">
-                    松田明氏
-                  </p>
+                <div class="profile">
+                  <span class="name">松田明氏</span>
                   <p class="description">
                     Ruby、Railsのコミッター。RailsでWeb開発をしたことがある人なら誰もが一度は使ったことがある、KaminariやCarrierWaveの開発者でもあります。また、Asakusa.rbの創設者でもあります。
                   </p>
-                </p>
+                </div>
               </div>
               <div class="col-xs4 col-md-4">
                 <span class="person koshikawa"></span>
-                <p class="discription">
-                  <p class="name">
-                    越川直人氏
-                  </p>
+                <div class="profile">
+                  <span class="name">越川直人氏</span>
+                  <span class="social">
+                    <a href="https://twitter.com/ppworks" class="twitter"></a>
+                    <a href="https://github.com/ppworks" class="github"></a>
+                  </span>
                   <p class="description">
                     家計簿ソフトの定番であるマネーフォワードのエンジニア。社内のエンジニア文化、開発環境の改善、エンジニア採用強化など社内の様々な業務に携わっており、傍でesa.ioの技術顧問としても日々活動しています。
                   </p>
-                </p>
+                </div>
               </div>
             </div>
         </div>
@@ -289,10 +319,10 @@
                 <span>11:10 〜 11:55</span>
               </td>
               <td class="timetable-time">
-                <span>ゲスト講演</span>
+                <span>許可を得る前にプルリクしよう（仮）</span>
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
+                <span>越川直人氏（マネーフォワード）</span>
               </td>
             </tr>
             <tr>
@@ -303,22 +333,9 @@
                 <span>昼休憩（LT）</span>
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
+                <span></span>
               </td>
             </tr>
-              <td class="timetable-time">
-              </td>
-              <td class="timetable-time">
-                <span>
-                  スプラウト.rb<br />
-                  「タイトル調整中」
-                </span>
-              </td>
-              <td class="timetable-time">
-                <span>松岡香里 氏</span>
-              </td>
-            </tr>
-            <tr>
           </tbody>
         </table>
 
@@ -350,18 +367,42 @@
             </tr>
             <tr>
               <td class="timetable-time">
-                <span>14:30 〜 14:45</span>
+                <span>14:30 〜 15:20</span>
               </td>
               <td class="timetable-time">
                 <span>ゲスト講演</span>
               </td>
               <td class="timetable-time">
-                <span>※調整中</span>
+                <span>松田明氏</span>
               </td>
             </tr>
             <tr>
               <td class="timetable-time">
-                <span>14:50 〜 15:40</span>
+                <span>15:30 〜 15:50</span>
+              </td>
+              <td class="timetable-time">
+                <span>プログラミングコンテスト結果発表</span>
+              </td>
+              <td class="timetable-time">
+                <span>-</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="timetable-time">
+                <span>16:00 〜 16:20</span>
+              </td>
+              <td class="timetable-time">
+                <span>
+                  ライブコーディング<br />
+                </span>
+              </td>
+              <td class="timetable-time">
+                <span>佐藤氏(pim)</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="timetable-time">
+                <span>16:30 〜 17:20</span>
               </td>
               <td class="timetable-time">
                 <span>
@@ -374,46 +415,13 @@
             </tr>
             <tr>
               <td class="timetable-time">
-                <span>15:50 〜 16:20</span>
-              </td>
-              <td class="timetable-time">
-                <span>ライブコーディング1</span>
-              </td>
-              <td class="timetable-time">
-                <span>※調整中</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="timetable-time">
-                <span>16:30 〜 16:50</span>
-              </td>
-              <td class="timetable-time">
-                <span>プログラミングコンテスト結果発表</span>
-              </td>
-              <td class="timetable-time">
-                <span>※調整中</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="timetable-time">
-                <span>16:55 〜 17:25</span>
-              </td>
-              <td class="timetable-time">
-                <span>ライブコーディング2</span>
-              </td>
-              <td class="timetable-time">
-                <span>※調整中</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="timetable-time">
-                <span>17:30 〜 17:40</span>
+                <span>17:20 〜 17:30</span>
               </td>
               <td class="timetable-time">
                 <span>クロージング</span>
               </td>
               <td class="timetable-time">
-                <span></span>
+                <span>実行委員長</span>
               </td>
             </tr>
           </tbody>

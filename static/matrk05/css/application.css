@@ -1,4 +1,4 @@
-// 
+/* default */
 body {
 }
 .top-image {
@@ -10,7 +10,7 @@ body {
 
 }
 
-// container
+/* container */
 .container {
 
 }
@@ -25,7 +25,7 @@ body {
   }
 
 
-// infomation
+/* infomation */
 #infomation {
 
 }

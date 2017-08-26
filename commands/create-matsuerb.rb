@@ -21,6 +21,7 @@ flag(:h, :help, 'show help for this command') do |value, cmd|
   exit(0)
 end
 
+option(:i, :id, 'specify doorkeeper ID', argument: :optional, default: nil)
 option(:s, :sproutrb, 'generate Sprout.rb, too. [Default: No Event Page]',
        argument: :optional, default: nil)
 option(:d, :date, 'specify created date [Default: Today]',
@@ -64,6 +65,12 @@ run do |opts, args, cmd|
     exit(1)
   end
 
+  subject = '松江Ruby(Matsue.rb)定例会'
+  if opts[:id]
+    link = "link_to_doorkeeper('#{subject}', 'matsue-rb', #{opts[:id]})"
+  else
+    link = "link_to('#{subject}', '/about_us/#matsuerb')"
+  end
   File.open(output_path, "w") do |f|
     f.write(<<-EOS)
 ---
@@ -87,7 +94,7 @@ calendar:
 ---
 
 
-<p>　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= link_to("松江Ruby(Matsue.rb)定例会", "/about_us/#matsuerb") %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:00までです。</p>
+<p>　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= #{link} %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:00までです。</p>
     EOS
 
     if [opts[:rubyjr], opts[:sproutrb], opts[:coderdojo]].any?

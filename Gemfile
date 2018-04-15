@@ -12,6 +12,7 @@ gem "guard-nanoc"
 gem "adsf"
 gem "minigit"
 gem "icalendar"
+gem "bundler-audit"
 
 group :test do
   gem "rspec"

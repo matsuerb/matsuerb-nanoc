@@ -1,0 +1,258 @@
+/* default */
+body {
+}
+.top-image {
+  position: relative;
+  height: 130px;
+  background-size: cover;
+}
+.nav {
+
+}
+
+/* container */
+.container {
+
+}
+  .container ul,
+  .container ol,
+  .container dt,
+  .container p {
+    margin-left: 50px;
+  }
+  .container dd {
+    margin-left: 80px;
+  }
+
+
+/* infomation */
+#infomation {
+
+}
+  #infomation dl {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    padding: 30px 0;
+    margin: -2px 0 0 0px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #fff;
+    max-width: 1170px;
+  }
+    #infomation dl dt {
+      float: left;
+      width: 100px;
+    }
+    #infomation dl dd {
+      margin-bottom: 12px;
+    }
+
+/* flow */
+#flow {
+}
+  #flow ol {
+  }
+    #flow ol li {
+      font-size: 18pt;
+    }
+
+/* question */
+#question {
+}
+  #question h3 {
+    margin-left: 20px;
+  }
+  #question .ask {
+    font-size: 16pt;
+  }
+  #question pre {
+    margin-left: 50px;
+  }
+
+footer {
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.list-inline img {
+    padding-bottom: 20px;
+}
+
+.col-xs-12 .col-xs-3{
+  width: 285px;
+  min-height: 160px;
+}
+
+/* sponsor */
+#sponser {
+}
+  #sponser .logo-wrapper {
+    height: 100px;
+    width: 285px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+  }
+
+footer p.text-small{
+  font-size: 11px;
+}
+
+/* timetable */
+table.timetable-table {
+  max-width: 90%;
+  background-color: transparent;
+  margin-left: 15px
+}
+.timetable-table td {
+  font-size:100%;
+}
+.timetable-table tr:nth-child(even) {
+  background-color:#F9F9F9;
+}
+.timetable-time td {
+  font-size:100%;
+}
+.timetable-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+.timetable-table > thead th,.timetable-table > tbody > tr td {
+  text-align: left;
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+  padding-left: 100px
+}
+.timetable-table-bordered > thead > th,
+.timetable-table-bordered > tbody > tr > td {
+  border: 1px solid #dddddd;
+}
+.timetable-table > thead th {
+  font-size: 1.25em;
+}
+.timetable-table > thead th .month {
+  font-size: 0.8em;
+  vertical-align: top;
+}
+.timetable-table > thead th .day {
+  font-size: 0.6em;
+}
+
+/* button */
+.button {
+  padding: 10px 70px;
+  font-size: 25px;
+  line-height: 1.3;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #EB1D15;
+  border-color: #EB1D15;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 295px
+}
+.container mark {
+  margin-top: 400px;
+}
+
+/* speaker */
+.keynote-person {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.keynote-person .person {
+  display: inline-block;
+  position: relative;
+  background-color: #ccc;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  margin-top: 50px;
+}
+.keynote-person .person:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: auto;
+  background: red;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  left: -30px;
+  top: 3px;
+  transform: rotate(-30deg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.keynote-person .matz {
+  background-image: url('../img/matz.jpg')
+}
+.keynote-person .matz:after {
+  content: "基調講演";
+}
+.keynote-person .matsuda {
+  background-image: url('../img/matsuda.jpg')
+}
+.keynote-person .matsuda:after {
+  content: "ゲスト講演";
+}
+.keynote-person .koshikawa {
+  background-image: url('../img/koshikawa.jpg')
+}
+.keynote-person .koshikawa:after {
+  content: "ゲスト講演";
+}
+.keynote-person p {
+  margin-left: 0px;
+}
+.profile {
+  width: 100%;
+  display: table;
+  display: table-cell;
+  text-align: center;
+}
+.profile .name {
+  display: inline-block;
+  padding: 10px 0;
+}
+.profile .social {
+  display: inline-block;
+  vertical-align: middle;
+}
+.profile .social a {
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
+}
+.profile .social a:hover {
+  opacity: 1.0;
+}
+.profile .social .twitter {
+  background-image: url('../icon/twitter.png');
+}
+.profile .social .github {
+  background-image: url('../icon/github.png');
+}
+.profile .description {
+  text-align: left;
+}

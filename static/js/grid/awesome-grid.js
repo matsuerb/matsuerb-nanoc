@@ -1,7 +1,6 @@
 
 /*
 AwesomeGrid v2.0.0
-http://awe5o.me/js/grid
 https://github.com/kamalkhan/awesome-grid
 A minimalist javascript library that allows you to display a responsive grid
 layout stacked on top of each other into rows and columns.
@@ -10,9 +9,10 @@ Copyright (c) 2015 M. Kamal Khan <shout@bhittani.com>
  */
 
 (function() {
-  var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  var AwesomeGrid,
+    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
-  window.AwesomeGrid = (function() {
+  AwesomeGrid = (function() {
     AwesomeGrid.prototype.__els = [];
 
     AwesomeGrid.prototype.__kids = [];
@@ -693,10 +693,18 @@ Copyright (c) 2015 M. Kamal Khan <shout@bhittani.com>
     return results;
   }, true);
 
-  if ((typeof window.define === 'function') && window.define.amd) {
-    window.define('AwesomeGrid', [], function() {
-      return window.AwesomeGrid;
+  if (typeof window !== "undefined" && window !== null) {
+    window.AwesomeGrid = AwesomeGrid;
+  }
+
+  if ((typeof define === 'function') && define.amd) {
+    define('AwesomeGrid', [], function() {
+      return AwesomeGrid;
     });
+  }
+
+  if (typeof module !== "undefined" && module !== null ? module.exports : void 0) {
+    module.exports = AwesomeGrid;
   }
 
 }).call(this);

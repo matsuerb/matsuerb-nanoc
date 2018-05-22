@@ -4,10 +4,12 @@ $(function() {
   $("a").click(function () {
     var mark = $(".mark").offset().top;
     var id = $(this).attr("href");
-    if (id == '#') {
-      return;
+    var point = 120;
+    try {
+      point = $(id).offset().top;
+    } catch(e) {
+      // $('#') は例外になるため無視。
     }
-    var point = $(id).offset().top;
     $('html,body').animate({ scrollTop: point - 120 }, 'fast');
     return false;
   });

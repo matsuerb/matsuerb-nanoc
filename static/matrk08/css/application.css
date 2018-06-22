@@ -255,6 +255,13 @@ table.timetable-table {
 .keynote-person .koshikawa:after {
   content: "ゲスト講演";
 }
+
+.keynote-person .inoue {
+  background-image: url('../img/inoue_nacl.jpg')
+}
+.keynote-person .inoue:after {
+  content: "ゲスト講演";
+}
 .keynote-person p {
   margin-left: 0px;
 }

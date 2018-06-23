@@ -104,6 +104,43 @@ footer {
     text-align:center;
   }
 
+#sponser ul.sponser_list_items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+#sponser ul.sponser_list_items li {
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#sponser ul.sponser_list_items li a { display: block; }
+#sponser ul.sponser_list_items li a span {
+  display: block;
+}
+#sponser ul.sponser_list_items li a span.item_img {
+  text-align: center;
+  max-width: 170px;
+  margin: auto auto 10px auto;
+}
+#sponser ul.sponser_list_items li a span.item_img img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+#sponser ul.sponser_list_items li a span.item_img img.misoca {
+  max-width: 130px;
+  margin-bottom: 0;
+}
+#sponser ul.sponser_list_items li a span.item_title {
+  text-align: center;
+  font-size: 80%;
+}
+
 footer p.text-small{
   font-size: 11px;
 }
@@ -206,16 +243,10 @@ table.timetable-table {
 .keynote-person .matz:after {
   content: "基調講演";
 }
-.keynote-person .matsuda {
-  background-image: url('../img/matsuda.jpg')
+.keynote-person .inoue {
+  background-image: url('../img/inoue_nacl.jpg')
 }
-.keynote-person .matsuda:after {
-  content: "ゲスト講演";
-}
-.keynote-person .koshikawa {
-  background-image: url('../img/koshikawa.jpg')
-}
-.keynote-person .koshikawa:after {
+.keynote-person .inoue:after {
   content: "ゲスト講演";
 }
 .keynote-person p {
@@ -255,4 +286,11 @@ table.timetable-table {
 }
 .profile .description {
   text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+  #sponser ul.sponser_list_items {
+    flex-wrap: wrap;
+  }
 }

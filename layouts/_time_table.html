@@ -1,0 +1,24 @@
+<table class="timetable-table">
+  <thead>
+    <th class="timetable-date col-xs-3">
+      <span class="inner">時間</span>
+    </th>
+    <th class="timetable-date col-xs-5">
+      <span class="inner">プログラム</span>
+    </th>
+    <th class="timetable-date col-xs-4">
+      <span class="inner">発表者</span>
+    </th>
+  </thead>
+  <tbody>
+    <%- @tbody_data.each do |row| -%>
+    <tr>
+      <%- row.each do |column| -%>
+      <td class="timetable-time">
+        <span><%= column -%></span>
+      </td>
+      <%- end -%>
+    </tr>
+    <%- end -%>
+  </tbody>
+</table>

@@ -45,7 +45,7 @@ compile '/matrk0[5-9]/' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    filter :erb, trim_mode: '-'
     filter :kramdown
     layout 'matrk'
   end
@@ -87,4 +87,4 @@ route '*' do
   end
 end
 
-layout '*', :erb
+layout '*', :erb, trim_mode: '-'

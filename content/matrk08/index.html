@@ -263,149 +263,22 @@ publish: true
       <br>
       <h3 class="font-Fenix" id="message">午前の部</h3>
       <h4>タイムテーブル</h4>
-      <table class="timetable-table">
-        <thead>
-          <th class="timetable-date">
-            <span class="inner">時間</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">プログラム</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">発表者</span>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="timetable-time">
-              <span>11:00 〜 11:05</span>
-            </td>
-            <td class="timetable-time">
-              <span>オープニング</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>11:10 〜 11:55</span>
-            </td>
-            <td class="timetable-time">
-              <span>
-                ゲスト講演<br />
-                「許可を得る前にプルリクしよう（仮）」
-              </span>
-            </td>
-            <td class="timetable-time">
-              <span>越川直人氏<br />（マネーフォワード）</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>12:00 〜 13:30</span>
-            </td>
-            <td class="timetable-time">
-              <span>昼休憩（LT）</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<%= render('_time_table', tbody_data: [
+  ['11:00 〜 11:05', 'オープニング', ''],
+  ['11:10 〜 11:55', 'ゲスト講演<br />「許可を得る前にプルリクしよう（仮）」', '越川直人氏<br />（マネーフォワード）'],
+  ['12:00 〜 13:30', '昼休憩（LT）', ''],
+]).gsub(/^/, '      ') -%>
 
       <h3 class="font-Fenix" id="message">午後の部</h3>
       <h4>タイムテーブル</h4>
-      <table class="timetable-table">
-        <thead>
-          <th class="timetable-date">
-            <span class="inner">時間</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">プログラム</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">発表者</span>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="timetable-time">
-              <span>13:30 〜 14:20</span>
-            </td>
-            <td class="timetable-time">
-              <span>基調講演</span>
-            </td>
-            <td class="timetable-time">
-              <span>まつもとゆきひろ 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>14:30 〜 15:20</span>
-            </td>
-            <td class="timetable-time">
-              <span>
-                ゲスト講演<br/>
-                「未定（オープンソースとの関わり方と開発環境に関するお話の予定）」
-              </span>
-            </td>
-            <td class="timetable-time">
-              <span>松田明氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>15:30 〜 15:50</span>
-            </td>
-            <td class="timetable-time">
-              <span>プログラミングコンテスト結果発表</span>
-            </td>
-            <td class="timetable-time">
-              <span>-</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>16:00 〜 16:20</span>
-            </td>
-            <td class="timetable-time">
-              <span>
-                ライブコーディング<br />
-                「mrubyで携帯回線IoTデバイスを作ってみた」
-              </span>
-            </td>
-            <td class="timetable-time">
-              <span>佐藤氏（pim）</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>16:30 〜 17:20</span>
-            </td>
-            <td class="timetable-time">
-              <span>
-                Ruby Quiz<br />
-                本多展幸 氏、小嵜英治 氏（司会・進行）
-              </span>
-            </td>
-            <td class="timetable-time">
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>17:20 〜 17:30</span>
-            </td>
-            <td class="timetable-time">
-              <span>クロージング</span>
-            </td>
-            <td class="timetable-time">
-              <span>実行委員長</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<%= render('_time_table', tbody_data: [
+  ['13:30 〜 14:20', '基調講演', 'まつもとゆきひろ 氏'],
+  ['14:30 〜 15:20', 'ゲスト講演<br/>「未定（オープンソースとの関わり方と開発環境に関するお話の予定）」', '松田明 氏'],
+  ['15:30 〜 15:50', 'プログラミングコンテスト結果発表', '-'],
+  ['16:00 〜 16:20', 'ライブコーディング<br />「mrubyで携帯回線IoTデバイスを作ってみた」', '佐藤 氏（pim）'],
+  ['16:30 〜 17:20', 'Ruby Quiz<br />本多展幸 氏、小嵜英治 氏（司会・進行）', ''],
+  ['17:20 〜 17:30', 'クロージング', '実行委員長'],
+]).gsub(/^/, '      ') -%>
       <br>
     </div>
   </div>

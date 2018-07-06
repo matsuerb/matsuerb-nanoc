@@ -152,152 +152,22 @@ publish: true
       </blockquote>
       <p class="main-text font-Fenix">参加希望の方は<a href="#register">参加登録</a>をお願いします。</p>
       <h3 class="font-Fenix" id="message">タイムテーブル</h3>
-      <table class="timetable-table">
-        <thead>
-          <th class="timetable-date">
-            <span class="inner">時間</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">プログラム</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">発表者</span>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="timetable-time">
-              <span>13:00〜</span>
-            </td>
-            <td class="timetable-time">
-              <span>開場・受付開始</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>13:25 〜 13:30</span>
-            </td>
-            <td class="timetable-time">
-              <span>開会あいさつ</span>
-            </td>
-            <td class="timetable-time">
-              <span>主催者</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>13:30 〜 14:10</span>
-            </td>
-            <td class="timetable-time">
-              <span>基調講演</span>
-            </td>
-            <td class="timetable-time">
-              <span>まつもとゆきひろ 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>14:15 〜 14:25</span>
-            </td>
-            <td class="timetable-time">
-              <span>ショートセッション<br/>「フルタイムのRubyコミッターとして働くこと」</span>
-            </td>
-            <td class="timetable-time">
-              <span>笹田耕一 氏</span>
-            </td>
-          </tr>
-           <tr>
-            <td class="timetable-time" rowspan="4">
-              <span>14:30 〜 15:25</span>
-            </td>
-            <td class="timetable-time" colspan="2">
-              <span><a href="ogiri.html">ライブコーディング大喜利</a></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>session1</span>
-            </td>
-            <td class="timetable-time">
-              <span>岩石嶺 氏<br/>井上裕之 氏<br/>進藤元明 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>session2</span>
-            </td>
-            <td class="timetable-time">
-              <span>前田修吾 氏<br/>内部高志 氏<br/>田上健太 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>表彰</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time" rowspan="5">
-              <span>15:30 〜 17:30</span>
-            </td>
-            <td class="timetable-time" colspan="2">
-              <span>講演</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>ゲスト講演<br/>「納品のない受託開発」と、エンジニアの働きかたのこれから</span>
-            </td>
-            <td class="timetable-time">
-              <span>株式会社ソニックガーデン<br/>倉貫義人 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>「Matsue.rbのふりかえり - 2014 - （仮）」</span>
-            </td>
-            <td class="timetable-time">
-              <span>tm21 吉岡隆行 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>パネルディスカッション</span>
-              <br>
-              <span>「来て、見て、感じた、日本、松江、Ruby、NaCl」</span>
-            </td>
-            <td class="timetable-time">
-              <span>正レナト 氏、多根チアゴ 氏、<br>高尾コウジ 氏（司会・進行）</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>「スモウルビーでライブコーディング」</span>
-            </td>
-            <td class="timetable-time">
-              <span>本多展幸 氏</span>
-            </td>
-          </tr>
-           <tr>
-            <td class="timetable-time">
-              <span>17:35 〜 17:45</span>
-            </td>
-            <td class="timetable-time">
-              <span>クロージング</span>
-              <br>
-              <span>本日のクロージング</span>
-            </td>
-            <td class="timetable-time">
-              <span>主催者</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<%= render('_time_table', tbody_data: [
+  ['13:00〜',        '開場・受付開始', ''],
+  ['13:25 〜 13:30', '開会あいさつ', '主催者'],
+  ['13:30 〜 14:10', '基調講演', 'まつもとゆきひろ 氏'],
+  ['14:15 〜 14:25', 'ショートセッション<br/>「フルタイムのRubyコミッターとして働くこと」', '笹田耕一 氏'],
+  ['14:30 〜 15:25', '<a href="ogiri.html">ライブコーディング大喜利</a>', ''],
+  ['', 'session1', '岩石嶺 氏<br/>井上裕之 氏<br/>進藤元明 氏'],
+  ['', 'session2', '前田修吾 氏<br/>内部高志 氏<br/>田上健太 氏'],
+  ['', '表彰', ''],
+  ['15:30 〜 17:30', '講演', ''],
+  ['', 'ゲスト講演<br/>「納品のない受託開発」と、エンジニアの働きかたのこれから', '株式会社ソニックガーデン<br/>倉貫義人 氏'],
+  ['', '「Matsue.rbのふりかえり - 2014 - （仮）」', 'tm21 吉岡隆行 氏'],
+  ['', 'パネルディスカッション<br />「来て、見て、感じた、日本、松江、Ruby、NaCl」', '正レナト 氏、多根チアゴ 氏、<br>高尾コウジ 氏（司会・進行）'],
+  ['', '「スモウルビーでライブコーディング」', '本多展幸 氏'],
+  ['17:35 〜 17:45', 'クロージング<br />本日のクロージング', '主催者']
+]).gsub(/^/, '      ') -%>
       <br>
     </div>
   </div>

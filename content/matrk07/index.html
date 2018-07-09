@@ -156,209 +156,29 @@ publish: true
       <br>
       <h3 class="font-Fenix" id="message">午前の部</h3>
       <h4>タイムテーブル</h4>
-      <table class="timetable-table">
-        <thead>
-          <th class="timetable-date">
-            <span class="inner">時間</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">プログラム</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">発表者</span>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="timetable-time">
-              <span>11:00 〜 11:05</span>
-            </td>
-            <td class="timetable-time">
-              <span>オープニング</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>11:10 〜 11:55</span>
-            </td>
-            <td class="timetable-time">
-              <span>ゲスト講演<br>「Redmineの歴史とアーキテクチャ(仮)」</span>
-            </td>
-            <td class="timetable-time">
-              <span>Toshi MARUYAMA 氏<br> (Redmineコミッター)</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>12:00 〜 13:30</span>
-            </td>
-            <td class="timetable-time">
-              <span>昼休憩（LT）</span>
-            </td>
-            <td class="timetable-time">
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-            </td>
-            <td class="timetable-time">
-              <span>WWDCに行ってきた話</span>
-            </td>
-            <td class="timetable-time">
-              <span>木村友哉 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-            </td>
-            <td class="timetable-time">
-              <span>島根大学ものづくり部Pimの紹介</span>
-            </td>
-            <td class="timetable-time">
-              <span>佐藤公治 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-            </td>
-            <td class="timetable-time">
-              <span>MidiosX を作りました</span>
-            </td>
-            <td class="timetable-time">
-              <span>進藤元明 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-            </td>
-            <td class="timetable-time">
-              <span>明日のために今日できること（仮</span>
-            </td>
-            <td class="timetable-time">
-              <span>きむらしのぶ 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-            </td>
-            <td class="timetable-time">
-              <span>都会と田舎のライフスタイルGAP</span>
-            </td>
-            <td class="timetable-time">
-              <span>小嵜英治 氏</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<%= render('_time_table', tbody_data: [
+  ['11:00 〜 11:05', 'オープニング', ''],
+  ['11:10 〜 11:55', 'ゲスト講演<br />「Redmineの歴史とアーキテクチャ(仮)」', 'Toshi MARUYAMA 氏<br> (Redmineコミッター)'],
+  ['12:00 〜 13:30', '昼休憩（LT）', ''],
+  ['', 'WWDCに行ってきた話', '木村友哉 氏'],
+  ['', '島根大学ものづくり部Pimの紹介', '佐藤公治 氏'],
+  ['', 'MidiosX を作りました', '進藤元明 氏'],
+  ['', '明日のために今日できること（仮', 'きむらしのぶ 氏'],
+  ['', '都会と田舎のライフスタイルGAP', '小嵜英治 氏']
+]).gsub(/^/, '      ') -%>
 
       <h3 class="font-Fenix" id="message">午後の部</h3>
       <h4>タイムテーブル</h4>
-      <table class="timetable-table">
-        <thead>
-          <th class="timetable-date">
-            <span class="inner">時間</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">プログラム</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">発表者</span>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="timetable-time">
-              <span>13:30 〜 14:20</span>
-            </td>
-            <td class="timetable-time">
-              <span>基調講演</span>
-            </td>
-            <td class="timetable-time">
-              <span>まつもとゆきひろ 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>14:30 〜 14:45</span>
-            </td>
-            <td class="timetable-time">
-              <span>Matsue.rb<br>「matsuerb.products(2014..2015)」</span>
-            </td>
-            <td class="timetable-time">
-              <span>橋本将 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>14:50 〜 15:05</span>
-            </td>
-            <td class="timetable-time">
-              <span>スプラウト.rb<br>「活動内容に関するお話」</span>
-            </td>
-            <td class="timetable-time">
-              <span>松岡香里 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>15:10 〜 15:55</span>
-            </td>
-            <td class="timetable-time">
-              <span><a href="contest.html">プログラミングコンテスト</a> 結果紹介</span>
-            </td>
-            <td class="timetable-time">
-              <span>-</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>16:05 〜 16:20</span>
-            </td>
-            <td class="timetable-time">
-              <span>学校で使用しているシステムのアップデートについての話</span>
-            </td>
-            <td class="timetable-time">
-              <span>藤井貴 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>16:25 〜 16:40</span>
-            </td>
-            <td class="timetable-time">
-              <span>プログラミング少年団<br>「スモウルビーに関するお話」</span>
-            </td>
-            <td class="timetable-time">
-              <span>高尾宏治 氏<br>本多展幸 氏</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>16:45 〜 17:00</span>
-            </td>
-            <td class="timetable-time">
-              <span>Ruby Quiz</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>17:00 〜 17:10</span>
-            </td>
-            <td class="timetable-time">
-              <span>クロージング</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<%= render('_time_table', tbody_data: [
+  ['13:30 〜 14:20', '基調講演', 'まつもとゆきひろ 氏'],
+  ['14:30 〜 14:45', 'Matsue.rb<br>「matsuerb.products(2014..2015)」', '橋本将 氏'],
+  ['14:50 〜 15:05', 'スプラウト.rb<br>「活動内容に関するお話」', '松岡香里 氏'],
+  ['15:10 〜 15:55', '<a href="contest.html">プログラミングコンテスト</a> 結果紹介', '-'],
+  ['16:05 〜 16:20', '学校で使用しているシステムのアップデートについての話', '藤井貴 氏'],
+  ['16:25 〜 16:40', 'プログラミング少年団<br>「スモウルビーに関するお話」', '高尾宏治 氏<br>本多展幸 氏'],
+  ['16:45 〜 17:00', 'Ruby Quiz', ''],
+  ['17:00 〜 17:10', 'クロージング', '']
+]).gsub(/^/, '      ') -%>
       <br>
     </div>
   </div>

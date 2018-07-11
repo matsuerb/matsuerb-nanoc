@@ -51,6 +51,16 @@ compile '/matrk0[5-9]/' do
   end
 end
 
+compile '/matrk06/*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    filter :kramdown
+    layout 'matrk'
+  end
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items

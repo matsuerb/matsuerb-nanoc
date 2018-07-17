@@ -21,6 +21,9 @@ PHOTO_PATHS = {
     "7" => "https://www.flickr.com/groups/2823956@N23/pool/",
     "8" => "https://www.flickr.com/groups/2849741@N23/pool/",
     "9" => "https://www.flickr.com/groups/2886131@N22/pool/",
+  },
+  matrk7: {
+    "写真一覧" => "https://www.flickr.com/groups/2901550@N22/pool/",
   }
 }
 

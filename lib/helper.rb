@@ -10,6 +10,20 @@ MEMBER_DEFAULTS = {
   website: ""
 }
 
+PHOTO_PATHS = {
+  matrk6: {
+    "1" => "https://www.flickr.com/groups/2875305@N22/pool/",
+    "2" => "https://www.flickr.com/groups/2860565@N21/pool/",
+    "3" => "https://www.flickr.com/groups/2819938@N24/pool/",
+    "4" => "https://www.flickr.com/groups/2813862@N25/pool/",
+    "5" => "https://www.flickr.com/groups/2863519@N23/pool/",
+    "6" => "https://www.flickr.com/groups/2886121@N22/pool/",
+    "7" => "https://www.flickr.com/groups/2823956@N23/pool/",
+    "8" => "https://www.flickr.com/groups/2849741@N23/pool/",
+    "9" => "https://www.flickr.com/groups/2886131@N22/pool/",
+  }
+}
+
 def get_tags(items)
   tag_num_hash = Hash.new(0)
   items.each do |item|
@@ -186,4 +200,8 @@ def generate_calendar
     end
   end
   cal.to_ical
+end
+
+def create_links(h)
+  h.collect { |s, url| link_to(s, url, target: "_blank") }.join(" ")
 end

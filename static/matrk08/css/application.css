@@ -248,10 +248,10 @@ table.timetable-table {
   opacity: 1.0;
 }
 .profile .social .twitter {
-  background-image: url('../icon/twitter.png');
+  background-image: url('/matrk_common/icon/twitter.png');
 }
 .profile .social .github {
-  background-image: url('../icon/github.png');
+  background-image: url('/matrk_common/icon/github.png');
 }
 .profile .description {
   text-align: left;

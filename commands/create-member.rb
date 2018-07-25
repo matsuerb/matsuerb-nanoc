@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 require 'digest/md5'
 require 'yaml'
 

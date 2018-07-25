@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 require 'yaml'
 require 'icalendar'
 require 'date'

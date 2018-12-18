@@ -1,7 +1,7 @@
 $(function() {
 
   //ページ内スクロール
-  $(".menu a").click(function () {
+  $(".menu a").on("click", function () {
     var mark = $(".mark").offset().top;
     var id = $(this).attr("href");
     var point = 120;

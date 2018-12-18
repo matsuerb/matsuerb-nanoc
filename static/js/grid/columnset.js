@@ -19,13 +19,13 @@ new AwesomeGrid('ul.menu', {desktop: 601}).gutters(0).grid(1).desktop(8, 0);
 new AwesomeGrid('ul.column', {desktop: 601}).gutters(0).grid(1).desktop(3, 0);
 new AwesomeGrid('ul.grid', {desktop: 601}).gutters(0).grid(5).desktop(6, 0);
 
-$(window).load(function(){
+$(window).on('load', function(){
   new AwesomeGrid('ul.menu', {desktop: 601}).gutters(0).grid(1).desktop(8, 0);
   new AwesomeGrid('ul.grid', {desktop: 601}).gutters(0).grid(5).desktop(6, 0);
 });
 
 var timer = false;
-$(window).resize(function() {
+$(window).on('resize', function() {
   if( window.matchMedia('(max-width:600px)').matches ) {
     new AwesomeGrid('ul.grid', {desktop: 601}).gutters(0).grid(5).desktop(6, 0);
   } else {

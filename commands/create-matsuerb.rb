@@ -38,8 +38,16 @@ run do |opts, args, cmd|
 
   created_date = opts[:date] ? Date.parse(opts[:date]) : Date.today
 
-  nengo = event_date.year - 1988
-  basename = "matsuerb_h#{nengo}#{event_date.strftime('%m')}.html"
+  s = event_date.jisx0301
+  # TODO: 元号が発表されたら文字クラス内にアルファベットを追加する。
+  nengo_regexp = /\A([H])(\d\d)\./i
+  gengo = s.slice(nengo_regexp, 1)
+  jpgengo = {
+    'H' => '平成',
+  }[gengo.upcase]
+
+  nengo = s.slice(nengo_regexp, 2)
+  basename = "matsuerb_#{gengo.downcase}#{nengo}#{event_date.strftime('%m')}.html"
   relative_path =
     'content/news/' + created_date.strftime('%Y/%m/%d/') + basename
   output_path = File.expand_path("../../#{relative_path}", __FILE__)
@@ -73,8 +81,8 @@ run do |opts, args, cmd|
   File.open(output_path, "w") do |f|
     f.write(<<-EOS)
 ---
-title: 「Matsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}」開催のお知らせ
-description: 平成#{nengo}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}を開催します。
+title: 「Matsue.rb定例会#{gengo.upcase}#{nengo}.#{event_date.strftime('%m')}」開催のお知らせ
+description: #{jpgengo}#{nengo}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo.upcase}#{nengo}.#{event_date.strftime('%m')}を開催します。
 created_at: #{created_date.strftime('%Y/%m/%d')}
 kind: article
 publish: true
@@ -85,8 +93,8 @@ calendar:
   year: #{event_date.year}
   month: #{event_date.month}
   day: #{event_date.day}
-  summary: Matsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}
-  description: 平成#{nengo}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}を開催します。
+  summary: Matsue.rb定例会#{gengo.upcase}#{nengo}.#{event_date.strftime('%m')}
+  description: #{jpgengo}#{nengo}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo.upcase}#{nengo}.#{event_date.strftime('%m')}を開催します。
   start_time: "9:30"
   end_time: "17:00"
   location: 島根県松江市朝日町478番地18　松江テルサ別館2階

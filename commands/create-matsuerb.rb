@@ -2,6 +2,29 @@ require 'date'
 require 'fileutils'
 require 'minigit'
 
+def gengo(type)
+  case type
+  when :jp
+    '令和'
+  when :en
+    'R'
+  else
+    raise
+  end
+end
+
+def nengo(year, type)
+  n = '%02d' % (year - 2018)
+  case type
+  when :jp
+    n == '01' ? '元' : n
+  when :en
+    n
+  else
+    raise
+  end
+end
+
 usage 'create-matsuerb EVENT_DATE [options]'
 aliases :cm
 summary 'create news for a periodic Matsue.rb hackathon'
@@ -38,8 +61,9 @@ run do |opts, args, cmd|
 
   created_date = opts[:date] ? Date.parse(opts[:date]) : Date.today
 
-  nengo = event_date.year - 1988
-  basename = "matsuerb_h#{nengo}#{event_date.strftime('%m')}.html"
+  nengo_jp = nengo(event_date.year, :jp)
+  nengo_en = nengo(event_date.year, :en)
+  basename = "matsuerb_#{gengo(:en).downcase}#{nengo_en}#{event_date.strftime('%m')}.html"
   relative_path =
     'content/news/' + created_date.strftime('%Y/%m/%d/') + basename
   output_path = File.expand_path("../../#{relative_path}", __FILE__)
@@ -73,8 +97,8 @@ run do |opts, args, cmd|
   File.open(output_path, "w") do |f|
     f.write(<<-EOS)
 ---
-title: 「Matsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}」開催のお知らせ
-description: 平成#{nengo}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}を開催します。
+title: 「Matsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}」開催のお知らせ
+description: #{gengo(:jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
 created_at: #{created_date.strftime('%Y/%m/%d')}
 kind: article
 publish: true
@@ -85,8 +109,8 @@ calendar:
   year: #{event_date.year}
   month: #{event_date.month}
   day: #{event_date.day}
-  summary: Matsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}
-  description: 平成#{nengo}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会H#{nengo}.#{event_date.strftime('%m')}を開催します。
+  summary: Matsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}
+  description: #{gengo(:jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
   start_time: "9:30"
   end_time: "17:00"
   location: 島根県松江市朝日町478番地18　松江テルサ別館2階

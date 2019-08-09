@@ -1,0 +1,25 @@
+version: 1
+
+update_configs:
+  - package_manager: "ruby:bundler"
+    directory: "/"
+    update_schedule: "daily"
+    default_assignees:
+      - sho-h
+    allowed_updates:
+      - match:
+          # Only includes indirect (aka transient/sub-dependencies) for
+          # supported package managers: ruby:bundler, python, go:modules,
+          #                             php:composer, rust:cargo
+          update_type: "all"
+
+    automerged_updates:
+      - match:
+          dependency_type: "development"
+          update_type: "all"
+      - match:
+          dependency_type: "production"
+          update_type: "semver:patch"
+
+    # Enable. Only lockfile updates (ignore updates that require Gemfile changes)
+    version_requirement_updates: "off"

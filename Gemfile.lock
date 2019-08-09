@@ -13,9 +13,7 @@ GEM
       celluloid (>= 0.15.0)
       nio4r (>= 0.5.0)
     coderay (1.1.0)
-    colored (1.2)
-    cri (2.6.0)
-      colored (~> 1.2)
+    cri (2.15.9)
     diff-lcs (1.2.5)
     ffi (1.9.25)
     formatador (0.2.4)
@@ -39,7 +37,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.2)
     minigit (0.0.4)
-    nanoc (3.6.11)
+    nanoc (3.8.0)
       cri (~> 2.3)
     nio4r (1.2.1)
     pry (0.9.12.6)
@@ -77,11 +75,11 @@ DEPENDENCIES
   listen
   mime-types
   minigit
-  nanoc
+  nanoc (~> 3.8)
   rack
   rb-fsevent
   rspec
   timecop
 
 BUNDLED WITH
-   1.16.1
+   1.16.6

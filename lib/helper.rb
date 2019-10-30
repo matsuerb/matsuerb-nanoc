@@ -183,7 +183,7 @@ def generate_calendar
     end
   end
 
-  articles.each do |item|
+  articles.sort_by { |a| a.identifier }.each do |item|
     # :calendarの内容は考慮していないので注意
     if item[:calendar] != nil
       calendar = item[:calendar]

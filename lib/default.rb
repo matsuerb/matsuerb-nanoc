@@ -13,3 +13,6 @@ module Nanoc::Helpers::Tagging
     %[<a href="#{h base_url}#{h tag}/" rel="tag">#{h tag}</a>]
   end
 end
+
+# calendar.icsの作成時に75文字で改行されてGoogle Calendarにインポートできなくなるので追加
+Icalendar::MAX_LINE_LENGTH = 200

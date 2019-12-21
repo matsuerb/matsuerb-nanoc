@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= @item[:title] %></title>
+    <meta name="description" content="<%= @item[:title] %> <%= @item[:date] %> <%= @item[:location] %>">
+    <meta property="og:title" content="<%= @item[:title] %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://matsue.rubyist.net/">
+    <meta property="og:description" content="<%= @item[:title] %> <%= @item[:date] %> <%= @item[:location] %>にて開催">
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>" />
+    <link rel="stylesheet" href="/matrk_common/css/normalize.css">
+    <link rel="stylesheet" href="/matrk_common/css/skeleton.css">
+    <link rel="stylesheet" href="<%= @item.identifier[/\/\w*\//] %>css/application.css">
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <%= yield %>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="raw">
+        <p class="text-center"><a href="http://matsue.rubyist.net/"><img src="/matrk_common/img/h_logo.jpg" alt="matsuerb"></a></p>
+        <p class="text-center text-small">RubyロゴはYukihiro Matsumotoの著作物であり、Creative Commons BY-SAライセンスにより <a href="https://www.ruby-lang.org/ja/about/logo/">https://www.ruby-lang.org/ja/about/logo/</a> で公開されています。</p>
+      </footer>
+    </div>
+  </body>
+ </html>

@@ -26,7 +26,7 @@ GEM
     guard-nanoc (1.0.2)
       guard (>= 1.8.0)
       nanoc (>= 3.6.3)
-    icalendar (2.5.3)
+    icalendar (2.6.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
     kramdown (1.3.3)

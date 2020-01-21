@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    adsf (1.2.0)
-      rack (>= 1.0.0)
+    adsf (1.4.3)
+      rack (>= 1.0.0, < 3.0.0)
     builder (3.2.4)
     bundler-audit (0.6.1)
       bundler (>= 1.2.0, < 3)

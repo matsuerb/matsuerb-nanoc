@@ -14,5 +14,6 @@ module Nanoc::Helpers::Tagging
   end
 end
 
+require 'icalendar'
 # calendar.icsの作成時に75文字で改行されてGoogle Calendarにインポートできなくなるので追加
 Icalendar::MAX_LINE_LENGTH = 200

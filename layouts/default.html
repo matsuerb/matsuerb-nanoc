@@ -6,7 +6,7 @@
 <body>
 
 <ul class="menu">
-<% if @item.identifier.size == 1 %>
+<% if @item.identifier.to_s.size == 1 %>
 <li data-ag-x="3"><h1><img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a></h1></li>
 <% else %>
 <li data-ag-x="3"><img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a></li>

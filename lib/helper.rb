@@ -72,7 +72,7 @@ def tag_page_item_list(tag)
 #  html_source = '<dl">'
   html_source = ""
   items_with_tag(tag).each do |item|
-    html_source << "<blockquote><small>#{link_to(item[:title], item.identifier)}</small><p>#{strip_html(item.reps.first.compiled_content).slice(0,100)}...</p></blockquote>"
+    html_source << "<blockquote><small>#{link_to(item[:title], item.identifier.to_s)}</small><p>#{strip_html(item.reps.first.compiled_content).slice(0,100)}...</p></blockquote>"
   end
   html_source
 end
@@ -82,7 +82,7 @@ def article_list
   sorted_articles.each do |item|
     date = item[:updated_at]
     date ||= item[:created_at]
-    html_source << "<li>#{link_to(item[:title], item.identifier)} - #{date}</li>"
+    html_source << "<li>#{link_to(item[:title], item.identifier.to_s)} - #{date}</li>"
   end
   html_source << "</ul>"
 end
@@ -183,7 +183,7 @@ def generate_calendar
     end
   end
 
-  articles.sort_by { |a| a.identifier }.each do |item|
+  articles.sort_by { |a| a.identifier.to_s }.each do |item|
     # :calendarの内容は考慮していないので注意
     if item[:calendar] != nil
       calendar = item[:calendar]

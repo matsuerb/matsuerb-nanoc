@@ -12,7 +12,7 @@
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>" />
     <link rel="stylesheet" href="/matrk_common/css/bootstrap.css">
     <link rel="stylesheet" href="/matrk_common/css/carousel.css">
-    <link rel="stylesheet" href="<%= @item.identifier[/\/\w*\//] %>css/application.css">
+    <link rel="stylesheet" href="<%= @item.identifier.to_s[/\/\w*\//] %>css/application.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/matrk_common/js/application.js"></script>
   </head>

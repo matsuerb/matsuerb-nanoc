@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <link rel="stylesheet" href="/css/siteindex.css" />
-<% if @item.identifier.size != 1 %>
+<% if @item.identifier.to_s.size != 1 %>
 <link rel="stylesheet" href="/css/sitecontents.css" />
 <% end %>
 <link rel="shortcut icon" href="/images/bn/favicon.ico" />

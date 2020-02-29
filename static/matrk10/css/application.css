@@ -3,25 +3,19 @@
 }
 
 .content {
-  background-color: #fff;
-}
-
-/* cover */
-.cover {
-  position: fixed;
-  top: 0;
-  right : 0;
-  bottom: 0;
-  left: 0;
-  background: no-repeat url('../img/cover.jpg') center/cover;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* title */
 .title {
-  position: relative;
+  background: url('../img/cover.jpg') fixed center/cover;
+  height: 100vh;
+}
+
+.title__wrapper {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 
 .title__cover {
@@ -34,7 +28,6 @@
   text-align: center;
   color: #fff;
   background-color: rgb(255, 0, 0, 0.7);
-  border: 1px solid #e33;
   border-radius: 2px;
 }
 

@@ -5,43 +5,31 @@ keywords:
 ---
 
 <ul class="column">
-<li>
-<div id="doc">
- <h2><a href="/news/"><img src="/images/bn/ruby.png" alt="*"/> お知らせ</a></h2>
-
-<% sorted_articles[0..4].each do |item| %>
-
-    <div class="wrp">
-      <div class="title"><%= item[:title] %><span class="date">(<%= item[:created_at] %>)</span></div>
-      <div class="body">
-        <p><%= excerptize(strip_html(item.reps.first.compiled_content), length:100) %></p>
-      </div>
-      <div class="link"><a href="<%= item.identifier %>">続きはこちら</a></div>
+  <li>
+    <div id="doc">
+      <h2><a href="/news/"><img src="/images/bn/ruby.png" alt="*"/> お知らせ</a></h2>
+      <% sorted_articles[0..4].each do |item| %>
+        <div class="wrp">
+          <div class="title"><%= item[:title] %><span class="date">(<%= item[:created_at] %>)</span></div>
+          <div class="body">
+            <p><%= excerptize(strip_html(item.reps.first.compiled_content), length:100) %></p>
+          </div>
+          <div class="link"><a href="<%= item.identifier %>">続きはこちら</a></div>
+        </div>
+      <% end %>
     </div>
-
-<% end %>
-
-</div>
-</li>
-
-<li id="columncenter">
-<div id="tw">
-<h2><a href="https://twitter.com/search?q=%23matsuerb&src=typd&lang=ja"><img src="/images/bn/twitter.png" alt="*" /> twitter</a></h2>
-  <a class="twitter-timeline" href="https://twitter.com/search?q=%23matsuerb" data-widget-id="351231887852851200" height="800">#matsuerb に関するツイート</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
-</li>
-
-<li>
-<div id="fb">
-<h2><a href="https://www.facebook.com/groups/matsuerb"><img src="/images/bn/facebook.png" alt="*" /> Facebook</a></h2>
-
-<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmatsue.rubyist.net%2F&width=450&layout=standard&action=like&show_faces=true&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-
-<p id="facebook">Matsue.rbの情報交換やイベントの告知は主にFacebookの<a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)グループ</a>で行なっていますので、よろしければご参加ください。</p>
- 
-<ul class="grid">
-</ul>
-</div>
-</li>
+  </li>
+  <li>
+    <div id="tw">
+      <h2><a href="https://twitter.com/search?q=%23matsuerb&src=typd&lang=ja"><img src="/images/bn/twitter.png" alt="*" /> twitter</a></h2>
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%23matsuerb">#matsuerb に関するツイート</a>
+    </div>
+    <div id="fb">
+      <h2><a href="https://www.facebook.com/groups/matsuerb"><img src="/images/bn/facebook.png" alt="*" /> Facebook</a></h2>
+      <p id="facebook">Matsue.rbの情報交換やイベントの告知は主にFacebookの<a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)グループ</a>で行なっていますので、よろしければご参加ください。</p>
+      <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmatsue.rubyist.net%2F&width=450&layout=standard&action=like&show_faces=true&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+    <ul class="grid">
+    </ul>
+  </li>
 </ul>

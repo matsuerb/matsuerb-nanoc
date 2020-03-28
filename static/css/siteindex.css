@@ -38,28 +38,14 @@ ul.column li img {
   margin-left: auto;
   margin-right: auto;
 }
-#columncenter {
-  background: -webkit-linear-gradient(top, #f9f9f9, #e6e6e6);
-  background: -moz-linear-gradient(top, #f9f9f9, #e6e6e6);
-  background: -ms-linear-gradient(top, #f9f9f9, #e6e6e6);
-  background: -o-linear-gradient(top, #f9f9f9, #e6e6e6);
-  background: linear-gradient(to bottom, #f9f9f9, #e6e6e6)；
-}
 div#doc {
   padding: 0 13px 0 0;
-  min-height: 840px;
 }
 div#tw {
-  padding: 0 13px;
-  color: #000;
-  background-color: #fff;
-  min-height: 840px;
+  padding: 0 0 13px 0;
 }
 div#fb {
-  padding: 0 0 0 13px;
-  color: #000;
-  background-color: #fff;
-  min-height: 810px;
+  padding: 13px 0;
 }
 /* grid member image */
 ul.grid {
@@ -259,7 +245,7 @@ iframe {
 }
 p#facebook {
   font-size: 1em;
-  padding: 0 0 3px;
+  margin-top: 15px;
 }
 @media only screen and (max-width: 1300px){
   .toc,
@@ -322,20 +308,6 @@ p#facebook {
   body {
     padding: 3px 10px 10px;
   }
-  #columncenter {
-    background: #fff;
-    margin: 0 0 10px;
-  }
-  div#tw {
-    min-height: 836px;
-  }
-  div#fb {
-    min-height: 380px;
-  }
-  ul.grid {
-    min-height: 225px;
-    max-height: 240px;
-  }
   div.doc {
     padding: 0;
   }
@@ -392,13 +364,6 @@ p#facebook {
   }
 }
 @media only screen and (max-width: 400px){
-  div#fb {
-    min-height: 300px;
-  }
-  ul.grid {
-    min-height: 145px;
-    max-height: 150px
-  }
   #footer {
     margin: 0 auto;
   }

@@ -11,7 +11,7 @@
     <meta property="og:description" content="<%= @item[:title] %> <%= @item[:date] %> <%= @item[:location] %>にて開催">
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>" />
     <link rel="stylesheet" href="/matrk_common/css/normalize.css">
-    <link rel="stylesheet" href="<%= @item.identifier[/\/\w*\//] %>css/application.css">
+    <link rel="stylesheet" href="<%= @item.identifier.to_s[/\/\w*\//] %>css/application.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
   </head>
   <body>

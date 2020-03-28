@@ -121,13 +121,3 @@
   border: 0;
   margin-bottom: 68px;
 }
-
-/* COVIT-19 の一次対応 */
-.contact,
-.about,
-.schedule,
-.map,
-.sponsors,
-footer {
-  display: none;
-}

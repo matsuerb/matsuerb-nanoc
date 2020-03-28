@@ -54,18 +54,30 @@
 
 .button {
   display: inline-block;
-  padding: 10px;
-  margin: 0 auto;
-  border: none;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
   text-decoration: none;
+  color: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  width: 200px;
+  height: 60px;
+  line-height: 80px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: #f75e5e;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #b5b5b5;
 }
-
+.btn-real:active {
+  /*押したとき*/
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
 /* about */
 .about {
   text-align: center;
   padding: 20px;
+  height: 100vh;
 }
 
 /* schedule */
@@ -85,7 +97,16 @@
 .schedule__time {
   display: inline-block;
   width: 100%;
-  margin: 0 auto;
+}
+
+.schedule__title {
+  display: inline-block;
+  width: 100%;
+}
+
+.schedule__speaker {
+  display: inline-block;
+  width: 100%;
 }
 
 /* map */
@@ -94,4 +115,14 @@
   height: 350px;
   border: 0;
   margin-bottom: 68px;
+}
+
+/* COVIT-19 の一次対応 */
+.contact,
+.about,
+.schedule,
+.map,
+.sponsors,
+footer {
+  display: none;
 }

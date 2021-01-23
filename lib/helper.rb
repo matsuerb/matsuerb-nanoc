@@ -62,8 +62,7 @@ def tag_page
   tags = get_tags(@items)
   tags.each do |k, v|
     page_stats = {:title => "tag: #{k}", :tag_page_title => "#{k}"}
-    option = {:binary => false}
-    @items.create("<%= render('_tag') %>", page_stats, Nanoc::Identifier.new("/tags/#{k}/", type: :legacy), option)
+    @items.create("<%= render('_tag') %>", page_stats, Nanoc::Identifier.new("/tags/#{k}/", type: :legacy))
   end
 end
 

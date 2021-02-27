@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "nanoc", "~> 4.11"
+gem "nanoc", "~> 4.12"
 gem "listen"
 gem "rb-fsevent"
 gem "rack"

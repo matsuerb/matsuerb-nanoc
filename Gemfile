@@ -12,6 +12,7 @@ gem "guard-nanoc"
 gem "adsf"
 gem "minigit"
 gem "icalendar"
+gem "puma"
 
 group :development do
   gem "bundler-audit"

@@ -2,11 +2,11 @@
 
 ## はじめに
 
-これは、[Matsue.rb公式Webサイト](http://matsue.rubyist.net/)のソースコードです。
+これは、[Matsue.rb公式Webサイト](https://matsue.rubyist.net/)のソースコードです。
 
-[Matsue.rb公式Webサイト](http://matsue.rubyist.net/)は[nanoc](http://nanoc.ws/)を利用して構築しています。
+[Matsue.rb公式Webサイト](https://matsue.rubyist.net/)は[nanoc](http://nanoc.ws/)を利用して構築しています。
 
-また、[GitHub Pages](http://pages.github.com/)を利用して公開しています。rubyist.netのサブドメインとして、[matsue.rubyist.net](http://matsue.rubyist.net/)をいただいています。
+また、[GitHub Pages](http://pages.github.com/)を利用して公開しています。rubyist.netのサブドメインとして、[matsue.rubyist.net](https://matsue.rubyist.net/)をいただいています。
 
 本文書では、Matsue.rb公式Webサイトをメンテナンスするための情報や、コンテンツの制作に貢献するための情報を提供します。
 
@@ -39,7 +39,7 @@
 
 ## コンテンツ制作への貢献
 
-[Matsue.rb公式Webサイト](http://matsue.rubyist.net/)のコンテンツの制作を手伝っていただける方へ、そのやり方を説明します。少し長いですが、GitHubを利用したプロジェクトへの貢献手順の一般的な方法ですので、覚えて損はありません！！
+[Matsue.rb公式Webサイト](https://matsue.rubyist.net/)のコンテンツの制作を手伝っていただける方へ、そのやり方を説明します。少し長いですが、GitHubを利用したプロジェクトへの貢献手順の一般的な方法ですので、覚えて損はありません！！
 
 1. GitHubのアカウントを取得します。
 2. このレポジトリを[Fork](fork)します。
@@ -72,7 +72,7 @@
 
 ### グループのメンバー 一覧の更新
 
-Matsue.rbのメンバーの一覧を http://matsue.rubyist.net/members/ で公開しています。
+Matsue.rbのメンバーの一覧を https://matsue.rubyist.net/members/ で公開しています。
 メンバーの情報は、 [/resources/members.yml](https://github.com/matsuerb/matsuerb-nanoc/blob/master/resources/members.yml) で管理していますので、上記の「コンテンツ制作への貢献」を参考にして、このファイルを修正してpull requestを送ってください。
 
 ### お知らせの追加

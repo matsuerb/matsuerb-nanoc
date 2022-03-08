@@ -118,7 +118,7 @@ GEM
     shellany (0.0.1)
     slow_enumerator_tools (1.1.0)
     thor (1.1.0)
-    timecop (0.9.4)
+    timecop (0.9.5)
     tty-color (0.6.0)
     tty-command (0.10.1)
       pastel (~> 0.8)

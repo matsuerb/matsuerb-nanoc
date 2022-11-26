@@ -39,7 +39,7 @@ GEM
       ice_cube (~> 0.16)
     ice_cube (0.16.4)
     json_schema (0.21.0)
-    kramdown (2.3.2)
+    kramdown (2.4.0)
       rexml
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)

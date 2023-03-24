@@ -111,13 +111,13 @@ calendar:
   day: #{event_date.day}
   summary: Matsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}
   description: #{gengo(:jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
-  start_time: "9:30"
+  start_time: "13:00"
   end_time: "17:00"
   location: 島根県松江市朝日町478番地18　松江テルサ別館2階
 ---
 
 
-<p>　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= #{link} %>を開催します。場所は<%= link_to_osslab %>で、時間は09:30から17:00までです。</p>
+<p>　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に<%= #{link} %>を開催します。場所は<%= link_to_osslab %>で、時間は13:00から17:00までです。</p>
     EOS
 
     if [opts[:rubyjr], opts[:sproutrb], opts[:coderdojo]].any?

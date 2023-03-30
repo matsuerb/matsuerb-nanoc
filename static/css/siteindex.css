@@ -39,10 +39,10 @@ ul.column li img {
   margin-right: auto;
 }
 div#doc {
-  padding: 0 13px 0 0;
+  padding: 13px 0;
 }
 div#tw {
-  padding: 0 0 13px 0;
+  padding: 13px 0;
 }
 div#fb {
   padding: 13px 0;
@@ -243,7 +243,7 @@ iframe {
   width: 100%;
   min-height: 120px;
 }
-p#facebook {
+p.description {
   font-size: 1em;
   margin-top: 15px;
 }

@@ -1,22 +1,180 @@
 ---
 title: 松江Ruby会議10
-date: 2020年6月6日（土）
+date: 2023年9月16日（土）
 location: 松江オープンソースラボ
-created_at: 2019/12/21
+created_at: 2018/04/24
 publish: true
 ---
 
-<main class="content">
-  <header class="title">
-    <div class="title__wrapper">
-      <div class="title__cover">
-        <h1 class="title__main">Matsue RubyKaigi 10</h1>
+<header class="bs-docs-nav" role="banner">
+  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h1><img src="img/matrb10Logo.png" alt="MATSUE Ruby Kaigi 10"></h1>
+      </div>
 
-        <p>"松江 Ruby の文化祭！"</p>
-        <p>Coming Soon...</p>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav menu">
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#guidance">開催概要</a></li>
+          <li><a href="#information">新着・お知らせ</a></li>
+          <li><a href="#program">プログラム</a></li>
+          <li><a href="#register">参加登録の案内</a></li>
+          <li><a href="#support">お問い合わせ先</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
 
-        <p class="title__info">新型コロナウイルスの感染拡大を受け、開催日を延期します。<br />開催時期と内容については収束の状況を見て掲載致します！</p>
+    </div><!-- /.container -->
+  </nav>
+</header>
+
+<div class="top-image"></div>
+
+<div class="container mark"></div>
+
+<br><br>
+
+<div id="guidance" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <blockquote>
+        <h2 class="font-Fenix" id="outline">開催概要</h2>
+      </blockquote>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <table class="table table-responsive table-condensed">
+        <tr>
+          <th width="20%">名称</th>
+          <td>松江Ruby会議10</td>
+        </tr>
+        <tr>
+          <th>開催日</th>
+          <td>2023年9月16日（土）</td>
+        </tr>
+        <tr>
+          <th>会場</th>
+          <td>松江オープンソースラボ</td>
+        </tr>
+        <tr>
+          <th>参加費</th>
+          <td>無料</td>
+        </tr>
+        <tr>
+          <th>主催</th>
+          <td>Matsue.rb(まつえるびー)</td>
+        </tr>
+        <tr>
+          <th>後援</th>
+          <td>日本Rubyの会</td>
+        </tr>
+        <tr>
+          <th>公式タグ</th>
+          <td>Twitter: <a href="https://twitter.com/search?q=matrk10&src=typd&f=realtime" target="_blank">#matrk10</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col-xs-12 col-md-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.62773773665!2d133.06001721495488!3d35.46400944946242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355704e36c4abdf9%3A0x404e8e5c9983181d!2z5p2-5rGf44Kq44O844OX44Oz44K944O844K544Op44Oc!5e0!3m2!1sja!2sjp!4v1524508374268" width="350" height="270" frameborder="0" style="border:0"></iframe>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div id="information" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <blockquote>
+        <h2 class="font-Fenix" id="message">新着・お知らせ</h2>
+      </blockquote>
+      <dl class="news_table">
+        <dt>2023/04/17</dt><dd>本ページを公開しました。</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div id="program" class="container">
+  <blockquote>
+    <h2 class="font-Fenix" id="message">プログラム</h2>
+  </blockquote>
+  <h3 class="font-Fenix" id="message">講演者ご紹介</h3>
+  <div class="row">
+    <div class="keynote-person">
+      <div class="col-xs4 col-md-4">
+        <span class="person unak"></span>
+        <div class="profile">
+          <span class="name">中村宇作氏</span>
+          <span class="social">
+            <a href="https://twitter.com/unak" class="twitter"></a>
+            <a href="https://github.com/unak" class="github"></a>
+          </span>
+          <p class="description">
+            Rubyのコアコミッタを務められているusaこと中村宇作氏。
+          </p>
+        </div>
       </div>
     </div>
-  </header>
-</main>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <h3>タイムテーブル</h3>
+<%= render('_time_table', tbody_data: [
+  ['13:30 〜 13:40', '開会の挨拶', ''],
+  ['13:40 〜 14:00', 'session 1', ''],
+  ['14:00 〜 14:20', 'session 2', ''],
+  ['14:20 〜 14:40', 'session 3', ''],
+  ['14:40 〜 15:00', 'session 4', ''],
+  ['15:00 〜 15:20', 'session 5', ''],
+  ['15:20 〜 15:40', 'session 6', ''],
+  ['15:40 〜 16:20', 'LTセッション', ''],
+  ['16:20 〜 16:50', '休憩', ''],
+  ['16:50 〜 17:20', 'ゲスト講演', ''],
+  ['17:20 〜 17:50', '企画セッション', ''],
+  ['17:50 〜 18:00', '閉会の挨拶', '']
+]).gsub(/^/, '      ') %>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div id="register" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <blockquote>
+        <h2 class="font-Fenix" id="message">参加登録の案内</h2>
+      </blockquote>
+      <p class="main-text font-Fenix">カンファレンスの参加費は無料ですが人数把握のため事前登録をお願いします。</p>
+      <a href="http://matsue-rb.doorkeeper.jp/events/8268">
+      <button class="button" type="button">参加受付</button></a>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div id="support" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <blockquote>
+        <h2 class="font-Fenix" id="message">お問い合わせ</h2>
+      </blockquote>
+      <p class="main-text font-Fenix">松江Ruby会議10に関するお問い合わせは、matsuerubykaigi _at_ googlegroups.comまでメールにてご連絡ください。</p>
+    </div>
+  </div>
+</div><!-- /.container -->

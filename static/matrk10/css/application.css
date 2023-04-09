@@ -1,3 +1,10 @@
 .container mark {
   margin-top: 400px;
 }
+
+/* speaker */
+.keynote-person .unak {
+}
+.keynote-person .unak:after {
+  content: "ゲスト講演";
+}

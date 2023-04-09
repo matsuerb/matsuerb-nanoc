@@ -6,38 +6,28 @@ created_at: 2018/06/24
 publish: true
 ---
 
-<header class="bs-docs-nav" role="banner">
-  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <h1><img src="img/matrb05Logo.png" alt="MATSUE Ruby Kaigi 05"></h1>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MATSUE RUBY KAIGI 05</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#guidance">開催概要</a></li>
+        <li class="nav-item"><a class="nav-link" href="#information">新着・お知らせ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#program">プログラム</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">参加登録の案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="#support">お問い合わせ先</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav menu">
-          <li><a href="#">ホーム</a></li>
-          <li><a href="#guidance">開催概要</a></li>
-          <li><a href="#information">新着・お知らせ</a></li>
-          <li><a href="#program">プログラム</a></li>
-          <li><a href="#register">参加登録の案内</a></li>
-          <li><a href="#support">お問い合わせ先</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-  </nav>
-</header>
-
-<div class="top-image"></div>
-
-<div class="container mark"></div>
-
-<br>
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/matrk_common/img/ruby.png" width="60" height="60">
+  <h1 class="display-5 fw-bold">MATSUE RUBY KAIGI 05</h1>
+</div>
 
 <div id="guidance" class="container">
   <div class="row">
@@ -144,16 +134,25 @@ publish: true
   </div>
 </div>
 
+<br><br>
+
 <div id="program" class="container">
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <blockquote>
         <h2 class="font-Fenix" id="message">プログラム</h2>
       </blockquote>
-      <h3 class="font-Fenix" id="message">・午前の部</h3>
-      <p class="main-text font-Fenix">松江Ruby会議の開会前に交流を兼ねてLT大会を行います。</p>
-      <br>
-      <h4 class="font-Fenix" id="message">タイムテーブル</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">タイムテーブル</h3>
+          <h4 class="font-Fenix" id="message">午前の部</h4>
+          <p class="main-text font-Fenix">松江Ruby会議の開会前に交流を兼ねてLT大会を行います。</p>
+          <br>
 <%= render('_time_table', tbody_data: [
   ['11:00',          '開場', ''],
   ['11:30 〜 13:00', 'LT大会、昼食', ''],
@@ -165,13 +164,11 @@ publish: true
   ['',               '「Chef使うなら知っておくと便利なn個のCookbook」', '西田雄也 氏（<a href="https://twitter.com/nishidayuya">@nishidayuya</a>）']
 ]).gsub(/^/, '      ') -%>
       <br>
-      <h3 class="font-Fenix" id="message">・午後の部</h3>
+      <h4 class="font-Fenix" id="message">午後の部</h4>
       <p class="main-text font-Fenix">松江Ruby会議の午後の部は<strong>まつもとゆきひろ氏</strong>による基調講演をはじめ、<strong>DXRuby開発者のmirichi氏</strong>のゲスト講演もあります。
       </p>
       <p class="main-text font-Fenix">ライブコーディングではMatsue.rbのメンバーによる、日頃の活動の成果の発表に加え、Rubyコミッターも参加します！ </p>
       <br>
-      <br>
-      <h4 class="font-Fenix" id="message">タイムテーブル</h4>
 <%= render('_time_table', tbody_data: [
   ['13:00 〜',       '開場・受付開始', ''],
   ['13:25 〜 13:30', '開会あいさつ', '主催者'],
@@ -184,73 +181,19 @@ publish: true
   ['17:30 〜',       '閉会挨拶', '主催者']
 ]).gsub(/^/, '      ') -%>
       <br>
-      <h3 class="font-Fenix" id="message">・夕方の部、懇親会 </h3>
-      <br>
-      <h4 class="font-Fenix" id="message">タイムテーブル</h4>
-      <table class="timetable-table">
-        <thead>
-          <th class="timetable-date">
-            <span class="inner">時間</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">プログラム</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">会場</span>
-          </th>
-          <th class="timetable-date">
-            <span class="inner">備考</span>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="timetable-time">
-              <span>18:00 〜 19:30</span>
-            </td>
-            <td class="timetable-time">
-              <span>Ruby Jr発表会</span>
-            </td>
-            <td class="timetable-time">
-              <span>オープンソースラボ</span>
-            </td>
-            <td class="timetable-time">
-            <span>中高生による発表会です。Rubyを使って作ったゲームの発表をします。</span>
-            </td>
-          </th>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-            <td class="timetable-time">
-              <span>ライブコーディング大喜利</span>
-            </td>
-            <td class="timetable-time">
-              <span>松江テルサ</span>
-            </td>
-            <td class="timetable-time">
-              <span>※RubyJrと平行開催となるため開催場所が<strong><a href="http://www.sanbg.com/terrsa/">テルサ研修室２</a></strong>となります。</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="timetable-time">
-              <span>20:00 〜</span>
-            </td>
-            <td class="timetable-time">
-              <span>懇親会</span>
-            </td>
-            <td class="timetable-time">
-              <span>彩鮮酒楽　やぁ</span>
-            </td>
-            <td class="timetable-time">
-              <span></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <h3 class="font-Fenix" id="message">夕方の部、懇親会 </h3>
+<%= render('_time_table', tbody_data: [
+  ['18:00 〜 19:30', 'Ruby Jr発表会', 'オープンソースラボ<br/>中高生による発表会です。Rubyを使って作ったゲームの発表をします。'],
+  ['', 'ライブコーディング大喜利', '松江テルサ<br/>※RubyJrと平行開催となるため開催場所が<strong><a href="http://www.sanbg.com/terrsa/">テルサ研修室２</a></strong>となります。'],
+  ['20:00 ～', '懇親会', '彩鮮酒楽　やぁ']
+]).gsub(/^/, '      ') -%>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<br><br>
 
 <div id="register" class="container">
   <div class="row">

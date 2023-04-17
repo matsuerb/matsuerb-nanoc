@@ -6,39 +6,29 @@ created_at: 2018/06/07
 publish: true
 ---
 
-<header class="bs-docs-nav" role="banner">
-  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <h1><img src="img/matrb06Logo.png" alt="MATSUE Ruby Kaigi 06"></h1>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/matrk06">MATSUE RUBY KAIGI 06</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#guidance">開催概要</a></li>
+        <li class="nav-item"><a class="nav-link" href="#information">新着・お知らせ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#program">プログラム</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">参加登録の案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sponser">スポンサー</a></li>
+        <li class="nav-item"><a class="nav-link" href="#support">お問い合わせ先</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav menu">
-          <li><a href="#">ホーム</a></li>
-          <li><a href="#guidance">開催概要</a></li>
-          <li><a href="#information">新着・お知らせ</a></li>
-          <li><a href="#program">プログラム</a></li>
-          <li><a href="#register">参加登録の案内</a></li>
-          <li><a href="#sponser">スポンサー</a></li>
-          <li><a href="#support">お問い合わせ先</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-  </nav>
-</header>
-
-<div class="top-image"></div>
-
-<div class="container mark"></div>
-
-<br><br>
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/matrk_common/img/ruby.png" width="60" height="60">
+  <h1 class="display-5 fw-bold">MATSUE RUBY KAIGI 06</h1>
+</div>
 
 <div id="guidance" class="container">
   <div class="row">
@@ -144,13 +134,22 @@ publish: true
   </div>
 </div>
 
+<br><br>
+
 <div id="program" class="container">
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <blockquote>
         <h2 class="font-Fenix" id="message">プログラム</h2>
       </blockquote>
-      <h3 class="font-Fenix" id="message">タイムテーブル</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">タイムテーブル</h3>
 <%= render('_time_table', tbody_data: [
   ['13:00〜',        '開場・受付開始', ''],
   ['13:25 〜 13:30', '開会あいさつ', '主催者'],
@@ -167,10 +166,13 @@ publish: true
   ['', '「スモウルビーでライブコーディング」', '本多展幸 氏'],
   ['17:35 〜 17:45', 'クロージング<br />本日のクロージング', '主催者']
 ]).gsub(/^/, '      ') -%>
-      <br>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<br><br>
 
 <div id="register" class="container">
   <div class="row">
@@ -191,51 +193,49 @@ publish: true
       <blockquote>
         <h2 class="font-Fenix" id="message">スポンサー</h2>
       </blockquote>
-      <div class="col-xs-3 col-md-3" style="text-align: center;">
-        <div>
+    </div>
+
+    <div class="col-xs-12 col-md-12">
+
+      <ul class="sponser_list_items">
+        <li>
           <a href='http://spicelife.jp/' target='_blank'>
             <div style="height: 100px;">
-              <img alt='spicelife' src='img/spicelife.png' width="80%">
+              <img alt='spicelife' src='img/spicelife.png' width="60%">
             </div>
             <div>株式会社 spice life</div>
           </a>
-        </div>
-      </div>
-      <div class="col-xs-3 col-md-3" style="text-align: center;">
-        <div>
+        </li>
+        <li>
           <a href='http://tmix.jp' target='_blank'>
             <div style="height: 100px;">
               <img alt='tmix' src='img/tmix.png'>
             </div>
             <div>オリジナルTシャツをWEBでデザインtmix</div>
           </a>
-        </div>
-      </div>
-      <div class="col-xs-3 col-md-3" style="text-align: center;">
-        <div>
+        </li>
+        <li>
           <a href='http://www.netlab.jp/' target='_blank'>
             <div style="height: 100px;">
               <img alt='tmix' src='img/nacl.jpg' style="">
             </div>
             <div>株式会社ネットワーク応用通信研究所</div>
           </a>
-        </div>
-      </div>
-      <div class="col-xs-3 col-md-3" style="text-align: center;">
-        <div>
+        </li>
+        <li>
           <a href='http://www.farend.co.jp/' target='_blank'>
             <div style="height: 100px;">
               <img alt='tmix' src='img/farend.jpg'>
             </div>
             <div>ファーエンドテクノロジー株式会社</div>
           </a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-12" style="height: 60px;">
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
+
+<br><br>
 
 <div id="support" class="container">
   <div class="row">

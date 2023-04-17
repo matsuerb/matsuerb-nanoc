@@ -6,40 +6,29 @@ created_at: 2018/04/24
 publish: true
 ---
 
-<header class="bs-docs-nav" role="banner">
-  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <h1><img src="img/matrb09Logo.png" alt="MATSUE Ruby Kaigi 09"></h1>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/matrk09">MATSUE RUBY KAIGI 09</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#guidance">開催概要</a></li>
+        <li class="nav-item"><a class="nav-link" href="#information">新着・お知らせ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#program">プログラム</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">参加登録の案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sponser">スポンサー</a></li>
+        <li class="nav-item"><a class="nav-link" href="#support">お問い合わせ先</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav menu">
-          <li><a href="#">ホーム</a></li>
-          <li><a href="#guidance">開催概要</a></li>
-          <li><a href="#information">新着・お知らせ</a></li>
-          <li><a href="#program">プログラム</a></li>
-          <li><a href="#register">参加登録の案内</a></li>
-          <li><a href="#sponser">スポンサー</a></li>
-          <li><a href="#support">お問い合わせ先</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-
-    </div><!-- /.container -->
-  </nav>
-</header>
-
-<div class="top-image"></div>
-
-<div class="container mark"></div>
-
-<br><br>
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/matrk_common/img/ruby.png" width="60" height="60">
+  <h1 class="display-5 fw-bold">MATSUE RUBY KAIGI 09</h1>
+</div>
 
 <div id="guidance" class="container">
   <div class="row">
@@ -143,31 +132,29 @@ publish: true
   </blockquote>
   <h3 class="font-Fenix" id="message">講演者ご紹介</h3>
   <div class="row">
-    <div class="keynote-person">
-      <div class="col-xs4 col-md-4">
-        <span class="person matz"></span>
-        <div class="profile">
-          <span class="name">まつもとゆきひろ 氏</span>
-          <span class="social">
-            <a href="https://twitter.com/yukihiro_matz" class="twitter"></a>
-            <a href="https://github.com/matz" class="github"></a>
-          </span>
-          <p class="description">
-            我らがRubyの生みの親。小泉八雲氏と肩を並べて松江市名誉市民でもあり、Rubyを通して地方から世界のソフトウェア業界に多大な影響を与えています。今回も松江ならでは、基調講演でお話をしていただきます。
-          </p>
-        </div>
+    <div class="col-xs4 col-md-4 keynote-person">
+      <span class="person matz"></span>
+      <div class="profile">
+        <span class="name">まつもとゆきひろ 氏</span>
+        <span class="social">
+          <a href="https://twitter.com/yukihiro_matz" class="twitter"></a>
+          <a href="https://github.com/matz" class="github"></a>
+        </span>
+        <p class="description">
+          我らがRubyの生みの親。小泉八雲氏と肩を並べて松江市名誉市民でもあり、Rubyを通して地方から世界のソフトウェア業界に多大な影響を与えています。今回も松江ならでは、基調講演でお話をしていただきます。
+        </p>
       </div>
-      <div class="col-xs4 col-md-4">
-        <span class="person inoue"></span>
-        <div class="profile">
-          <span class="name">井上浩 氏</span>
-          <span class="social">
-            <a href="https://twitter.com/nacl" class="twitter"></a>
-          </span>
-          <p class="description">
-            株式会社ネットワーク応用通信研究所(NaCl) 代表取締役。会社設立当初から自由に使えるオープンソースソフトウェアを利用した事業を展開、座右の銘は「禍福は糾える縄のごとし」、又は「人生最後はチャラ」 ゲスト講演でお話いただきます。
-          </p>
-        </div>
+    </div>
+    <div class="col-xs4 col-md-4 keynote-person">
+      <span class="person inoue"></span>
+      <div class="profile">
+        <span class="name">井上浩 氏</span>
+        <span class="social">
+          <a href="https://twitter.com/nacl" class="twitter"></a>
+        </span>
+        <p class="description">
+          株式会社ネットワーク応用通信研究所(NaCl) 代表取締役。会社設立当初から自由に使えるオープンソースソフトウェアを利用した事業を展開、座右の銘は「禍福は糾える縄のごとし」、又は「人生最後はチャラ」 ゲスト講演でお話いただきます。
+        </p>
       </div>
     </div>
   </div>
@@ -211,16 +198,17 @@ publish: true
 
   <div class="row">
     <div class="col-xs-12 col-md-12">
-      <h3>タイムテーブル</h3>
-      <br>
-      <h4>午前の部</h4>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">タイムテーブル</h3>
+          <h4>午前の部</h4>
 <%= render('_time_table', tbody_data: [
   ['11:00 〜 11:05', 'オープニング', ''],
   ['11:10 〜 11:55', 'ゲスト講演<br />「島根でRubyが使えるようになったキッカケ 〜 10年前松江で何が起きていたか 〜」', '株式会社ネットワーク応用通信研究所（NaCl）<br />井上浩 氏'],
   ['12:00 〜 13:30', '昼食休憩', '']
 ]).gsub(/^/, '      ') -%>
 
-      <h4>午後の部</h4>
+          <h4>午後の部</h4>
 <%= render('_time_table', tbody_data: [
   ['13:30 〜 14:20', '基調講演', 'まつもとゆきひろ 氏'],
   ['14:20 〜 14:35', '休憩・写真撮影', ' - '],
@@ -237,6 +225,8 @@ publish: true
   ['16:35 〜 17:20', 'Ruby Quiz', '-'],
   ['17:20 〜 17:30', 'クロージング', '-']
 ]).gsub(/^/, '      ') -%>
+        </div>
+      </div>
     </div>
   </div>
 </div>

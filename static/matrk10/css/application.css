@@ -1,3 +1,11 @@
 .container mark {
   margin-top: 400px;
 }
+
+/* speaker */
+.keynote-person .unak {
+  background-image: url('../img/unak.jpg')
+}
+.keynote-person .unak:after {
+  content: "基調講演";
+}

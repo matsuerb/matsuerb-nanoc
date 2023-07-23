@@ -1,24 +1,10 @@
-<table class="timetable-table">
-  <thead>
-    <th class="timetable-date col-xs-3">
-      <span class="inner">時間</span>
-    </th>
-    <th class="timetable-date col-xs-5">
-      <span class="inner">プログラム</span>
-    </th>
-    <th class="timetable-date col-xs-4">
-      <span class="inner">発表者</span>
-    </th>
-  </thead>
-  <tbody>
+<div class="timetable">
+  <ul class="timeline">
     <%- @tbody_data.each do |row| -%>
-    <tr>
-      <%- row.each do |column| -%>
-      <td class="timetable-time">
-        <span><%= column -%></span>
-      </td>
-      <%- end -%>
-    </tr>
+      <li class="event" data-date="<%= row[0] %>">
+        <h3><%= row[1] %></h3>
+        <p><%= row[2] %></p>
+      </li>
     <%- end -%>
-  </tbody>
-</table>
+  </ul>
+</div>

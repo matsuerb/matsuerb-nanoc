@@ -4,32 +4,45 @@ description:
 keywords:
 ---
 
-<ul class="column">
-  <li>
-    <div id="doc">
-      <h2><a href="/news/"><img src="/images/bn/ruby.png" alt="*"/> お知らせ</a></h2>
-      <% sorted_articles[0..4].each do |item| %>
-        <div class="wrp">
-          <div class="title"><%= item[:title] %><span class="date">(<%= item[:created_at] %>)</span></div>
-          <div class="body">
-            <p><%= excerptize(strip_html(item.reps.first.compiled_content), length:100) %></p>
-          </div>
-          <div class="link"><a href="<%= item.identifier %>">続きはこちら</a></div>
+<div class="body">
+  <div id="doorkeeper">
+    <h2><a href="https://matsue-rb.doorkeeper.jp/">参加登録</a></h2>
+    <p class="description">Matsue.rb定例会の参加登録は<a href="https://matsue-rb.doorkeeper.jp/">Doorkeeper</a>でお願いします。</p>
+  </div>
+
+  <div id="doc">
+    <h2><a href="/news/"><img src="/images/bn/ruby.png" alt="*"/> お知らせ</a></h2>
+    <% sorted_articles[0..4].each do |item| %>
+      <div class="wrp">
+        <div class="title"><%= item[:title] %><span class="date">(<%= item[:created_at] %>)</span></div>
+        <div class="body">
+          <p><%= excerptize(strip_html(item.reps.first.compiled_content), length:100) %></p>
         </div>
-      <% end %>
-    </div>
-  </li>
-  <li>
-    <div id="tw">
-      <h2><a href="https://twitter.com/search?q=%23matsuerb&src=typd&lang=ja"><img src="/images/bn/twitter.png" alt="*" /> twitter</a></h2>
-      <a class="twitter-timeline" href="https://twitter.com/search?q=%23matsuerb">#matsuerb に関するツイート</a>
-    </div>
-    <div id="fb">
-      <h2><a href="https://www.facebook.com/groups/matsuerb"><img src="/images/bn/facebook.png" alt="*" /> Facebook</a></h2>
-      <p id="facebook">Matsue.rbの情報交換やイベントの告知は主にFacebookの<a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)グループ</a>で行なっていますので、よろしければご参加ください。</p>
-      <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmatsue.rubyist.net%2F&width=450&layout=standard&action=like&show_faces=true&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </div>
-    <ul class="grid">
+        <div class="link"><a href="<%= item.identifier %>">続きはこちら</a></div>
+      </div>
+    <% end %>
+  </div>
+
+  <div id="tw">
+    <h2><a href="https://twitter.com/search?q=%23matsuerb&src=typd&lang=ja"><img src="/images/bn/twitter.png" alt="*" /> twitter</a></h2>
+    <a class="twitter-timeline" href="https://twitter.com/search?q=%23matsuerb">#matsuerb に関するツイート</a>
+  </div>
+  <div id="fb">
+    <h2><a href="https://www.facebook.com/groups/matsuerb"><img src="/images/bn/facebook.png" alt="*" /> Facebook</a></h2>
+    <p class="description">Matsue.rbの情報交換やイベントの告知は主にFacebookの<a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)グループ</a>で行なっていますので、よろしければご参加ください。</p>
+    <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmatsue.rubyist.net%2F&width=450&layout=standard&action=like&show_faces=true&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden;min-height:0px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  </div>
+
+  <div id="map">
+    <h2>アクセスマップ（定例会開催場所）</h2>
+    <p class="description">　松江Rubyの定例会は「松江オープンソースラボ」で開催しています。松江オープンソースラボについての詳細は、松江市のウェブサイト（下記リンク）にてご確認ください。</p>
+    <ul>
+      <li><%= link_to("松江市ホームページ : 松江オープンソースラボ（松江市開発交流プラザ）", "http://www1.city.matsue.shimane.jp/jigyousha/sangyou/ruby/rabo_open.html") %></li>
     </ul>
-  </li>
-</ul>
+
+    <h2>周辺地図</h2>
+    <div class="map" style="margin-left: 20px;">
+      <iframe width="900" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?hl=ja&amp;q=%E6%9D%BE%E6%B1%9F%E5%B8%82%E6%9C%9D%E6%97%A5%E7%94%BA%EF%BC%94%EF%BC%97%EF%BC%98%E7%95%AA%E5%9C%B0%EF%BC%91%EF%BC%98&amp;lr=&amp;ie=UTF8&amp;split=0&amp;gl=jp&amp;hq=&amp;hnear=%E5%B3%B6%E6%A0%B9%E7%9C%8C%E6%9D%BE%E6%B1%9F%E5%B8%82%E6%9C%9D%E6%97%A5%E7%94%BA%EF%BC%94%EF%BC%97%EF%BC%98%E2%88%92%EF%BC%91%EF%BC%98&amp;t=m&amp;brcurrent=3,0x355704e36d537ed9:0x6c1ed53a5ec6d0e4,0,0x355704e31336211b:0x6b714f3d919be050&amp;ll=35.463991,133.061986&amp;spn=0.017477,0.040298&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.jp/maps?hl=ja&amp;q=%E6%9D%BE%E6%B1%9F%E5%B8%82%E6%9C%9D%E6%97%A5%E7%94%BA%EF%BC%94%EF%BC%97%EF%BC%98%E7%95%AA%E5%9C%B0%EF%BC%91%EF%BC%98&amp;lr=&amp;ie=UTF8&amp;split=0&amp;gl=jp&amp;hq=&amp;hnear=%E5%B3%B6%E6%A0%B9%E7%9C%8C%E6%9D%BE%E6%B1%9F%E5%B8%82%E6%9C%9D%E6%97%A5%E7%94%BA%EF%BC%94%EF%BC%97%EF%BC%98%E2%88%92%EF%BC%91%EF%BC%98&amp;t=m&amp;brcurrent=3,0x355704e36d537ed9:0x6c1ed53a5ec6d0e4,0,0x355704e31336211b:0x6b714f3d919be050&amp;ll=35.463991,133.061986&amp;spn=0.017477,0.040298&amp;z=15&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">大きな地図で見る</a></small>
+    </div>
+  </div>
+</div>

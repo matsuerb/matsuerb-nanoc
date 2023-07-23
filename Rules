@@ -44,9 +44,9 @@ compile '/matrk10/' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    filter :erb, trim_mode: '-'
     filter :kramdown
-    layout 'nxt_matrk'
+    layout 'matrk'
   end
 end
 

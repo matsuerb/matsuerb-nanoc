@@ -126,7 +126,7 @@ GEM
     slow_enumerator_tools (1.1.0)
     stringio (3.0.2)
     thor (1.2.1)
-    timecop (0.9.5)
+    timecop (0.9.6)
     tty-color (0.6.0)
     tty-command (0.10.1)
       pastel (~> 0.8)

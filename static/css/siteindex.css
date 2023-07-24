@@ -3,8 +3,9 @@
 body {
   margin: 0;
   padding: 3px 3% 10px;
-  color: #000;
   background-color: #fff;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+  color: #333;
 }
 a:link{
   color: #0000df;

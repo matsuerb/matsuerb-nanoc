@@ -101,7 +101,7 @@ GEM
     public_suffix (5.0.1)
     puma (6.1.1)
       nio4r (~> 2.0)
-    rack (3.0.7)
+    rack (3.0.8)
     rackup (2.1.0)
       rack (>= 3)
       webrick (~> 1.8)

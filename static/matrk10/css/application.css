@@ -9,3 +9,10 @@
 .keynote-person .unak:after {
   content: "基調講演";
 }
+
+.keynote-person .matz {
+  background-image: url('../img/matz.jpg')
+}
+.keynote-person .matz:after {
+  content: "対談者";
+}

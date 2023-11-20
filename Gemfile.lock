@@ -36,7 +36,7 @@ GEM
       nanoc-core (~> 4.11, >= 4.11.14)
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    icalendar (2.8.0)
+    icalendar (2.10.0)
       ice_cube (~> 0.16)
     ice_cube (0.16.4)
     json_schema (0.21.0)

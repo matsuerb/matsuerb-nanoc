@@ -156,7 +156,7 @@ calendar:
   puts("create: #{relative_path}")
   begin
     git.add(relative_path)
-    git.commit({m: "#{event_date.month}/#{event_date.day}(#{wday_s[event_date.wday]})のお知らせを追加。"}, relative_path)
+    git.commit({m: "#{event_date.month}/#{event_date.day}(#{wday_s[event_date.wday]})のお知らせを追加"}, relative_path)
   rescue MiniGit::GitError
     exit(1)
   end

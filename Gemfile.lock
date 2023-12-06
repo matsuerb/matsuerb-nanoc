@@ -34,7 +34,7 @@ GEM
       guard-compat (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.14)
       nanoc-core (~> 4.11, >= 4.11.14)
-    icalendar (2.10.0)
+    icalendar (2.10.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.4)
     immutable-ruby (0.1.0)

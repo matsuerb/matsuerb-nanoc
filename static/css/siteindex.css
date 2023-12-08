@@ -111,8 +111,7 @@ ul.menu li img:hover {
   -ms-filter: saturate(136%);
   filter: saturate(136%);
 }
-.toc,
-.contact {
+.toc {
   margin: 16px 0 0;
   font-size: 16px;
   text-shadow: 1px 1px 1px #d3d3d3;
@@ -130,11 +129,7 @@ ul.menu li img:hover {
   padding: 9px 0 0;
   height: 27px;
 }  
-.contact {
-  width: 99%;
-} 
-.toc:hover,
-.contact:hover {
+.toc:hover {
   background: -moz-linear-gradient(top,#fff 0%,#fff 3%,#e3e3e3 3%,#fff);
   background: -ms-linear-gradient(top,#fff 0%,#fff 3%,#e3e3e3 3%,#fff);
   background: -o-linear-gradient(top,#fff 0%,#fff 3%,#e3e3e3 3%,#fff);
@@ -249,8 +244,7 @@ p.description {
   margin-top: 15px;
 }
 @media only screen and (max-width: 1300px){
-  .toc,
-  .contact {
+  .toc {
     font-size: 15px;
   }
  #outline {
@@ -265,8 +259,7 @@ p.description {
   }
 }
 @media only screen and (max-width: 1000px){
-  .toc,
-  .contact {
+  .toc {
     font-size: 13px;
   }
   #outline {
@@ -275,8 +268,7 @@ p.description {
   }
 }
 @media only screen and (max-width: 900px){
-  .toc,
-  .contact {
+  .toc {
     font-size: 12px;
     padding: 11px 0 0;
     height: 25px;
@@ -286,8 +278,7 @@ p.description {
   body {
     padding: 3px 10px 0;
   }
-  .toc,
-  .contact {
+  .toc {
     font-size: 11px;
   }
   #outline {
@@ -300,8 +291,7 @@ p.description {
   body {
     padding: 3px 3px 0;
   }
-  .toc,
-  .contact {
+  .toc {
     font-size: 10px;
   }
 }
@@ -334,8 +324,7 @@ p.description {
     margin-left: auto;
     margin-right: auto;
   }
-  .toc,
-  .contact {
+  .toc {
     font-size: 16px;
     margin: 0;
     -moz-border-radius: 5px;

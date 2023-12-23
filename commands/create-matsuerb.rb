@@ -91,8 +91,6 @@ run do |opts, args, cmd|
   subject = '松江Ruby(Matsue.rb)定例会'
   if opts[:id]
     link = "link_to_doorkeeper('#{subject}', 'matsue-rb', #{opts[:id]})"
-  else
-    link = "link_to('#{subject}', '/about_us/#matsuerb')"
   end
   File.open(output_path, "w") do |f|
     f.write(<<-EOS)

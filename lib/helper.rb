@@ -103,7 +103,7 @@ def copyright_year
 end
 
 def link_to_osslab(lab = "松江オープンソースラボ")
-  return link_to(lab, "/map/")
+  return link_to(lab, "https://www.city.matsue.lg.jp/soshikikarasagasu/sangyokeizaibu_matsuesangyoshiencenter/14133.html")
 end
 
 def link_to_rubyjr(subject = "Ruby.Jr(松江市主催)")

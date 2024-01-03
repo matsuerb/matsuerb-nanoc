@@ -87,7 +87,7 @@ GEM
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
     nenv (0.3.0)
-    nio4r (2.5.9)
+    nio4r (2.7.0)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -100,7 +100,7 @@ GEM
     psych (5.1.1.1)
       stringio
     public_suffix (5.0.4)
-    puma (6.4.0)
+    puma (6.4.1)
       nio4r (~> 2.0)
     rack (3.0.8)
     rackup (2.1.0)

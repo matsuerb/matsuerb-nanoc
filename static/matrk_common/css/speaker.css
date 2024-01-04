@@ -60,7 +60,8 @@
   opacity: 1.0;
 }
 .profile .social .twitter {
-  background-image: url('/matrk_common/icon/twitter.png');
+  background-image: url('/images/x_logo.svg');
+  filter: brightness(0);
 }
 .profile .social .github {
   background-image: url('/matrk_common/icon/github.png');

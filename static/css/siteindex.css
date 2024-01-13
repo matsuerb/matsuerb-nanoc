@@ -7,15 +7,15 @@ body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
   color: #333;
 }
-a:link{
+.body a:link{
   color: #0000df;
   background-color: #fff;
 }
-a:visited{
+.body a:visited{
   color: #5700b3;
   background-color: #fff;
 }
-a:hover{
+.body a:hover{
   color: #b00060;
   background-color: #f3f3f3;
 }
@@ -127,7 +127,7 @@ ul.menu li img:hover {
   border-bottom: none;
   width: 100%;
   padding: 9px 0 0;
-  height: 27px;
+  height: 35px;
 }  
 .toc:hover {
   background: -moz-linear-gradient(top,#fff 0%,#fff 3%,#e3e3e3 3%,#fff);
@@ -271,7 +271,7 @@ p.description {
   .toc {
     font-size: 12px;
     padding: 11px 0 0;
-    height: 25px;
+    height: 40px;
   }
 }
 @media only screen and (max-width: 800px){

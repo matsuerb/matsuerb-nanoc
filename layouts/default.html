@@ -5,44 +5,82 @@
 </head>
 <body>
 
-<ul class="menu">
-<% if @item.identifier.to_s.size == 1 %>
-<li data-ag-x="3"><h1><img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a></h1></li>
-<% else %>
-<li data-ag-x="3"><img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a></li>
-<% end %>
-<li><a href="/news/"><div class="toc">お知らせ</div></a></li>
-<li><a href="/members/"><div class="toc">メンバー</div></a></li>
-<li><a href="/schedule/"><div class="toc">スケジュール</div></a></li>
-<li data-ag-x="5"><p id="outline">Matsue.rb(松江Ruby)は、島根県松江市周辺で活動するプログラミング言語Rubyのコミュニティです。</p></li>
-</ul>
+<header class="py-3">
+  <ul class="nav menu">
+    <% if @item.identifier.to_s.size == 1 %>
+    <li class="nav-item">
+      <h1><img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a></h1>
+    </li>
+    <% else %>
+    <li class="nav-item">
+      <img src="/images/bn/matsuerb_layer.png" alt="*"/><a href="/"><img src="/images/bn/matsuerb.png" alt="matsue.rb 松江Ruby"/></a>
+    </li>
+    <% end %>
+    <li class="nav-item">
+      <a class="link-body-emphasis text-decoration-none" href="/news/"><div class="toc">お知らせ</div></a>
+    </li>
+    <li class="nav-item">
+      <a class="link-body-emphasis text-decoration-none" href="/members/"><div class="toc">メンバー</div></a>
+    </li>
+    <li class="nav-item">
+      <a class="link-body-emphasis text-decoration-none" href="/schedule/"><div class="toc">スケジュール</div></a>
+    </li>
+    <li><p id="outline">Matsue.rb(松江Ruby)は、島根県松江市周辺で活動するプログラミング言語Rubyのコミュニティです。</p></li>
+  </ul>
+</header>
 <!-- End of head -->
 
 <% if @item[:kind] == "article" %>
-  <div class="page-title"><h1><%= @item[:title] %></h1></div>
-  <div class="body">
-  <%= yield %>
+  <div class="container">
+    <div class="page-title"><h1><%= @item[:title] %></h1></div>
+    <div class="body">
+      <%= yield %>
+    </div>
   </div>
 <% else  %>
   <%= yield %>
 <% end %>
 
 <!-- footer -->
-<ul id="footer">
-  <li><%= link_to("トップ", "/index.html") %></li>
-  <li><%= link_to("お知らせ", "/news/") %></li>
-  <li><%= link_to("メンバー", "/members/") %></li>
-  <li><%= link_to("スケジュール", "/schedule/")%></li>
-  <li><%= link_to("アンチハラスメントポリシー", "/anti_harassment_policy/")%></li>
-  <br />
-  <li><%= link_to("X(旧:Twitter)", "https://twitter.com/matsuerb") %></li>
-  <li><%= link_to("Facebook", "https://www.facebook.com/groups/matsuerb") %></li>
-  <li><%= link_to("GitHub", "https://github.com/matsuerb/matsuerb-nanoc") %></li>
-  <li><%= link_to("YouTube", "https://www.youtube.com/@Matsuerb") %></li>
-  <li><%= link_to("Doorkeeper", "https://matsue-rb.doorkeeper.jp/") %></li>
-</ul>
-
-<div id="copyright">Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span></div>
+<footer class="py-3 my-4">
+  <ul class="nav justify-content-center pb-3">
+    <li class="nav-item">
+      <%= link_to("トップ", "/index.html", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("お知らせ", "/news", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("メンバー", "/members", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("スケジュール", "/schedule", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("アンチハラスメントポリシー", "/anti_harassment_policy", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+  </ul>
+  <ul class="nav justify-content-center list-unstyled border-bottom pb-3 mb-3">
+    <li class="nav-item">
+      <%= link_to("X(旧:Twitter)", "https://twitter.com/matsuerb", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("Facebook", "https://www.facebook.com/groups/matsuerb", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("GitHub", "https://github.com/matsuerb/matsuerb-nanoc", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("YouTube", "https://www.youtube.com/@Matsuerb", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+    <li class="nav-item">
+      <%= link_to("Doorkeeper", "https://matsue-rb.doorkeeper.jp/", class: "nav-link px-2 text-body-secondary") %>
+    </li>
+  </ul>
+  <p class="text-center text-body-secondary">
+    Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span>
+  </p>
+</footer>
 
 <script src="/js/bootstrap.js"></script>
 

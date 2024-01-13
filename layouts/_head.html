@@ -3,6 +3,7 @@
 <% if @item.identifier.to_s.size != 1 %>
 <link rel="stylesheet" href="/css/sitecontents.css" />
 <% end %>
+<link rel="stylesheet" href="/css/bootstrap.css" />
 <link rel="shortcut icon" href="/images/bn/favicon.ico" />
 <link rel="canonical" href="<%= File.join("https://matsue.rubyist.net", @item.path) %>" />
 <title><%= (t = @item[:title]) ? "#{t}|" : '' %>松江Ruby(Matsue.rb)</title>

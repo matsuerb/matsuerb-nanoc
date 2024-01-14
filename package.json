@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "comment": "このファイルはダミーです。GitHubに脆弱性を検知してもらうためだけに置いています。",
   "dependencies": {
-    "jquery": "3.5.1",
     "awesome-grid": "2.0.2",
     "bootstrap": "3.4.1",
     "holderjs": "2.2.0"

@@ -4,7 +4,6 @@
   "comment": "このファイルはダミーです。GitHubに脆弱性を検知してもらうためだけに置いています。",
   "dependencies": {
     "awesome-grid": "2.0.2",
-    "bootstrap": "3.4.1",
-    "holderjs": "2.2.0"
+    "bootstrap": "3.4.1"
   }
 }

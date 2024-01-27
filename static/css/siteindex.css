@@ -48,6 +48,9 @@ div#tw {
 div#fb {
   padding: 13px 0;
 }
+div#members {
+  padding: 13px 0;
+}
 /* grid member image */
 ul.grid {
   list-style: none;

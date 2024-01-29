@@ -115,44 +115,6 @@ h4 {
 .table_schedule table td:nth-child(7) {
   width: 10%;
 }
-#member_wrapper td {
-  padding: 0 0 10px;
-  border-bottom: 1px dotted #ccc;
-  vertical-align: top;
-}
-#member_wrapper td:nth-child(odd) {
-  width: auto;
-  padding: 16px 0 0;
-}
-#member_wrapper td:nth-child(even) {
-  width: 50%;
-  padding: 0 5px 10px 18px;
-}
-#member_wrapper .profile {
-  vertical-align: text-top;
-}
-#member_wrapper img {
-  border: 1px solid #e3e3e3;
-}
-#member_wrapper .profile h3 {
-  font-size: 1.2em;
-}
-#member_wrapper .profile h4 {
-  margin: 5px 0 0 17px;
-  font-size: 1.1em;
-}
-#member_wrapper .profile p {
-  margin: 5px 0 0 17px;
-  line-height: 140%;
-}
-#member_wrapper .profile ul {
-  margin: 0 0 0 1.1em;
-  padding: 0;
-}
-#member_wrapper .profile ul li {
-  margin-right: 0;
-  display: inline;
-}
 
 @media only screen and (max-width: 600px) {
 .page-title{
@@ -162,9 +124,6 @@ h4 {
   padding: 0;
   line-height: 150%;
 }
-  #member_wrapper .profile h3 {
-  margin: 5px 0 0;
- }
  th {
     display: none;
   }
@@ -179,22 +138,6 @@ h4 {
   .table_schedule table td:nth-child(5),
   .table_schedule table td:nth-child(6),
   .table_schedule table td:nth-child(7) {
-    width: 100%;
-  }
-  #member_wrapper td {
-    border: none;
-  }
-  #member_wrapper td:nth-child(odd) ,
-  #member_wrapper td:nth-child(even) {
-    width: 100%;
-    padding: 10px 0 0;
-  }
-  #member_wrapper td:nth-child(even) {
-    width: 100%;
-    padding: 0 0 0;
-  }
-  #member_wrapper td:nth-child(odd),
-  #member_wrapper td:nth-child(even) {
     width: 100%;
   }
   .table_wrapper table,
@@ -258,7 +201,6 @@ h4 {
  .table_schedule table td:nth-child(1) {
     padding-top: 10px;
   }
-  #member_wrapper td:nth-child(even) ,
  .table_schedule table td:nth-child(7) {
     padding-bottom: 10px;
     border-bottom: solid 1px #ddd;

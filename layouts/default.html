@@ -36,7 +36,7 @@
 <% end %>
 
 <!-- footer -->
-<footer class="py-3 my-4">
+<footer class="border-top py-3 my-4">
   <ul class="nav justify-content-center pb-3">
     <li class="nav-item">
       <%= link_to("トップ", "/index.html", class: "nav-link px-2 text-body-secondary") %>
@@ -51,7 +51,7 @@
       <%= link_to("アンチハラスメントポリシー", "/anti_harassment_policy", class: "nav-link px-2 text-body-secondary") %>
     </li>
   </ul>
-  <ul class="nav justify-content-center list-unstyled border-bottom pb-3 mb-3">
+  <ul class="nav justify-content-center pb-3">
     <li class="nav-item">
       <%= link_to("X(旧:Twitter)", "https://twitter.com/matsuerb", class: "nav-link px-2 text-body-secondary") %>
     </li>
@@ -68,9 +68,9 @@
       <%= link_to("Doorkeeper", "https://matsue-rb.doorkeeper.jp/", class: "nav-link px-2 text-body-secondary") %>
     </li>
   </ul>
-  <p class="text-center text-body-secondary">
-    Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span>
-  </p>
+  <p class="text-center"><a href="https://matsue.rubyist.net/"><img src="/matrk_common/img/h_logo.jpg" alt="matsuerb"></a></p>
+  <p class="text-center"><small>RubyロゴはYukihiro Matsumotoの著作物であり、Creative Commons BY-SAライセンスにより <%= link_to "https://www.ruby-lang.org/ja/about/logo/", "https://www.ruby-lang.org/ja/about/logo/" %> で公開されています。</small></p>
+  <p class="text-center"><small>Copyright © <%= copyright_year %> <a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby) </a>. All Rights Reserved. <span><%= link_to("GitHub・matsuerb/matsuerb-nanoc", "https://github.com/matsuerb/matsuerb-nanoc", {:target => "_blank"}) %></span></small></p>
 </footer>
 
 <script src="/js/bootstrap.js"></script>

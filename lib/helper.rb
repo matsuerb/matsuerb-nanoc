@@ -76,16 +76,6 @@ def tag_page_item_list(tag)
   html_source
 end
 
-def article_list
-  html_source = "<ul>"
-  sorted_articles.each do |item|
-    date = item[:updated_at]
-    date ||= item[:created_at]
-    html_source << "<li>#{link_to(item[:title], item.identifier.to_s)} - #{date}</li>"
-  end
-  html_source << "</ul>"
-end
-
 def fbe(id)
   return link_to("Facebook", "https://www.facebook.com/events/#{id}/")
 end

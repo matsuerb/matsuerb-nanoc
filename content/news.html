@@ -5,7 +5,11 @@ title: お知らせ一覧
 <div markdown="1" class="page-title" ><h1><%= @item[:title] %></h1></div>
 
 <div markdown="1" class="body">
-
-<%= article_list %>
-
+  <% sorted_articles.each do |item| %>
+    <div class="row">
+      <div class="title">
+        <%= link_to(item[:title], item.identifier.to_s) %><span class="fw-light ps-1"><small>(<%= item[:updated_at] || item[:created_at] %>)</small></span>
+      </div>
+    </div>
+  <% end %>
 </div>

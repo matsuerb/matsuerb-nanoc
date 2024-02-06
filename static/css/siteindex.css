@@ -153,22 +153,6 @@ h2 a,
   padding: 2px 0 1px;
 }
 
-/* footer */
-#footer {
-  font-size: 0.9em;
-  list-style: none;
-  margin: 40px auto 0;
-  padding: 2px 0;
-  text-align: center;
-  word-spacing: 1.2em;
-  border-top: dotted 1px #ccc;
-}
-#footer li {
-  display: inline;
-  margin: 0 auto;
-  padding: 0 0 1px;
-  white-space: nowrap;
-}
 #copyright {
   font-size: 0.9em;
   margin: 0;
@@ -351,13 +335,5 @@ p.description {
     border: solid 5px #d97777;
     border-bottom: none;
     border-top: none;
-  }
-  #footer {
-    margin: 0 auto;
-  }
-}
-@media only screen and (max-width: 400px){
-  #footer {
-    margin: 0 auto;
   }
 }

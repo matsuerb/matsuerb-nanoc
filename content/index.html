@@ -51,10 +51,10 @@ keywords:
     <h2><a href="/news/"><img src="/images/bn/ruby.png" alt="*"/> お知らせ</a></h2>
     <% sorted_articles[0..4].each do |item| %>
       <div class="row">
-        <div class="title">
+        <div>
           <a href="<%= item.identifier %>"><%= item[:title] %></a><span class="fw-light ps-1"><small>(<%= item[:created_at] %>)</small></span>
         </div>
-        <div class="body">
+        <div>
           <p><%= excerptize(strip_html(item.reps.first.compiled_content), length:100) %></p>
         </div>
       </div>

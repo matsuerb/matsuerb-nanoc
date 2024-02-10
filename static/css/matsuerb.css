@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* seiteindex css */
 body {
   margin: 0;
   padding: 3px 3% 10px;
@@ -18,18 +17,6 @@ body {
 .body a:hover{
   color: #b00060;
   background-color: #f3f3f3;
-}
-div#doc {
-  padding: 13px 0;
-}
-div#tw {
-  padding: 13px 0;
-}
-div#fb {
-  padding: 13px 0;
-}
-div#members {
-  padding: 13px 0;
 }
 /* toc menu */
 ul.menu {
@@ -99,64 +86,13 @@ ul.menu li img:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.03,#fff), color-stop(0.03,#e3e3e3), to(#fff));
   text-shadow: 0 1px 1px #bbb;
 }
-h2 a,
-.menu a {
-  text-decoration: none;
-}
 
 /* elememts */
-h1 {
-  margin:0;
-  padding: 0;
-}
-h2 {
-  font-weight:normal;
-  color: #000;
-  background: #fff;
-  border-width: 0 0 2px;
-  border-style: solid;
-  border-color: #ececec;
-  font-size: 1.1em;
-  font-family: Helvetica , "游ゴシック体" , "Yu Gothic" , "メイリオ" ,sans-serif;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #ddd;
-}
-h2 a:hover {
-  color: #300;
-  background: #fff;
-  text-shadow: 1px 1px 1px #999;
-  text-decoration: none;
-  border-color: #bab;
-}
-h2 a:link { color: #000; }
-h2 a:visited { color: #000; }
-h2 a:active { color: #303; }
-.body {
-  font-size: 1em;
-  margin: 5px 0 0;
-}
-p {
-  margin: 0;
-  line-height: 1.2em;
-}
-.link {
-  text-align: right;
-  margin: 0;
-  padding: 2px 2px 10px;
-  border-bottom: solid 1px #e6e6ea;
-  font-size: 0.9em;
-}
 iframe {
   margin :0.5em 0 0;
   padding: 0;
   width: 100%;
   min-height: 120px;
-}
-p.description {
-  font-size: 1em;
-  margin-top: 15px;
 }
 @media only screen and (max-width: 1300px){
   .toc {
@@ -229,5 +165,147 @@ p.description {
     border: 1px solid #CCC;
     width: 100%;
     padding: 9px 0 6px;
+  }
+}
+.table_wrapper table,
+.table_schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin: 10px 0 0 3px;
+}
+.table_wrapper table th,
+.table_schedule table th  {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #f6f6f6;
+  padding: 1px 10px 0px;
+  text-align: center;
+  font-weight: normal;
+}
+.table_wrapper table td,
+.table_schedule table td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: center;
+}
+.table_schedule table td:first-child{
+  text-align: left;
+}
+.table_schedule table td:nth-child(1) {
+  width: 20%;
+}
+.table_schedule table td:nth-child(2) {
+  width: 15%;
+}
+.table_schedule table td:nth-child(3) {
+  width: 20%;
+}
+.table_schedule table td:nth-child(4) {
+  width: 20%;
+}
+.table_schedule table td:nth-child(5) {
+  width: 7%;
+}
+.table_schedule table td:nth-child(6) {
+  width: 6%;
+}
+.table_schedule table td:nth-child(7) {
+  width: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+.page-title{
+  margin: 2px 0 0 0;
+}
+.body{
+  padding: 0;
+  line-height: 150%;
+}
+ th {
+    display: none;
+  }
+  td {
+    display: block;
+    width: 100%;
+  }
+  .table_schedule table td:nth-child(1),
+  .table_schedule table td:nth-child(2),
+  .table_schedule table td:nth-child(3),
+  .table_schedule table td:nth-child(4),
+  .table_schedule table td:nth-child(5),
+  .table_schedule table td:nth-child(6),
+  .table_schedule table td:nth-child(7) {
+    width: 100%;
+  }
+  .table_wrapper table,
+  .table_schedule table {
+    border: none;
+  }
+  .table_wrapper table th,
+  .table_schedule table th {
+    border: none;
+  }
+  .table_wrapper table td,
+  .table_schedule table td {
+    border: none;
+    text-align: left;
+    padding: 2px 0;
+  }
+  .table_wrapper table td:nth-child(1):before {
+    content: "イベント名：";
+  }
+  .table_wrapper table td:nth-child(2):before {
+    content: "説明 ：";
+    word-spacing: 2.5em;
+  }
+  .table_wrapper table td:nth-child(3):before {
+    content: "時間 ：";
+    word-spacing: 2.5em;
+  }
+ .table_schedule table td:nth-child(1):before {
+    content: "イベント名：";
+  }
+  .table_schedule table td:nth-child(2):before {
+    content: "状態 ：";
+    word-spacing: 2.5em;
+  }
+  .table_schedule table td:nth-child(3):before {
+    content: "日時 ：";
+    word-spacing: 2.5em;
+  }
+  .table_schedule table td:nth-child(4):before {
+    content: "会場 ：";
+    word-spacing: 2.5em;
+  }
+  .table_schedule table td:nth-child(5):before {
+    content: "事前登録 ：";
+    word-spacing: 0.5em;
+  }
+  .table_schedule table td:nth-child(6):before {
+    content: "料金 ：";
+    word-spacing: 2.5em;
+  }
+  .table_schedule table td:nth-child(7):before {
+    content: "リンク ：";
+    word-spacing: 1.5em;
+  }
+  .table_wrapper table td:nth-child(2),
+  .table_schedule table td:nth-child(1),
+  .table_schedule table td:nth-child(7) {
+    padding-left: 6em;
+    text-indent: -6em;
+  }
+ .table_schedule table td:nth-child(1) {
+    padding-top: 10px;
+  }
+ .table_schedule table td:nth-child(7) {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ddd;
+  }
+   .table_schedule table td:before{
+    color :#000;
+    font-family:"Osaka−等幅","ＭＳ ゴシック","monospace";
   }
 }

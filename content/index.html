@@ -5,15 +5,14 @@ keywords:
 ---
 
 <div class="body">
-  <div id="doorkeeper">
+  <div class="py-3">
     <h2><a href="https://matsue-rb.doorkeeper.jp/">松江Rubyとは</a></h2>
-    <p class="description">
+    <p>
       Matsue.rb(松江Ruby)は、島根県松江市周辺で活動するプログラミング言語Rubyのコミュニティです。<br />
       主な活動はイベント（Matsue.rb定例会、松江Ruby会議）を開催することです。各イベントのスケジュールは<a href="<%= relative_path_to('/schedule/') %>">こちら</a>からご確認いただけます。<br />
-      <br />
     </p>
     <h2 id="matsuerb">Matsue.rb定例会について</h2>
-    <p class="description">
+    <p>
       Matsue.rb定例会の参加登録は <a href="https://matsue-rb.doorkeeper.jp/"><img src="/images/doorkeeper_logo.svg" alt="doorkeeper" width="140" height="24" /></a> でお願いします。<br />
       <br />
       Matsue.rb定例会は、『Rubyを中心にオープンソースソフトウェアに関する新しい発見や学びを共有できる場を提供し続ける』という目的で、毎月1回、13:00から17:00まで<a href="https://matsue.rubyist.net/map/">松江オープンソースラボ</a>、<a href="https://github.com/matsuerb/matsuerb-nanoc/wiki/matsuerb-online">オンライン</a>で開催しているイベントです。<br />
@@ -29,7 +28,7 @@ keywords:
       Matsue.rb定例会は、Slackを使用しています。<a href="https://join.slack.com/t/matsuerb/shared_invite/zt-2azq8bg7m-Ng6kenMhD7oMA2qqLk4l8w">Slackワークスペースに参加する</a> のリンクからSlackへの参加もよろしくお願いします。<br />
     </p>
     <h2 id="matrk">松江Ruby会議について</h2>
-    <p class="description">
+    <p>
       松江Ruby会議は、年1回、松江市周辺で開催しているイベントです。松江Ruby会議02からMatsue.rbのメンバーも関わって開催しています。<br />
       本イベントは、<%= link_to("地域Ruby会議(Regional RubyKaigi;りーじょなるるびーかいぎ)", "http://regional.rubykaigi.org/") %>という<%= link_to("RubyKaigi", "http://rubykaigi.org/") %>のようなイベントをいろんな地域でやってしまおうというプロジェクトの一部として開催しています。日本Rubyの会が<%= link_to("後援", "http://www.fdiary.net/ml/ruby/msg/1929") %>しています。<br />
       <ul>
@@ -47,7 +46,7 @@ keywords:
     </p>
   </div>
 
-  <div id="doc">
+  <div class="py-3">
     <h2><a href="/news/"><img src="/images/bn/ruby.png" alt="*"/> お知らせ</a></h2>
     <% sorted_articles[0..4].each do |item| %>
       <div class="row">
@@ -61,20 +60,20 @@ keywords:
     <% end %>
   </div>
 
-  <div id="tw">
+  <div class="py-3">
     <h2><a href="https://twitter.com/search?q=%23matsuerb&src=typd&lang=ja"><img src="/images/x_logo.svg" alt="*" width="20" height="20" style="filter: brightness(0);" /> X(旧: Twitter)</a></h2>
     <a class="twitter-timeline" href="https://twitter.com/search?q=%23matsuerb">#matsuerb に関するツイート</a>
-    <p class="description">X(旧: Twitter)をご利用の方は、<%= link_to("@matsuerb", "https://twitter.com/matsuerb") %>にメンションしていただくか、ハッシュタグ <%= link_to("#matsuerb", "https://twitter.com/hashtag/matsuerb") %> をつけてご質問などをつぶやいていただければお返事いたします。フォローよろしくお願いいたします。</p>
+    <p>X(旧: Twitter)をご利用の方は、<%= link_to("@matsuerb", "https://twitter.com/matsuerb") %>にメンションしていただくか、ハッシュタグ <%= link_to("#matsuerb", "https://twitter.com/hashtag/matsuerb") %> をつけてご質問などをつぶやいていただければお返事いたします。フォローよろしくお願いいたします。</p>
   </div>
   <div id="fb">
     <h2><a href="https://www.facebook.com/groups/matsuerb"><img src="/images/facebook_logo.svg" alt="*" width="20" height="20" /> Facebook</a></h2>
-    <p class="description">Matsue.rbの情報交換やイベントの告知は主にFacebookの<a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)グループ</a>で行なっていますので、よろしければご参加ください。</p>
+    <p>Matsue.rbの情報交換やイベントの告知は主にFacebookの<a href="https://www.facebook.com/groups/matsuerb">Matsue.rb(松江Ruby)グループ</a>で行なっていますので、よろしければご参加ください。</p>
     <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmatsue.rubyist.net%2F&width=450&layout=standard&action=like&show_faces=true&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden;min-height:0px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
   </div>
 
-  <div id="map">
+  <div class="py-3">
     <h2>アクセスマップ（定例会開催場所）</h2>
-    <p class="description">　松江Rubyの定例会は「松江オープンソースラボ」で開催しています。松江オープンソースラボについての詳細は、松江市のウェブサイト（下記リンク）にてご確認ください。</p>
+    <p>　松江Rubyの定例会は「松江オープンソースラボ」で開催しています。松江オープンソースラボについての詳細は、松江市のウェブサイト（下記リンク）にてご確認ください。</p>
     <ul>
       <li><%= link_to("松江市ホームページ : 松江オープンソースラボ（松江市開発交流プラザ）", "http://www1.city.matsue.shimane.jp/jigyousha/sangyou/ruby/rabo_open.html") %></li>
     </ul>
@@ -85,9 +84,9 @@ keywords:
     </div>
   </div>
 
-  <div id="members">
+  <div class="py-3">
     <h2>運営スタッフ</h2>
-    <p class="description">
+    <p>
     　Matsue.rbのメンバーになりたい方は、公式アカウントに登録をお願いします。<br />
       <br />
     　現在は、Matsue.rb定例会の登録を <a href="https://matsue-rb.doorkeeper.jp/"><img src="/images/doorkeeper_logo.svg" alt="doorkeeper" width="140" height="24" /></a> でおこなっていますので、 <a href="https://matsue-rb.doorkeeper.jp/"><img src="/images/doorkeeper_logo.svg" alt="doorkeeper" width="140" height="24" /></a> のMatsue.rbのグループのメンバーの登録をお願いします。<br />

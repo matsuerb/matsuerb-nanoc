@@ -1,20 +1,13 @@
 @charset "UTF-8";
-body {
-  margin: 0;
-  padding: 3px 3% 10px;
-  background-color: #fff;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
-  color: #333;
-}
-.body a:link{
+a:link{
   color: #0000df;
   background-color: #fff;
 }
-.body a:visited{
+a:visited{
   color: #5700b3;
   background-color: #fff;
 }
-.body a:hover{
+a:hover{
   color: #b00060;
   background-color: #f3f3f3;
 }
@@ -112,25 +105,16 @@ iframe {
   }
 }
 @media only screen and (max-width: 800px){
-  body {
-    padding: 3px 10px 0;
-  }
   .toc {
     font-size: 11px;
   }
 }
 @media only screen and (max-width: 700px){
-  body {
-    padding: 3px 3px 0;
-  }
   .toc {
     font-size: 10px;
   }
 }
 @media only screen and (max-width: 600px){
-  body {
-    padding: 3px 10px 10px;
-  }
   div.doc {
     padding: 0;
   }
@@ -218,10 +202,6 @@ iframe {
 @media only screen and (max-width: 600px) {
 .page-title{
   margin: 2px 0 0 0;
-}
-.body{
-  padding: 0;
-  line-height: 150%;
 }
  th {
     display: none;

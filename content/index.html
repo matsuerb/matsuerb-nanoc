@@ -102,28 +102,32 @@ keywords:
       <div class="row">
         <% get_matsuerb_members.each_slice(2) do |members| %>
           <% members.each do |data| %>
-            <div class="col-lg-6">
-              <div class="text-center">
-                <%= gravatar_image(data[:gravatar_hash]) %>
-                <h3><%= data[:name] %></h3>
-                <p><%= data[:profile] %></p>
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <div class="card p-4">
+                <div class="image d-flex flex-column justify-content-center align-items-center">
+                  <%= gravatar_image(data[:gravatar_hash]) %>
+                  <span class="fs-5 mt-2"><%= data[:name] %></span>
+                  <div class="mt-2">
+                    <p><%= data[:profile] %></p>
+                  </div>
+                </div>
+                <% if member_websites?(data) %>
+                  <p class="fs-4">ウェブサイト</p>
+                  <ul>
+                    <% get_member_websites(data).each do |website| %>
+                      <li><%= link_to(website[:name], website[:url]) %></li>
+                    <% end %>
+                  </ul>
+                <% end %>
+                <% if member_products?(data) %>
+                  <p class="fs-4">プロジェクト</p>
+                  <ul class="links">
+                    <% data[:products].each do |h| %>
+                      <li><%= link_to(h[:name], h[:url]) %></li>
+                    <% end %>
+                  </ul>
+                <% end %>
               </div>
-              <% if member_websites?(data) %>
-                <h4>ウェブサイト</h4>
-                <ul class="links">
-                  <% get_member_websites(data).each do |website| %>
-                    <li><%= link_to(website[:name], website[:url]) %></li>
-                  <% end %>
-                </ul>
-              <% end %>
-              <% if member_products?(data) %>
-                <h4>プロジェクト</h4>
-                <ul class="links">
-                  <% data[:products].each do |h| %>
-                    <li><%= link_to(h[:name], h[:url]) %></li>
-                  <% end %>
-                </ul>
-              <% end %>
             </div>
           <% end %>
         <% end %>

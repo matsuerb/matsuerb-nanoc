@@ -1,15 +1,12 @@
 @charset "UTF-8";
 a:link{
   color: #0000df;
-  background-color: #fff;
 }
 a:visited{
   color: #5700b3;
-  background-color: #fff;
 }
 a:hover{
   color: #b00060;
-  background-color: #f3f3f3;
 }
 /* toc menu */
 ul.menu {

@@ -77,6 +77,15 @@ ul.menu li img:hover {
   text-shadow: 0 1px 1px #bbb;
 }
 
+/* footer */
+.matsuerb_logo:hover {
+  -webkit-filter: saturate(136%);
+  -moz-filter: saturate(136%);
+  -o-filter: saturate(136%);
+  -ms-filter: saturate(136%);
+  filter: saturate(136%);
+}
+
 /* elememts */
 iframe {
   margin :0.5em 0 0;

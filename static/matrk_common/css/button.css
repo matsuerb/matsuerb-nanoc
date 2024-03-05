@@ -11,3 +11,11 @@
   margin-top: 10px;
   width: 295px
 }
+
+.matsuerb_logo:hover {
+  -webkit-filter: saturate(136%);
+  -moz-filter: saturate(136%);
+  -o-filter: saturate(136%);
+  -ms-filter: saturate(136%);
+  filter: saturate(136%);
+}

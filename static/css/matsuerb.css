@@ -77,6 +77,17 @@ ul.menu li img:hover {
   text-shadow: 0 1px 1px #bbb;
 }
 
+h2 {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+h2:before {
+  content: url('/images/bn/ruby.png');
+  width: 23px;
+  height: 20px;
+  padding-right: 10px;
+}
+
 /* footer */
 .matsuerb_logo:hover {
   -webkit-filter: saturate(136%);

@@ -82,7 +82,7 @@ h2 {
   border-bottom: 1px solid #ccc;
 }
 h2:before {
-  content: url('/images/bn/ruby.png');
+  content: url('/images/bn/gem.svg');
   width: 23px;
   height: 20px;
   padding-right: 10px;

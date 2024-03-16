@@ -1,7 +1,7 @@
 ---
 - :name: Kouji Takao
-  :github: takaokouji
-  :twitter: takaokouji
+  :github: https://github.com/takaokouji
+  :twitter: https://twitter.com/takaokouji
   :website: http://takaokouji.hatenablog.com/
   :profile: 松江在住のITエンジニア。職業はRubyを活用したSIer。松江周辺のRubyコミュニティMatsue.rbの発起人。松江市の中学生Ruby教室の講師。
   :gravatar_hash: 0680ae0d795607a6d9d7fb24698710bd
@@ -12,8 +12,8 @@
     :url: http://matsuerbradio.seesaa.net/
   :public: true
 - :name: Akihiro Sada
-  :github: sada
-  :twitter: sada4
+  :github: https://github.com/sada
+  :twitter: https://twitter.com/sada4
   :website:
   :profile: Matsue.rb に参加している松江市在住のITエンジニア。主に使用しているのはRubyとJavaScript。
   :gravatar_hash: ed009bd803ad84352205f2eb4a978cb5

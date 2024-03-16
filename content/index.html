@@ -118,16 +118,13 @@ keywords:
                   </div>
                 </div>
                 <% if member_websites?(data) %>
-                  <p class="fs-4">ウェブサイト</p>
-                  <ul>
-                    <% get_member_websites(data).each do |website| %>
-                      <li><%= link_to(website[:name], website[:url]) %></li>
-                    <% end %>
-                  </ul>
+                  <span class="d-flex">
+                    <a href="<%= data[:twitter] %>"><img src="/images/x_logo.svg" class="x_logo me-1"></a>
+                    <a href="<%= data[:github] %>"><img src="/matrk_common/icon/github.png" class="github_logo me-1"></a>
+                  </span>
                 <% end %>
                 <% if member_products?(data) %>
-                  <p class="fs-4">プロジェクト</p>
-                  <ul class="links">
+                  <ul class="links py-2">
                     <% data[:products].each do |h| %>
                       <li><%= link_to(h[:name], h[:url]) %></li>
                     <% end %>

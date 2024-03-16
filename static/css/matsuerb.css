@@ -88,6 +88,13 @@ h2:before {
   padding-right: 10px;
 }
 
+.x_logo, .github_logo {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0);
+  opacity: 0.4;
+}
+
 /* footer */
 .matsuerb_logo:hover {
   -webkit-filter: saturate(136%);

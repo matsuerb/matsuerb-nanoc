@@ -64,7 +64,7 @@
   filter: brightness(0);
 }
 .profile .social .github {
-  background-image: url('/matrk_common/icon/github.png');
+  background-image: url('/images/github.png');
 }
 .profile .description {
   text-align: left;

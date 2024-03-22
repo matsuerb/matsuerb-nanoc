@@ -77,14 +77,20 @@ ul.menu li img:hover {
   text-shadow: 0 1px 1px #bbb;
 }
 
+h1 {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+h1:before {
+  content: url('/images/bn/gem.svg');
+  padding-right: 10px;
+}
 h2 {
   padding: 10px 0px;
   border-bottom: 1px solid #ccc;
 }
 h2:before {
   content: url('/images/bn/gem.svg');
-  width: 23px;
-  height: 20px;
   padding-right: 10px;
 }
 

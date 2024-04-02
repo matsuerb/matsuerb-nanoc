@@ -1,0 +1,8 @@
+h2 {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+h2:before {
+  content: url('/images/bn/gem.svg');
+  padding-right: 10px;
+}

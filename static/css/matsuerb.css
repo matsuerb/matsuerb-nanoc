@@ -24,7 +24,6 @@ ul.menu li {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: Helvetica , "游ゴシック体" , "Yu Gothic" , "メイリオ" ,sans-serif;
 }
 ul.menu li:first-child {
   position: relative;
@@ -316,6 +315,5 @@ iframe {
   }
    .table_schedule table td:before{
     color :#000;
-    font-family:"Osaka−等幅","ＭＳ ゴシック","monospace";
   }
 }

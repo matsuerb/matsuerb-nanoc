@@ -6,18 +6,9 @@
 .keynote-person .matz {
   background-image: url('../img/matz.jpg')
 }
-.keynote-person .matz:after {
-  content: "基調講演";
-}
 .keynote-person .matsuda {
   background-image: url('../img/matsuda.jpg')
 }
-.keynote-person .matsuda:after {
-  content: "ゲスト講演";
-}
 .keynote-person .koshikawa {
   background-image: url('../img/koshikawa.jpg')
-}
-.keynote-person .koshikawa:after {
-  content: "ゲスト講演";
 }

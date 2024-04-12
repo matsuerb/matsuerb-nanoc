@@ -6,12 +6,6 @@
 .keynote-person .matz {
   background-image: url('../img/matz.jpg')
 }
-.keynote-person .matz:after {
-  content: "基調講演";
-}
 .keynote-person .inoue {
   background-image: url('../img/inoue_nacl.jpg')
-}
-.keynote-person .inoue:after {
-  content: "ゲスト講演";
 }

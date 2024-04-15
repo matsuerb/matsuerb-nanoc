@@ -40,17 +40,7 @@ compile '/tags/*/' do
   layout 'default'
 end
 
-compile '/matrk10/' do
-  if item.binary?
-    # don’t filter binary items
-  else
-    filter :erb, trim_mode: '-'
-    filter :kramdown
-    layout 'matrk'
-  end
-end
-
-compile '/matrk0[5-9]/' do
+compile '/matrk[0-1][0-1,5-9]/' do
   if item.binary?
     # don’t filter binary items
   else

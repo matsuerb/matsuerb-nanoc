@@ -1,0 +1,11 @@
+.container mark {
+  margin-top: 400px;
+}
+
+/* speaker */
+.keynote-person .shyouhei {
+  background-image: url('../img/shyouhei.jpg')
+}
+.keynote-person .matz {
+  background-image: url('../img/matz.jpg')
+}

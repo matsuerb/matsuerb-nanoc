@@ -155,10 +155,8 @@ publish: true
 
   <div class="row">
     <div class="col-md-12">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">タイムテーブル</h3>
-          <h4>午前の部</h4>
+      <h3>タイムテーブル</h3>
+      <h4>午前の部</h4>
 <%= render('_time_table', tbody_data: [
   ['11:00 〜 11:05', 'オープニング', ''],
   ['11:10 〜 11:55', 'ゲスト講演<br />「Redmineの歴史とアーキテクチャ(仮)」', 'Toshi MARUYAMA 氏<br> (Redmineコミッター)'],
@@ -181,8 +179,6 @@ publish: true
   ['16:45 〜 17:00', 'Ruby Quiz', ''],
   ['17:00 〜 17:10', 'クロージング', '']
 ]).gsub(/^/, '      ') -%>
-        </div>
-      </div>
     </div>
   </div>
 </div>

@@ -152,12 +152,10 @@ publish: true
 
   <div class="row">
     <div class="col-md-12">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">タイムテーブル</h3>
-          <h4>午前の部</h4>
-          <p>松江Ruby会議の開会前に交流を兼ねてLT大会を行います。</p>
-          <br>
+      <h3>タイムテーブル</h3>
+      <h4>午前の部</h4>
+      <p>松江Ruby会議の開会前に交流を兼ねてLT大会を行います。</p>
+      <br>
 <%= render('_time_table', tbody_data: [
   ['11:00',          '開場', ''],
   ['11:30 〜 13:00', 'LT大会、昼食', ''],
@@ -192,8 +190,6 @@ publish: true
   ['', 'ライブコーディング大喜利', '松江テルサ<br/>※RubyJrと平行開催となるため開催場所が<strong><a href="http://www.sanbg.com/terrsa/">テルサ研修室２</a></strong>となります。'],
   ['20:00 ～', '懇親会', '彩鮮酒楽　やぁ']
 ]).gsub(/^/, '      ') -%>
-        </div>
-      </div>
     </div>
   </div>
 </div>

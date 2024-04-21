@@ -152,9 +152,7 @@ publish: true
 
   <div class="row">
     <div class="col-md-12">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">タイムテーブル</h3>
+      <h3>タイムテーブル</h3>
 <%= render('_time_table', tbody_data: [
   ['13:00〜',        '開場・受付開始', ''],
   ['13:25 〜 13:30', '開会あいさつ', '主催者'],
@@ -171,8 +169,6 @@ publish: true
   ['', '「スモウルビーでライブコーディング」', '本多展幸 氏'],
   ['17:35 〜 17:45', 'クロージング<br />本日のクロージング', '主催者']
 ]).gsub(/^/, '      ') -%>
-        </div>
-      </div>
     </div>
   </div>
 </div>

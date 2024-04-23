@@ -48,16 +48,14 @@ keywords:
 
   <div class="py-3">
     <h2>お知らせ</h2>
-    <% sorted_articles[0..4].each do |item| %>
-      <div class="row">
+    <div class="overflow-auto news">
+      <% sorted_articles[0..10].each do |item| %>
         <div>
           <a href="<%= item.identifier %>"><%= item[:title] %></a><span class="fw-light ps-1"><small>(<%= item[:created_at] %>)</small></span>
-        </div>
-        <div>
           <p><%= excerptize(strip_html(item.reps.first.compiled_content), length:100) %></p>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 
   <div class="py-3">

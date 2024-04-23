@@ -92,6 +92,9 @@ h2:before {
   content: url('/images/bn/gem.svg');
   padding-right: 10px;
 }
+.news {
+  height: 250px;
+}
 
 .x_logo, .github_logo {
   width: 18px;

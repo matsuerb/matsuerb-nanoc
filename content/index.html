@@ -103,10 +103,10 @@ keywords:
     </p>
 
     <div class="container">
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <% get_matsuerb_members.each_slice(2) do |members| %>
           <% members.each do |data| %>
-            <div class="col-lg-6 d-flex align-items-stretch">
+            <div class="col-lg-4 d-flex align-items-stretch">
               <div class="card p-4">
                 <div class="image d-flex flex-column justify-content-center align-items-center">
                   <%= gravatar_image(data[:gravatar_hash]) %>

@@ -74,10 +74,3 @@
 .profile .description {
   text-align: left;
 }
-
-
-@media screen and (max-width: 768px) {
-  #sponser ul.sponser_list_items {
-    flex-wrap: wrap;
-  }
-}

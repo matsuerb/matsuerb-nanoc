@@ -113,7 +113,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rbtree (0.4.6)
-    rexml (3.2.5)
+    rexml (3.2.8)
+      strscan (>= 3.0.9)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -134,6 +135,7 @@ GEM
       rbtree
       set (~> 1.0)
     stringio (3.1.0)
+    strscan (3.1.0)
     thor (1.2.2)
     timecop (0.9.8)
     tty-color (0.6.0)

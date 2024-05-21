@@ -30,11 +30,6 @@ compile '/(tags|news)/' do
   layout 'default'
 end
 
-compile '/' do
-  filter :erb
-  layout 'default'
-end
-
 compile '/tags/*/' do
   filter :erb
   layout 'default'

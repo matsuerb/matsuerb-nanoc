@@ -96,10 +96,6 @@ def link_to_osslab(lab = "松江オープンソースラボ")
   return link_to(lab, "https://www.city.matsue.lg.jp/soshikikarasagasu/sangyokeizaibu_matsuesangyoshiencenter/14133.html")
 end
 
-def link_to_rubyjr(subject = "Ruby.Jr(松江市主催)")
-  return link_to(subject, "http://www1.city.matsue.shimane.jp/sangyoushinkou/ruby/rubycity/rubyjr/rubyjr.html")
-end
-
 def link_to_doorkeeper(subject, owner, event_id = nil)
   url = "http://#{owner}.doorkeeper.jp/"
   url = File.join(url, "events", event_id.to_s) if event_id

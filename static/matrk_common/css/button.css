@@ -12,6 +12,7 @@
   width: 295px
 }
 
+.button:hover,
 .matsuerb_logo:hover {
   -webkit-filter: saturate(136%);
   -moz-filter: saturate(136%);

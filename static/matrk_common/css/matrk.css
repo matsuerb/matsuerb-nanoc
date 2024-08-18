@@ -6,6 +6,10 @@ h2:before {
   content: url('/images/bn/gem.svg');
   padding-right: 10px;
 }
+.title {
+  background: #eb1d15;
+  color: white;
+}
 .news {
   height: 250px;
 }

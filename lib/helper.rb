@@ -93,7 +93,7 @@ def copyright_year
 end
 
 def link_to_osslab(lab = "松江オープンソースラボ")
-  return link_to(lab, "https://www.city.matsue.lg.jp/soshikikarasagasu/sangyokeizaibu_matsuesangyoshiencenter/14133.html")
+  return link_to(lab, "https://www.city.matsue.lg.jp/soshikikarasagasu/shinsangyousouzouka/rcm/labo/14133.html")
 end
 
 def link_to_doorkeeper(subject, owner, event_id = nil)

@@ -12,7 +12,12 @@
   width: 295px
 }
 
-.button:hover,
+.button:hover {
+  background-color: white;
+  border-color: #EB1D15;
+  color: #EB1D15;
+}
+
 .matsuerb_logo:hover {
   -webkit-filter: saturate(136%);
   -moz-filter: saturate(136%);

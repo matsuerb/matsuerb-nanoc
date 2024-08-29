@@ -108,7 +108,7 @@ keywords:
         <% get_matsuerb_members.each_slice(2) do |members| %>
           <% members.each do |data| %>
             <div class="col-lg-4 d-flex align-items-stretch">
-              <div class="card p-4">
+              <div class="card p-4 my-3">
                 <div class="image d-flex flex-column justify-content-center align-items-center">
                   <%= gravatar_image(data[:gravatar_hash]) %>
                   <span class="fs-5 mt-2"><%= data[:name] %></span>

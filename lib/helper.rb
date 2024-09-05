@@ -140,14 +140,6 @@ def member_websites?(data)
   return data.keys.any? {|key| MEMBER_DEFAULTS.keys.include?(key) }
 end
 
-def get_member_websites(data)
-  return MEMBER_DEFAULTS.map {|name, url_base|
-    url = data[name]
-    next if url.nil? || url == ""
-    {name: name, url: url_base + url}
-  }.compact
-end
-
 def member_products?(data)
   return data.key?(:products) &&
          data[:products].length > 0 &&

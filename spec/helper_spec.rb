@@ -95,16 +95,6 @@ describe 'members' do
     end
   end
 
-  it "get_member_websites returns urls" do
-    data = {github: "foo", twitter: "foo", website: "http://example.com"}
-    results = get_member_websites(data)
-    results.length.should eq(3)
-    MEMBER_DEFAULTS.each do |name, url_base|
-      result = results.detect {|r| r[:name] == name }
-      result[:url].should eq(url_base + data[name.to_sym])
-    end
-  end
-
   it "member_products? returns true" do
     data = {products: [{name: "foo", url: "http://example.com"}]}
     member_products?(data).should eq(true)

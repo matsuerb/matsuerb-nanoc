@@ -38,6 +38,8 @@ end
 compile '/matrk[0-1][0-1,5-9]/*' do
   if item.binary?
     # don’t filter binary items
+  elsif item[:kind] == 'content'
+    layout 'content'
   else
     filter :erb, trim_mode: '-'
     filter :kramdown

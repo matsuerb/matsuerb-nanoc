@@ -60,19 +60,17 @@ kind: matrk
           <li>ランダムに並べ替えてください。</li>
         </ul>
         <p>※ただし、 <code>Array#shuffle</code>, <code>Array#shuffle!</code>, <code>Array#sample</code> は使用しないでください。</p>
-        <div class="border bg-light p-3 p-sm-4">
-          <pre><code class="language-ruby">
-            def f
-              a = (1..10).to_a
-              # -- ここにコードを記述してください。 --
-            end
+        <pre><code>
+def f
+  a = (1..10).to_a
+  # -- ここにコードを記述してください。 --
+end
 
-            # 三回出力してそれぞれランダムに並び替えられていることを確認します。
-            f
-            f
-            f
-          </code></pre>
-        </div>
+# 三回出力してそれぞれランダムに並び替えられていることを確認します。
+f
+f
+f
+        </code></pre>
       </div>
     </div>
     <div id="question2" class="col-md-12 py-3">
@@ -85,29 +83,25 @@ kind: matrk
           （平均点が同じ場合はrubyの点数が高い方を先に表示すること）<br/>
         </p>
         <h4>CSVファイル</h4>
-        <div class="border bg-light p-3 p-sm-4">
-          <pre><code class="language-ruby">
-          name,ruby,php,python,perl
-          一郎,100,40,70,80
-          二郎,60,90,80,10
-          三郎,90,60,60,60
-          四郎,80,70,70,80
+          <pre><code>
+name,ruby,php,python,perl
+一郎,100,40,70,80
+二郎,60,90,80,10
+三郎,90,60,60,60
+四郎,80,70,70,80
           </code></pre>
-        </div>
         <h4>Rubyスクリプトファイル</h4>
-        <div class="border bg-light p-3 p-sm-4">
-          <pre><code class="language-ruby">
-            require 'open-uri'
-            require 'csv'
+        <pre><code>
+require 'open-uri'
+require 'csv'
 
-            # スクレイピング先のURL
-            url = 'https://matsue.rubyist.net/matrk06/ruby_2.csv'
+# スクレイピング先のURL
+url = 'https://matsue.rubyist.net/matrk06/ruby_2.csv'
 
-            # -- ここにコードを記述してください。 --
+# -- ここにコードを記述してください。 --
 
-            # -- ここに出力をしてください。 --
-          </code></pre>
-        </div>
+# -- ここに出力をしてください。 --
+        </code></pre>
       </div>
     </div>
     <div id="question3" class="col-md-12 py-3">
@@ -121,18 +115,16 @@ kind: matrk
           仲間はずれの理由と何番目のRubyかを出力してください。<br/>
           ※仲間はずれの理由に特に正解はありません。自由に考えてOKです。
         </p>
-        <div class="border bg-light p-3 p-sm-4">
-          <pre><code class="language-ruby">
-            require 'open-uri'
+          <pre><code>
+require 'open-uri'
 
-            # スクレイピング先のURL
-            url = 'https://matsue.rubyist.net/matrk06/ruby_3'
+# スクレイピング先のURL
+url = 'https://matsue.rubyist.net/matrk06/ruby_3'
 
-            # -- ここにコードを記述してください。 --
+# -- ここにコードを記述してください。 --
 
-            # -- ここに出力をしてください。 --
+# -- ここに出力をしてください。 --
           </code></pre>
-        </div>
       </div>
     </div>
     <div id="question4" class="col-md-12 py-3">

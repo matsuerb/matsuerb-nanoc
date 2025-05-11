@@ -114,12 +114,10 @@ kind: matsuerb
                 <div class="image d-flex flex-column justify-content-center align-items-center">
                   <%= gravatar_image(data[:gravatar_hash]) %>
                   <span class="fs-5 mt-2"><%= data[:name] %></span>
-                  <% if member_websites?(data) %>
                     <span>
                       <a href="<%= data[:twitter] %>"><img src="/images/x_logo.svg" class="x_logo me-1"></a>
                       <a href="<%= data[:github] %>"><img src="/images/github.png" class="github_logo me-1"></a>
                     </span>
-                  <% end %>
                   <div class="mt-2">
                     <p><%= data[:profile] %></p>
                   </div>

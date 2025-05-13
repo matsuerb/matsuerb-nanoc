@@ -136,10 +136,6 @@ def get_matsuerb_members(path = 'resources/members.yml', public_only = true)
   return members
 end
 
-def member_websites?(data)
-  return data.keys.any? {|key| MEMBER_DEFAULTS.keys.include?(key) }
-end
-
 def member_products?(data)
   return data.key?(:products) &&
          data[:products].length > 0 &&

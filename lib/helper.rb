@@ -2,12 +2,6 @@ require 'yaml'
 require 'icalendar'
 require 'date'
 
-MEMBER_DEFAULTS = {
-  github: "https://github.com/",
-  twitter: "https://twitter.com/",
-  website: ""
-}
-
 PHOTO_PATHS = {
   matrk6: {
     "1" => "https://www.flickr.com/groups/2875305@N22/pool/",

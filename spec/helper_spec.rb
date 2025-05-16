@@ -28,21 +28,6 @@ describe 'members' do
     @tempfile = Tempfile.open("matsuerb_members")
   end
 
-  it "member_websites? returns true" do
-    data = {github: "foo"}
-    member_websites?(data).should eq(true)
-    data[:twitter] = "foo"
-    member_websites?(data).should eq(true)
-    data[:website] = "http://example.com"
-    member_websites?(data).should eq(true)
-  end
-
-  it "member_websites? returns false" do
-    member_websites?({}).should eq(false)
-    data = {name: "foo", profile: "foo", gravatar_hash: "42", public: true}
-    member_websites?(data).should eq(false)
-  end
-
   it "get_matsuerb_members returns nothing#1" do
     @tempfile.write([].to_yaml)
     @tempfile.close

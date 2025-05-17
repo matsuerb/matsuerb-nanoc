@@ -122,7 +122,7 @@ kind: matsuerb
                     <p><%= data[:profile] %></p>
                   </div>
                 </div>
-                <% if member_products?(data) %>
+                <% if data.key?(:products) %>
                   <ul class="links py-2">
                     <% data[:products].each do |h| %>
                       <li><%= link_to(h[:name], h[:url]) %></li>

@@ -130,12 +130,6 @@ def get_matsuerb_members(path = 'resources/members.yml', public_only = true)
   return members
 end
 
-def member_products?(data)
-  return data.key?(:products) &&
-         data[:products].length > 0 &&
-         data[:products].all? {|p| p.key?(:name) && p.key?(:url) }
-end
-
 def generate_calendar
   matsuerb_items = []
   # https://github.com/icalendar/icalendar/

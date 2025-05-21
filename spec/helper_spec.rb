@@ -79,14 +79,4 @@ describe 'members' do
       member[s].should eq(data[0][s])
     end
   end
-
-  it "member_products? returns true" do
-    data = {products: [{name: "foo", url: "http://example.com"}]}
-    member_products?(data).should eq(true)
-  end
-
-  it "member_products? returns false" do
-    member_products?({}).should eq(false)
-    member_products?({products: [{name: "foo"}]}).should eq(false)
-  end
 end

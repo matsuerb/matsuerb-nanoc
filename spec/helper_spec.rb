@@ -23,6 +23,12 @@ describe 'copyright' do
   end
 end
 
+describe 'link_to_osslab' do
+  it "return html" do
+    expect(link_to_osslab).to eq('<a href="https://www.city.matsue.lg.jp/soshikikarasagasu/shinsangyousouzouka/rcm/labo/14133.html">松江オープンソースラボ</a>')
+  end
+end
+
 describe 'members' do
   before do
     @tempfile = Tempfile.open("matsuerb_members")

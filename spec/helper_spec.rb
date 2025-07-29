@@ -37,13 +37,13 @@ describe 'members' do
   it "get_matsuerb_members returns nothing#1" do
     @tempfile.write([].to_yaml)
     @tempfile.close
-    get_matsuerb_members(@tempfile.path).should == []
+    expect(get_matsuerb_members(@tempfile.path)).to eq([])
   end
 
   it "get_matsuerb_members returns nothing#2" do
     @tempfile.write([{name: "Foo Bar", public: false}].to_yaml)
     @tempfile.close
-    get_matsuerb_members(@tempfile.path).should == []
+    expect(get_matsuerb_members(@tempfile.path)).to eq([])
   end
 
   it "get_matsuerb_members returns one#1" do
@@ -56,13 +56,13 @@ describe 'members' do
     @tempfile.write(data.to_yaml)
     @tempfile.close
     members = get_matsuerb_members(@tempfile.path)
-    members.length.should eq(1)
+    expect(members.length).to eq(1)
     member = members.first
     %i(name profile gravatar_hash public).each do |s|
-      member[s].should eq(data[0][s])
+      expect(member[s]).to eq(data[0][s])
     end
     %i(github twitter website).each do |s|
-      member[s].should eq(nil)
+      expect(member[s]).to eq(nil)
     end
   end
 
@@ -79,10 +79,10 @@ describe 'members' do
     @tempfile.write(data.to_yaml)
     @tempfile.close
     members = get_matsuerb_members(@tempfile.path)
-    members.length.should eq(1)
+    expect(members.length).to eq(1)
     member = members.first
     member.keys.each do |s|
-      member[s].should eq(data[0][s])
+      expect(member[s]).to eq(data[0][s])
     end
   end
 end

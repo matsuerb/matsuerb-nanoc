@@ -29,6 +29,12 @@ describe 'link_to_osslab' do
   end
 end
 
+describe 'link_to_doorkeeper' do
+  it "return html" do
+    expect(link_to_doorkeeper('松江Ruby(Matsue.rb)定例会', 'matsue-rb', 99999)).to eq('<a href="http://matsue-rb.doorkeeper.jp/events/99999">松江Ruby(Matsue.rb)定例会</a>')
+  end
+end
+
 describe 'members' do
   before do
     @tempfile = Tempfile.open("matsuerb_members")

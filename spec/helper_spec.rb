@@ -35,6 +35,12 @@ describe 'link_to_doorkeeper' do
   end
 end
 
+describe 'link_to_connpass' do
+  it "return html" do
+    expect(link_to_connpass('松江Ruby(Matsue.rb)定例会', 'matsue-rb', 99999)).to eq('<a href="http://matsue-rb.connpass.com/event/99999">松江Ruby(Matsue.rb)定例会</a>')
+  end
+end
+
 describe 'members' do
   before do
     @tempfile = Tempfile.open("matsuerb_members")

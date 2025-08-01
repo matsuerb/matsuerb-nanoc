@@ -41,6 +41,12 @@ describe 'link_to_connpass' do
   end
 end
 
+describe 'link_to_dojo' do
+  it "return html" do
+    expect(link_to_dojo(event_id: 99999)).to eq('<a href="http://smalruby.doorkeeper.jp/events/99999">コーダー道場 松江</a>')
+  end
+end
+
 describe 'members' do
   before do
     @tempfile = Tempfile.open("matsuerb_members")

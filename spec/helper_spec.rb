@@ -47,6 +47,12 @@ describe 'link_to_dojo' do
   end
 end
 
+describe 'link_to_sproutrb' do
+  it "return html" do
+    expect(link_to_sproutrb(event_id: 99999)).to eq('<a href="http://sproutrb.connpass.com/event/99999">スプラウト.rb</a>')
+  end
+end
+
 describe 'members' do
   before do
     @tempfile = Tempfile.open("matsuerb_members")

@@ -48,8 +48,16 @@ describe 'link_to_dojo' do
 end
 
 describe 'link_to_sproutrb' do
-  it "return html" do
-    expect(link_to_sproutrb(event_id: 99999)).to eq('<a href="http://sproutrb.connpass.com/event/99999">スプラウト.rb</a>')
+  context 'connpass' do
+    it "return html" do
+      expect(link_to_sproutrb(event_id: 99999)).to eq('<a href="http://sproutrb.connpass.com/event/99999">スプラウト.rb</a>')
+    end
+  end
+
+  context 'doorkeeper' do
+    it "return html" do
+      expect(link_to_sproutrb(event_id: 99999, site_type: :doorkeeper)).to eq('<a href="http://sproutrb.doorkeeper.jp/events/99999">スプラウト.rb</a>')
+    end
   end
 end
 

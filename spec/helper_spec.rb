@@ -67,6 +67,12 @@ describe 'link_to_terrsa' do
   end
 end
 
+describe 'gravatar_image' do
+  it "return html" do
+    expect(gravatar_image('99999999999999999999999999999999')).to eq('<img src="http://www.gravatar.com/avatar/99999999999999999999999999999999" alt="" class="rounded-circle">')
+  end
+end
+
 describe 'members' do
   before do
     @tempfile = Tempfile.open("matsuerb_members")

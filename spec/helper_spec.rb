@@ -61,6 +61,12 @@ describe 'link_to_sproutrb' do
   end
 end
 
+describe 'link_to_terrsa' do
+  it "return html" do
+    expect(link_to_terrsa).to eq('<a href="http://www.sanbg.com/terrsa/">松江テルサ</a>')
+  end
+end
+
 describe 'members' do
   before do
     @tempfile = Tempfile.open("matsuerb_members")

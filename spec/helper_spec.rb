@@ -73,60 +73,57 @@ describe 'gravatar_image' do
   end
 end
 
-describe 'members' do
-  before do
-    @tempfile = Tempfile.open("matsuerb_members")
+describe 'get_matsuerb_members' do
+  let(:members_data1) do
+    [
+      {
+        name: "Foo Bar",
+        profile: "foobar is nice guy",
+        gravatar_hash: "0123456789",
+        public: true,
+      }
+    ]
+  end
+  let(:members_data2) do
+    [
+      {
+        name: "Foo Bar",
+        github: "foobar",
+        twitter: "foobar",
+        website: "http://www.example.org",
+        profile: "foobar is nice guy",
+        gravatar_hash: "0123456789",
+        public: true,
+      }
+    ]
   end
 
-  it "get_matsuerb_members returns nothing#1" do
-    @tempfile.write([].to_yaml)
-    @tempfile.close
-    expect(get_matsuerb_members(@tempfile.path)).to eq([])
-  end
-
-  it "get_matsuerb_members returns nothing#2" do
-    @tempfile.write([{name: "Foo Bar", public: false}].to_yaml)
-    @tempfile.close
-    expect(get_matsuerb_members(@tempfile.path)).to eq([])
-  end
-
-  it "get_matsuerb_members returns one#1" do
-    data = [{
-      name: "Foo Bar",
-      profile: "foobar is nice guy",
-      gravatar_hash: "0123456789",
-      public: true,
-    }]
-    @tempfile.write(data.to_yaml)
-    @tempfile.close
-    members = get_matsuerb_members(@tempfile.path)
-    expect(members.length).to eq(1)
-    member = members.first
-    %i(name profile gravatar_hash public).each do |s|
-      expect(member[s]).to eq(data[0][s])
+  it 'return []' do
+    [
+      [].to_yaml,
+      [{ name: "Foo Bar", public: false }].to_yaml
+    ].each do |yaml|
+      @tempfile = Tempfile.open("matsuerb_members")
+      @tempfile.write(yaml)
+      @tempfile.close
+      expect(get_matsuerb_members(@tempfile.path)).to eq([])
     end
-    %i(github twitter website).each do |s|
-      expect(member[s]).to eq(nil)
-    end
   end
 
-  it "get_matsuerb_members returns one#2" do
-    data = [{
-      name: "Foo Bar",
-      github: "foobar",
-      twitter: "foobar",
-      website: "http://www.example.org",
-      profile: "foobar is nice guy",
-      gravatar_hash: "0123456789",
-      public: true,
-    }]
-    @tempfile.write(data.to_yaml)
-    @tempfile.close
-    members = get_matsuerb_members(@tempfile.path)
-    expect(members.length).to eq(1)
-    member = members.first
-    member.keys.each do |s|
-      expect(member[s]).to eq(data[0][s])
+  it 'return member json' do
+    [
+      members_data1,
+      members_data2,
+    ].each do |members_data|
+      @tempfile = Tempfile.open("matsuerb_members")
+      @tempfile.write(members_data.to_yaml)
+      @tempfile.close
+      members = get_matsuerb_members(@tempfile.path)
+      expect(members.length).to eq(1)
+      member = members.first
+      member.keys.each do |member_attribute_name|
+        expect(member[member_attribute_name]).to eq(members_data[0][member_attribute_name])
+      end
     end
   end
 end

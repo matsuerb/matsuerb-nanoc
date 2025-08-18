@@ -127,3 +127,20 @@ describe 'get_matsuerb_members' do
     end
   end
 end
+
+describe 'create_links' do
+  it 'return matrk6 html' do
+    expected = [
+      '<a target="_blank" href="https://www.flickr.com/groups/2875305@N22/pool/">1</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2860565@N21/pool/">2</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2819938@N24/pool/">3</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2813862@N25/pool/">4</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2863519@N23/pool/">5</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2886121@N22/pool/">6</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2823956@N23/pool/">7</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2849741@N23/pool/">8</a>',
+      '<a target="_blank" href="https://www.flickr.com/groups/2886131@N22/pool/">9</a>',
+    ].join(' ')
+    expect(create_links(::PHOTO_PATHS[:matrk6])).to eq(expected)
+  end
+end

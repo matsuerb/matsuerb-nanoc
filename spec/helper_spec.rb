@@ -148,4 +148,9 @@ describe 'create_links' do
     expected = '<a target="_blank" href="https://www.flickr.com/groups/2901550@N22/pool/">写真一覧</a>'
     expect(create_links(::PHOTO_PATHS[:matrk7])).to eq(expected)
   end
+
+  it 'return matrk8 html' do
+    expected = '<a target="_blank" href="https://www.flickr.com/groups/4529348@N23/pool/">写真一覧</a>'
+    expect(create_links(::PHOTO_PATHS[:matrk8])).to eq(expected)
+  end
 end

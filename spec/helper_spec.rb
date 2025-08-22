@@ -3,7 +3,7 @@ require 'default'
 require 'helper'
 require 'tempfile'
 
-describe 'copyright' do
+describe 'copyright_year' do
   after do
     Timecop.return
   end

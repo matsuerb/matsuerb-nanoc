@@ -35,7 +35,7 @@ compile '/tags/*/' do
   layout 'default'
 end
 
-compile '/matrk[0-1][0-1,5-9]/*' do
+compile '/matrk[0-1][0-2,5-9]/*' do
   if item.binary?
     # don’t filter binary items
   elsif item[:kind] == 'content'

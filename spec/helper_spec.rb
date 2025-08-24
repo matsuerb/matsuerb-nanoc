@@ -3,6 +3,12 @@ require 'default'
 require 'helper'
 require 'tempfile'
 
+describe 'fbe' do
+  it "return html" do
+    expect(fbe(99999)).to eq('<a href="https://www.facebook.com/events/99999/">Facebook</a>')
+  end
+end
+
 describe 'copyright_year' do
   after do
     Timecop.return

@@ -61,8 +61,6 @@ def tag_page
 end
 
 def tag_page_item_list(tag)
-
-#  html_source = '<dl">'
   html_source = ""
   items_with_tag(tag).each do |item|
     html_source << "<blockquote><small>#{link_to(item[:title], item.identifier.to_s)}</small><p>#{strip_html(item.reps.first.compiled_content).slice(0,100)}...</p></blockquote>"

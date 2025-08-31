@@ -2,6 +2,8 @@ require 'yaml'
 require 'icalendar'
 require 'date'
 
+OFFICIAL_SITE_START_YEAR = 2013
+
 PHOTO_PATHS = {
   matrk6: {
     "1" => "https://www.flickr.com/groups/2875305@N22/pool/",
@@ -71,8 +73,6 @@ end
 def fbe(id)
   return link_to("Facebook", "https://www.facebook.com/events/#{id}/")
 end
-
-OFFICIAL_SITE_START_YEAR = 2013
 
 def copyright_year
   start_year = OFFICIAL_SITE_START_YEAR

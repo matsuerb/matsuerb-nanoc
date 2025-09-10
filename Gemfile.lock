@@ -107,7 +107,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (6.0.1)
-    puma (7.0.1)
+    puma (7.0.2)
       nio4r (~> 2.0)
     rack (3.2.1)
     rackup (2.1.0)

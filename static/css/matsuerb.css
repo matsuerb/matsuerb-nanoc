@@ -319,4 +319,11 @@ iframe {
    .table_schedule table td:before{
     color :#000;
   }
+ .matrk_table_schedule table td:nth-child(3) {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ddd;
+  }
+   .matrk_table_schedule table td:before{
+    color :#000;
+  }
 }

@@ -33,20 +33,75 @@ kind: matsuerb
     <p>
       松江Ruby会議は、年1回、松江市周辺で開催しているイベントです。松江Ruby会議02からMatsue.rbのメンバーも関わって開催しています。<br />
       本イベントは、<%= link_to("地域Ruby会議(Regional RubyKaigi;りーじょなるるびーかいぎ)", "http://regional.rubykaigi.org/") %>という<%= link_to("RubyKaigi", "http://rubykaigi.org/") %>のようなイベントをいろんな地域でやってしまおうというプロジェクトの一部として開催しています。<%= link_to("日本Rubyの会", "https://ruby-no-kai.org/") %>が<%= link_to("後援", "http://www.fdiary.net/ml/ruby/msg/1929") %>しています。<br />
-      <ul>
-        <li><a href="https://matsue.rubyist.net/matrk11">松江Ruby会議11</a> (2024/10/05) <a href="https://magazine.rubyist.net/articles/0065/0065-MatsueRubyKaigi11Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/2445824") %></li>
-        <li><a href="https://matsue.rubyist.net/matrk10">松江Ruby会議10</a> (2023/09/16) <a href="https://magazine.rubyist.net/articles/0063/0063-MatsueRubyKaigi10Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/2228242") %></li>
-        <li><a href="https://matsue.rubyist.net/matrk09">松江Ruby会議09</a> (2018/06/30) <a href="https://magazine.rubyist.net/articles/0058/0058-MatsueRubyKaigi09Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/1243152") %> <%= link_to("YouTube", "https://www.youtube.com/watch?v=Q4QBVKDZwcg") %></li>
-        <li><a href="https://matsue.rubyist.net/matrk08">松江Ruby会議08</a> (2016/12/17) <a href="https://magazine.rubyist.net/articles/0056/0056-MatsueRubyKaigi08Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/1061092") %> <%= link_to("YouTube", "https://www.youtube.com/playlist?list=PLbJxhePIoIPBU5f0cAn4BceCG48EGSHsA") %> Flickr(<%= create_links(::PHOTO_PATHS[:matrk8]) %>)</li>
-        <li><a href="https://matsue.rubyist.net/matrk07">松江Ruby会議07</a> (2015/09/26) <a href="https://magazine.rubyist.net/articles/0052/0052-MatsueRubyKaigi07Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "http://togetter.com/li/895041") %> <%= link_to("YouTube", "https://www.youtube.com/playlist?list=PLbJxhePIoIPBSYjO2enmqSTpucHuHiA9S") %> Flickr(<%= create_links(::PHOTO_PATHS[:matrk7]) %>)</li>
-        <li><a href="https://matsue.rubyist.net/matrk06">松江Ruby会議06</a> (2014/12/30) <a href="https://magazine.rubyist.net/articles/0051/0051-MatsueRubyKaigi06Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "http://togetter.com/li/760234") %> <%= link_to("YouTube", "https://www.youtube.com/playlist?list=PLbJxhePIoIPDCF_KeFc-U5W4XdmTYWPVd") %> Flickr(<%= create_links(::PHOTO_PATHS[:matrk6]) %>)</li>
-        <li><a href="https://matsue.rubyist.net/matrk05">松江Ruby会議05</a> (2014/03/25) <a href="https://magazine.rubyist.net/articles/0050/0050-MatsueRubyKaigi05.html">るびま記事</a> <%= link_to("Togetterまとめ", "http://togetter.com/li/642795") %></li>
-        <li><a href="http://regional.rubykaigi.org/matsue04">松江Ruby会議04</a> (2012/09/01) <a href="https://magazine.rubyist.net/articles/0040/0040-MatsueRubyKaigi04Report.html">るびま記事</a></li>
-        <li><a href="http://regional.rubykaigi.org/matsue03">松江Ruby会議03</a> (2011/07/03) <a href="https://magazine.rubyist.net/articles/0035/0035-MatsueRubyKaigi03Report.html">るびま記事</a></li>
-        <li><a href="http://regional.rubykaigi.org/matsue02">松江Ruby会議02</a> (2010/02/13) <a href="https://magazine.rubyist.net/articles/0034/0034-MatsueRubyKaigi02Report.html">るびま記事</a></li>
-        <li><a href="http://regional.rubykaigi.org/matsue01">松江Ruby会議01</a> (2009/02/02) <a href="https://magazine.rubyist.net/articles/0026/0026-MatsueRubyKaigi01Report.html">るびま記事</a></li>
-      </ul>
     </p>
+    <div class="table_schedule matrk_table_schedule mb-3">
+      <table>
+        <thead>
+          <tr>
+            <th>イベント名</th>
+            <th>日時</th>
+            <th>リンク</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://matsue.rubyist.net/matrk11">松江Ruby会議11</a></td>
+            <td>2024/10/05 12:00-17:30</td>
+            <td><a href="https://magazine.rubyist.net/articles/0065/0065-MatsueRubyKaigi11Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/2445824") %></td>
+          </tr>
+          <tr>
+            <td><a href="https://matsue.rubyist.net/matrk10">松江Ruby会議10</a></td>
+            <td>2023/09/16 13:00-18:00</td>
+            <td><a href="https://magazine.rubyist.net/articles/0063/0063-MatsueRubyKaigi10Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/2228242") %></td>
+          </tr>
+          <tr>
+            <td><a href="https://matsue.rubyist.net/matrk09">松江Ruby会議09</a></td>
+            <td>2018/06/30 11:00-17:40</td>
+            <td><a href="https://magazine.rubyist.net/articles/0058/0058-MatsueRubyKaigi09Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/1243152") %> <%= link_to("YouTube", "https://www.youtube.com/watch?v=Q4QBVKDZwcg") %></td>
+          </tr>
+          <tr>
+            <td><a href="https://matsue.rubyist.net/matrk08">松江Ruby会議08</a></td>
+            <td>2016/12/17 11:00-17:40</td>
+            <td><a href="https://magazine.rubyist.net/articles/0056/0056-MatsueRubyKaigi08Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "https://togetter.com/li/1061092") %> <%= link_to("YouTube", "https://www.youtube.com/playlist?list=PLbJxhePIoIPBU5f0cAn4BceCG48EGSHsA") %> Flickr(<%= create_links(::PHOTO_PATHS[:matrk8]) %>)</td>
+          </tr>
+          <tr>
+            <td><a href="https://matsue.rubyist.net/matrk07">松江Ruby会議07</a></td>
+            <td>2015/09/26 11:00-17:10</td>
+            <td><a href="https://magazine.rubyist.net/articles/0052/0052-MatsueRubyKaigi07Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "http://togetter.com/li/895041") %> <%= link_to("YouTube", "https://www.youtube.com/playlist?list=PLbJxhePIoIPBSYjO2enmqSTpucHuHiA9S") %> Flickr(<%= create_links(::PHOTO_PATHS[:matrk7]) %>)</td>
+          </tr>
+          <tr>
+            <td><a href="https://matsue.rubyist.net/matrk06">松江Ruby会議06</a></td>
+            <td>2014/12/20 13:00-17:45</td>
+            <td><a href="https://magazine.rubyist.net/articles/0051/0051-MatsueRubyKaigi06Report.html">るびま記事</a> <%= link_to("Togetterまとめ", "http://togetter.com/li/760234") %> <%= link_to("YouTube", "https://www.youtube.com/playlist?list=PLbJxhePIoIPDCF_KeFc-U5W4XdmTYWPVd") %> Flickr(<%= create_links(::PHOTO_PATHS[:matrk6]) %>)</td>
+          </tr>
+          <tr>
+            <td><a href="https://matsue.rubyist.net/matrk05">松江Ruby会議05</a></td>
+            <td>2014/03/15 11:00-13:00</td>
+            <td><a href="https://magazine.rubyist.net/articles/0050/0050-MatsueRubyKaigi05.html">るびま記事</a> <%= link_to("Togetterまとめ", "http://togetter.com/li/642795") %></td>
+          </tr>
+          <tr>
+            <td><a href="http://regional.rubykaigi.org/matsue04">松江Ruby会議04</a></td>
+            <td>2012/09/01 10:00-17:00</td>
+            <td><a href="https://magazine.rubyist.net/articles/0040/0040-MatsueRubyKaigi04Report.html">るびま記事</a></td>
+          </tr>
+          <tr>
+            <td><a href="http://regional.rubykaigi.org/matsue03">松江Ruby会議03</a></td>
+            <td>2011/07/03 13:00-18:00</td>
+            <td><a href="https://magazine.rubyist.net/articles/0035/0035-MatsueRubyKaigi03Report.html">るびま記事</a></td>
+          </tr>
+          <tr>
+            <td><a href="http://regional.rubykaigi.org/matsue02">松江Ruby会議02</a></td>
+            <td>2010/02/13 13:00-18:00</td>
+            <td><a href="https://magazine.rubyist.net/articles/0034/0034-MatsueRubyKaigi02Report.html">るびま記事</a></td>
+          </tr>
+          <tr>
+            <td><a href="http://regional.rubykaigi.org/matsue01">松江Ruby会議01</a></td>
+            <td>2009/02/02 17:00~21:00</td>
+            <td><a href="https://magazine.rubyist.net/articles/0026/0026-MatsueRubyKaigi01Report.html">るびま記事</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="py-3">

@@ -140,7 +140,7 @@ GEM
     sorted_set (1.1.0)
       rbtree
     thor (1.5.0)
-    timecop (0.9.10)
+    timecop (0.9.11)
     tty-color (0.6.0)
     tty-command (0.10.1)
       pastel (~> 0.8)

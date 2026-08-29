@@ -17,6 +17,7 @@ GEM
     ddmetrics (1.1.0)
     ddplugin (1.0.3)
     diff-lcs (1.6.2)
+    drb (2.2.3)
     ffi (1.17.4)
     formatador (1.2.3)
       reline
@@ -62,6 +63,9 @@ GEM
       mime-types-data (~> 3.2025, >= 3.2025.0507)
     mime-types-data (3.2025.0507)
     minigit (0.0.4)
+    minitest (6.0.6)
+      drb (~> 2.0)
+      prism (~> 1.5)
     nanoc (4.14.7)
       addressable (~> 2.5)
       nanoc-checking (~> 1.0, >= 1.0.2)
@@ -105,6 +109,7 @@ GEM
     parallel (1.27.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
+    prism (1.9.0)
     pry (0.16.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -122,19 +127,6 @@ GEM
     reline (0.6.3)
       io-console (~> 0.5)
     rexml (3.4.4)
-    rspec (3.13.2)
-      rspec-core (~> 3.13.0)
-      rspec-expectations (~> 3.13.0)
-      rspec-mocks (~> 3.13.0)
-    rspec-core (3.13.6)
-      rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.5)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.6)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.13.0)
-    rspec-support (3.13.6)
     shellany (0.0.1)
     slow_enumerator_tools (1.1.0)
     sorted_set (1.1.0)
@@ -162,11 +154,11 @@ DEPENDENCIES
   listen
   mime-types
   minigit
+  minitest
   nanoc (~> 4.14)
   puma
   rack
   rb-fsevent
-  rspec
   timecop
 
 BUNDLED WITH

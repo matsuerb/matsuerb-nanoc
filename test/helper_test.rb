@@ -1,11 +1,11 @@
-require 'spec_helper'
+require 'test_helper'
 require 'default'
 require 'helper'
 require 'tempfile'
 
 describe 'fbe' do
   it "return html" do
-    expect(fbe(99999)).to eq('<a href="https://www.facebook.com/events/99999/">Facebook</a>')
+    _(fbe(99999)).must_equal('<a href="https://www.facebook.com/events/99999/">Facebook</a>')
   end
 end
 
@@ -17,65 +17,65 @@ describe 'copyright_year' do
   [Time.mktime(2013, 1, 1, 0, 0, 0), Time.mktime(2014, 1, 1) - 1].each_with_index do |t, i|
     it "copyright_year returns 2013##{i + 1}" do
       Timecop.freeze(t)
-      expect(copyright_year).to eq(OFFICIAL_SITE_START_YEAR.to_s)
+      _(copyright_year).must_equal(OFFICIAL_SITE_START_YEAR.to_s)
     end
   end
 
   [Time.mktime(2014, 1, 1), Time.mktime(2015, 1, 1) - 1].each_with_index do |t, i|
     it "copyright_year returns 2013-2014##{i + 1}" do
       Timecop.freeze(t)
-      expect(copyright_year).to eq("2013-2014")
+      _(copyright_year).must_equal("2013-2014")
     end
   end
 end
 
 describe 'link_to_osslab' do
   it "return html" do
-    expect(link_to_osslab).to eq('<a href="https://www.city.matsue.lg.jp/soshikikarasagasu/shinsangyousouzouka/rcm/labo/14133.html">松江オープンソースラボ</a>')
+    _(link_to_osslab).must_equal('<a href="https://www.city.matsue.lg.jp/soshikikarasagasu/shinsangyousouzouka/rcm/labo/14133.html">松江オープンソースラボ</a>')
   end
 end
 
 describe 'link_to_doorkeeper' do
   it "return html" do
-    expect(link_to_doorkeeper('松江Ruby(Matsue.rb)定例会', 'matsue-rb', 99999)).to eq('<a href="http://matsue-rb.doorkeeper.jp/events/99999">松江Ruby(Matsue.rb)定例会</a>')
+    _(link_to_doorkeeper('松江Ruby(Matsue.rb)定例会', 'matsue-rb', 99999)).must_equal('<a href="http://matsue-rb.doorkeeper.jp/events/99999">松江Ruby(Matsue.rb)定例会</a>')
   end
 end
 
 describe 'link_to_connpass' do
   it "return html" do
-    expect(link_to_connpass('松江Ruby(Matsue.rb)定例会', 'matsue-rb', 99999)).to eq('<a href="http://matsue-rb.connpass.com/event/99999">松江Ruby(Matsue.rb)定例会</a>')
+    _(link_to_connpass('松江Ruby(Matsue.rb)定例会', 'matsue-rb', 99999)).must_equal('<a href="http://matsue-rb.connpass.com/event/99999">松江Ruby(Matsue.rb)定例会</a>')
   end
 end
 
 describe 'link_to_dojo' do
   it "return html" do
-    expect(link_to_dojo(event_id: 99999)).to eq('<a href="http://smalruby.doorkeeper.jp/events/99999">コーダー道場 松江</a>')
+    _(link_to_dojo(event_id: 99999)).must_equal('<a href="http://smalruby.doorkeeper.jp/events/99999">コーダー道場 松江</a>')
   end
 end
 
 describe 'link_to_sproutrb' do
-  context 'connpass' do
+  describe 'connpass' do
     it "return html" do
-      expect(link_to_sproutrb(event_id: 99999)).to eq('<a href="http://sproutrb.connpass.com/event/99999">スプラウト.rb</a>')
+      _(link_to_sproutrb(event_id: 99999)).must_equal('<a href="http://sproutrb.connpass.com/event/99999">スプラウト.rb</a>')
     end
   end
 
-  context 'doorkeeper' do
+  describe 'doorkeeper' do
     it "return html" do
-      expect(link_to_sproutrb(event_id: 99999, site_type: :doorkeeper)).to eq('<a href="http://sproutrb.doorkeeper.jp/events/99999">スプラウト.rb</a>')
+      _(link_to_sproutrb(event_id: 99999, site_type: :doorkeeper)).must_equal('<a href="http://sproutrb.doorkeeper.jp/events/99999">スプラウト.rb</a>')
     end
   end
 end
 
 describe 'link_to_terrsa' do
   it "return html" do
-    expect(link_to_terrsa).to eq('<a href="http://www.sanbg.com/terrsa/">松江テルサ</a>')
+    _(link_to_terrsa).must_equal('<a href="http://www.sanbg.com/terrsa/">松江テルサ</a>')
   end
 end
 
 describe 'gravatar_image' do
   it "return html" do
-    expect(gravatar_image('99999999999999999999999999999999')).to eq('<img src="http://www.gravatar.com/avatar/99999999999999999999999999999999" alt="" class="rounded-circle">')
+    _(gravatar_image('99999999999999999999999999999999')).must_equal('<img src="http://www.gravatar.com/avatar/99999999999999999999999999999999" alt="" class="rounded-circle">')
   end
 end
 
@@ -112,7 +112,7 @@ describe 'get_matsuerb_members' do
       @tempfile = Tempfile.open("matsuerb_members")
       @tempfile.write(yaml)
       @tempfile.close
-      expect(get_matsuerb_members(@tempfile.path)).to eq([])
+      _(get_matsuerb_members(@tempfile.path)).must_equal([])
     end
   end
 
@@ -125,10 +125,10 @@ describe 'get_matsuerb_members' do
       @tempfile.write(members_data.to_yaml)
       @tempfile.close
       members = get_matsuerb_members(@tempfile.path)
-      expect(members.length).to eq(1)
+      _(members.length).must_equal(1)
       member = members.first
       member.keys.each do |member_attribute_name|
-        expect(member[member_attribute_name]).to eq(members_data[0][member_attribute_name])
+        _(member[member_attribute_name]).must_equal(members_data[0][member_attribute_name])
       end
     end
   end
@@ -147,16 +147,16 @@ describe 'create_links' do
       '<a target="_blank" href="https://www.flickr.com/groups/2849741@N23/pool/">8</a>',
       '<a target="_blank" href="https://www.flickr.com/groups/2886131@N22/pool/">9</a>',
     ].join(' ')
-    expect(create_links(::PHOTO_PATHS[:matrk6])).to eq(expected)
+    _(create_links(::PHOTO_PATHS[:matrk6])).must_equal(expected)
   end
 
   it 'return matrk7 html' do
     expected = '<a target="_blank" href="https://www.flickr.com/groups/2901550@N22/pool/">写真一覧</a>'
-    expect(create_links(::PHOTO_PATHS[:matrk7])).to eq(expected)
+    _(create_links(::PHOTO_PATHS[:matrk7])).must_equal(expected)
   end
 
   it 'return matrk8 html' do
     expected = '<a target="_blank" href="https://www.flickr.com/groups/4529348@N23/pool/">写真一覧</a>'
-    expect(create_links(::PHOTO_PATHS[:matrk8])).to eq(expected)
+    _(create_links(::PHOTO_PATHS[:matrk8])).must_equal(expected)
   end
 end

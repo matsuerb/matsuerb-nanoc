@@ -17,7 +17,7 @@ index_filenames: [ 'index.html' ]
 # Whether or not to generate a diff of the compiled content when compiling a
 # site. The diff will contain the differences between the compiled content
 # before and after the last site compilation.
-enable_output_diff: false
+enable_output_diff: true
 
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
@@ -33,7 +33,7 @@ prune:
 # hashes; each array element represents a single data source. By default,
 # there is only a single data source that reads data from the “content/” and
 # “layout/” directories in the site directory.
-string_pattern_type: legacy
+string_pattern_type: glob
 data_sources:
   -
     # The type is the identifier of the data source. By default, this will be

@@ -151,7 +151,7 @@ kind: matrk
       <h4>午前の部</h4>
       <p>松江Ruby会議の開会前に交流を兼ねてLT大会を行います。</p>
       <br>
-<%= render('_time_table', tbody_data: [
+<%= render('/_time_table.*', tbody_data: [
   ['11:00',          '開場', ''],
   ['11:30 〜 13:00', 'LT大会、昼食', ''],
   ['',               '「とくちゃんと Ruby Association」', '徳永翔二 氏'],
@@ -167,7 +167,7 @@ kind: matrk
       </p>
       <p>ライブコーディングではMatsue.rbのメンバーによる、日頃の活動の成果の発表に加え、Rubyコミッターも参加します！ </p>
       <br>
-<%= render('_time_table', tbody_data: [
+<%= render('/_time_table.*', tbody_data: [
   ['13:00 〜',       '開場・受付開始', '', ''],
   ['13:25 〜 13:30', '開会あいさつ', '', '主催者'],
   ['13:30 〜 14:00', '基調講演', '', 'まつもとゆきひろ 氏'],
@@ -180,7 +180,7 @@ kind: matrk
 ]).gsub(/^/, '      ') -%>
       <br>
       <h4>夕方の部、懇親会 </h4>
-<%= render('_time_table', tbody_data: [
+<%= render('/_time_table.*', tbody_data: [
   ['18:00 〜 19:30', 'Ruby Jr発表会', 'オープンソースラボ<br/>中高生による発表会です。Rubyを使って作ったゲームの発表をします。'],
   ['', 'ライブコーディング大喜利', '松江テルサ<br/>※RubyJrと平行開催となるため開催場所が<strong><a href="http://www.sanbg.com/terrsa/">テルサ研修室２</a></strong>となります。'],
   ['20:00 ～', '懇親会', '彩鮮酒楽　やぁ']

@@ -203,14 +203,14 @@ kind: matrk
     <div class="col">
       <h3 class="card-title">タイムテーブル</h3>
       <h4>午前の部</h4>
-<%= render('_time_table', tbody_data: [
+<%= render('/_time_table.*', tbody_data: [
   ['11:00 〜 11:05', 'オープニング', '', ''],
   ['11:10 〜 11:55', 'ゲスト講演', '「島根でRubyが使えるようになったキッカケ 〜 10年前松江で何が起きていたか 〜」', '株式会社ネットワーク応用通信研究所（NaCl）<br />井上浩 氏'],
   ['12:00 〜 13:30', '昼食休憩', '', '']
 ]).gsub(/^/, '      ') -%>
 
       <h4>午後の部</h4>
-<%= render('_time_table', tbody_data: [
+<%= render('/_time_table.*', tbody_data: [
   ['13:30 〜 14:20', '基調講演', '', 'まつもとゆきひろ 氏'],
   ['14:20 〜 14:35', '休憩・写真撮影', '', ' - '],
   ['14:35 〜 14:50', 'session 1', '<strong>「<a href="https://www.slideshare.net/shohashimoto/redmine1-103850531">Redmineの更新を楽にする？1つの方法</a>」</strong>', '株式会社ネットワーク応用通信研究所（NaCl）<br />橋本将 氏'],

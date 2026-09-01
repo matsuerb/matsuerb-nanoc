@@ -29,7 +29,7 @@ def next_matsuerb_event_number(schedule_content)
   schedule_content.scan(/\(#(\d+)\)/).map { |m| m[0].to_i }.max + 1
 end
 
-# Inserts a new "参加募集中" row for the given event into content/schedule.html.
+# Inserts a new "参加受付中" row for the given event into content/schedule.html.
 # The row is added to the top of the matching 令和/平成 year section (events are
 # listed in reverse chronological order); if that year has no section yet, a
 # new one is created just before the previous year's section.
@@ -43,7 +43,7 @@ def insert_matsuerb_schedule_row(schedule_content, event_date, event_number, doo
     else
       ''
     end
-  row = "| Matsue.rb定例会R#{nengo_en}.#{month2}(##{event_number})| 参加募集中 | #{event_date.strftime('%Y/%m/%d')} 13:00-17:00 | <%= link_to_osslab %>   | 不要   |無料| #{link} |\n"
+  row = "| Matsue.rb定例会R#{nengo_en}.#{month2}(##{event_number})| 参加受付中 | #{event_date.strftime('%Y/%m/%d')} 13:00-17:00 | <%= link_to_osslab %>   | 不要   |無料| #{link} |\n"
 
   section_header = "## 令和#{reiwa_year}年"
 

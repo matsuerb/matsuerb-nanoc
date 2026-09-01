@@ -58,14 +58,14 @@ def tag_page
   tags = get_tags(@items)
   tags.each do |k, v|
     page_stats = {:title => "tag: #{k}", :tag_page_title => "#{k}"}
-    @items.create("<%= render('_tag') %>", page_stats, Nanoc::Identifier.new("/tags/#{k}/", type: :legacy))
+    @items.create("<%= render('/_tag.*') %>", page_stats, Nanoc::Identifier.new("/tags/#{k}/", type: :legacy))
   end
 end
 
 def tag_page_item_list(tag)
   html_source = ""
   items_with_tag(tag).each do |item|
-    html_source << "<blockquote><small>#{link_to(item[:title], item.identifier.to_s)}</small><p>#{strip_html(item.reps.first.compiled_content).slice(0,100)}...</p></blockquote>"
+    html_source << "<blockquote><small>#{link_to(item[:title], item)}</small><p>#{strip_html(item.reps.first.compiled_content).slice(0,100)}...</p></blockquote>"
   end
   html_source
 end

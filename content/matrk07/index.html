@@ -152,7 +152,7 @@ kind: matrk
     <div class="col">
       <h3>タイムテーブル</h3>
       <h4>午前の部</h4>
-<%= render('_time_table', tbody_data: [
+<%= render('/_time_table.*', tbody_data: [
   ['11:00 〜 11:05', 'オープニング', ''],
   ['11:10 〜 11:55', 'ゲスト講演', '「Redmineの歴史とアーキテクチャ(仮)」', 'Toshi MARUYAMA 氏<br> (Redmineコミッター)'],
   ['12:00 〜 13:30', '昼休憩（LT）', '', ''],
@@ -164,7 +164,7 @@ kind: matrk
 ]).gsub(/^/, '      ') -%>
 
       <h4>午後の部</h4>
-<%= render('_time_table', tbody_data: [
+<%= render('/_time_table.*', tbody_data: [
   ['13:30 〜 14:20', '基調講演', '', 'まつもとゆきひろ 氏'],
   ['14:30 〜 14:45', 'Matsue.rb<br>「matsuerb.products(2014..2015)」', '', '橋本将 氏'],
   ['14:50 〜 15:05', 'スプラウト.rb<br>「活動内容に関するお話」', '', '松岡香里 氏'],

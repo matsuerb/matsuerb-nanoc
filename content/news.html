@@ -14,7 +14,7 @@ kind: matsuerb
     <% sorted_articles.each do |item| %>
       <div class="row">
         <div>
-          <%= link_to(item[:title], item.identifier.to_s) %><span class="fw-light ps-1"><small>(<%= item[:updated_at] || item[:created_at] %>)</small></span>
+          <%= link_to(item[:title], item) %><span class="fw-light ps-1"><small>(<%= item[:updated_at] || item[:created_at] %>)</small></span>
         </div>
       </div>
     <% end %>

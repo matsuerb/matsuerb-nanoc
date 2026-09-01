@@ -8,13 +8,17 @@
 # * The order of rules is important: for each item, only the first matching
 #   rule is applied.
 #
-# * Item identifiers start and end with a slash (e.g. “/about/” for the file
-#   “content/about.html”). Patterns use glob syntax (string_pattern_type:
+# * Item identifiers keep their file extension (e.g. “/about.html” for the
+#   file “content/about.html”). Patterns use glob syntax (string_pattern_type:
 #   glob in nanoc.yaml): “*” matches a single path segment, “**/” matches
-#   zero or more nested directories, and “/about/**/*” selects “/about/”
-#   itself as well as all of its children, grandchildren, ….
+#   zero or more nested directories, and “/about.*” matches “/about.html”
+#   regardless of its extension.
+#
+# * Items created with an explicit `type: :legacy` identifier (see
+#   lib/helper.rb’s tag_page) keep the old trailing-slash, no-extension
+#   identifier style (e.g. “/tags/ruby/”) regardless of the above.
 
-preprocess do 
+preprocess do
   tag_page
 end
 
@@ -22,29 +26,29 @@ compile '/static/**/*' do
   # don’t filter or layout
 end
 
-compile '/{feed,sitemap,calendar}/' do
+compile '/{feed,sitemap,calendar}.*' do
   filter :erb
 end
 
-compile '/{tags,news}/' do
+compile '/{tags,news}.*' do
   filter :erb
-  layout 'default'
+  layout '/default.*'
 end
 
 compile '/tags/**/*' do
   filter :erb
-  layout 'default'
+  layout '/default.*'
 end
 
 compile '/matrk[0-1][0-2,5-9]/**/*' do
   if item.binary?
     # don’t filter binary items
   elsif item[:kind] == 'content'
-    layout 'content'
+    layout '/content.*'
   else
     filter :erb, trim_mode: '-'
     filter :kramdown
-    layout 'matrk'
+    layout '/matrk.*'
   end
 end
 
@@ -54,7 +58,7 @@ compile '/**/*' do
   else
     filter :erb
     filter :kramdown
-    layout 'default'
+    layout '/default.*'
   end
 end
 
@@ -62,25 +66,40 @@ route '/static/**/*' do
   item.identifier.to_s[7..-1]
 end
 
-route '/sitemap/' do
+# Tag pages are created with an explicit type: :legacy identifier (see
+# lib/helper.rb), so they must be routed like legacy identifiers rather
+# than with `without_ext`, which only works on full identifiers.
+route '/tags/**/*' do
+  item.identifier.to_s + 'index.html'
+end
+
+route '/sitemap.*' do
   '/sitemap.xml'
 end
 
-route '/feed/' do
+route '/feed.*' do
   '/feed.xml'
 end
 
-route '/calendar/' do
+route '/calendar.*' do
   '/calendar.ics'
+end
+
+# Index files (e.g. /matrk08/index.html) route to themselves rather than
+# nesting an extra “index” directory; this rule must come before the
+# catch-all route below.
+route '/**/index.*' do
+  # /matrk08/index.html gets written to /matrk08/index.html (i.e. /matrk08/)
+  item.identifier.without_ext + '.html'
 end
 
 route '/**/*' do
   if item.binary?
-    # Write item with identifier /foo/ to /foo.ext
-    item.identifier.to_s.chop + '.' + item[:extension]
+    # Write item with identifier /foo.ext to /foo.ext
+    item.identifier.to_s
   else
-    # Write item with identifier /foo/ to /foo/index.html
-    item.identifier.to_s + 'index.html'
+    # Write item with identifier /foo.html to /foo/index.html
+    item.identifier.without_ext + '/index.html'
   end
 end
 

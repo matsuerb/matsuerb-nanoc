@@ -36,9 +36,7 @@ run do |opts, args, cmd|
   }
 
   path = "resources/members.yml"
-  members = YAML.load(File.read(path)).push(member)
-  File.open(path, "w") do |f|
-    f.write(members.to_yaml)
-  end
+  members = YAML.load_file(path).push(member)
+  File.write(path, members.to_yaml)
   puts "update #{path}, please edit your profile"
 end

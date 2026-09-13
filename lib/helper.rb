@@ -40,7 +40,7 @@ def tags_page
   tags = get_tags(@items)
   html_source = '<ul">'
   tags.each do |k, v|
-    html_source << '<li class="tagnum' + v.to_s + '">' + link_to(k, "/tags/#{k}/") + '</li>'
+    html_source << ('<li class="tagnum' + v.to_s + '">' + link_to(k, "/tags/#{k}/") + '</li>')
   end
   html_source << '</ul>'
 end
@@ -49,7 +49,7 @@ def tags_in_article
   tags = @item[:tags]
   html_source = '<ul">'
   tags.each do |k, v|
-    html_source << '<li class="tagnum' + v.to_s + '">' + link_to(k, "/tags/#{k}/") + '</li>'
+    html_source << ('<li class="tagnum' + v.to_s + '">' + link_to(k, "/tags/#{k}/") + '</li>')
   end
   html_source << '</ul>'
 end
@@ -123,7 +123,7 @@ def gravatar_image(hash)
 end
 
 def get_matsuerb_members(path = 'resources/members.yml', public_only = true)
-  members = YAML.load(File.read(path))
+  members = YAML.load_file(path)
   members.reject! {|m| !m[:public]} if public_only
   return members
 end

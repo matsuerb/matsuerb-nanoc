@@ -147,16 +147,16 @@ describe 'create_links' do
       '<a target="_blank" href="https://www.flickr.com/groups/2849741@N23/pool/">8</a>',
       '<a target="_blank" href="https://www.flickr.com/groups/2886131@N22/pool/">9</a>',
     ].join(' ')
-    _(create_links(::PHOTO_PATHS[:matrk6])).must_equal(expected)
+    _(create_links(PHOTO_PATHS[:matrk6])).must_equal(expected)
   end
 
   it 'return matrk7 html' do
     expected = '<a target="_blank" href="https://www.flickr.com/groups/2901550@N22/pool/">写真一覧</a>'
-    _(create_links(::PHOTO_PATHS[:matrk7])).must_equal(expected)
+    _(create_links(PHOTO_PATHS[:matrk7])).must_equal(expected)
   end
 
   it 'return matrk8 html' do
     expected = '<a target="_blank" href="https://www.flickr.com/groups/4529348@N23/pool/">写真一覧</a>'
-    _(create_links(::PHOTO_PATHS[:matrk8])).must_equal(expected)
+    _(create_links(PHOTO_PATHS[:matrk8])).must_equal(expected)
   end
 end

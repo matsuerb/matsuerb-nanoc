@@ -138,8 +138,7 @@ run do |opts, args, cmd|
   else
     link = subject
   end
-  File.open(output_path, "w") do |f|
-    f.write(<<-EOS)
+  File.write(output_path, <<-EOS)
 ---
 title: 「Matsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}」開催のお知らせ
 description: #{gengo(:jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
@@ -162,8 +161,7 @@ calendar:
 
 
 <p>　#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})に#{link}を開催します。場所は<%= link_to_osslab %>で、時間は13:00から17:00までです。</p>
-    EOS
-  end
+  EOS
   puts("create: #{relative_path}")
   begin
     git.add(relative_path)

@@ -36,7 +36,7 @@ run do |opts, args, cmd|
   git = MiniGit::Capturing.new(File.expand_path('..', File.dirname(__FILE__)))
   nendo = event_date.year - 1988
   month = "%02d" % event_date.month
-  branch_name = "closed_h#{nendo}#{month}"
+  branch_name = "chore/closed-h#{nendo}#{month}"
   begin
     git.checkout(b: branch_name)
   rescue MiniGit::GitError
@@ -55,7 +55,7 @@ run do |opts, args, cmd|
   puts("update: #{relative_path}")
   begin
     git.add(relative_path)
-    git.commit({m: "スケジュールを更新。"}, relative_path)
+    git.commit({m: "chore: スケジュールを更新"}, relative_path)
   rescue MiniGit::GitError
     exit(1)
   end

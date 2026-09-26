@@ -34,9 +34,9 @@ run do |opts, args, cmd|
   output_path = File.expand_path("../../#{relative_path}", __FILE__)
 
   git = MiniGit::Capturing.new(File.expand_path('..', File.dirname(__FILE__)))
-  nendo = event_date.year - 1988
+  gengo_en, nendo = event_date.jisx0301.match(/\A([A-Z])(\d+)\./).captures
   month = "%02d" % event_date.month
-  branch_name = "chore/closed-h#{nendo}#{month}"
+  branch_name = "chore/closed-#{gengo_en.downcase}#{nendo}#{month}"
   begin
     git.checkout(b: branch_name)
   rescue MiniGit::GitError
@@ -46,7 +46,7 @@ run do |opts, args, cmd|
   n = opts[:participants] || 0
   File.open(output_path, "r+") do |f|
     s = f.read
-    regexp = /(\|\s*Matsue.rb定例会H#{nendo}\.#{month}\s*\|)\s*参加受付中\s*\|/
+    regexp = /(\|\s*Matsue.rb定例会#{gengo_en}#{nendo}\.#{month}(?:\(#\d+\))?\s*\|)\s*参加受付中\s*\|/
     s.gsub!(regexp) { $1 + " 終了(#{n}名参加) |" }
     f.rewind
     f.write(s)

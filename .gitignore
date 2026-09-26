@@ -10,3 +10,7 @@ tmp/
 public/
 vendor/bundle
 .idea/
+
+.devcontainer/
+.github/
+CLAUDE.md

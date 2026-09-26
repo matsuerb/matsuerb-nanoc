@@ -125,7 +125,7 @@ run do |opts, args, cmd|
 
   git = MiniGit::Capturing.new(File.expand_path('..', File.dirname(__FILE__)))
   branch_name =
-    "add-teirei-#{event_date.year}-#{"%02d" % event_date.month}-news"
+    "chore/add-teirei-#{event_date.year}-#{"%02d" % event_date.month}-news"
   begin
     git.checkout(b: branch_name)
   rescue MiniGit::GitError
@@ -165,7 +165,7 @@ calendar:
   puts("create: #{relative_path}")
   begin
     git.add(relative_path)
-    git.commit({m: "#{event_date.month}/#{event_date.day}(#{wday_s[event_date.wday]})のお知らせを追加"}, relative_path)
+    git.commit({m: "chore: #{event_date.month}/#{event_date.day}(#{wday_s[event_date.wday]})のお知らせを追加"}, relative_path)
   rescue MiniGit::GitError
     exit(1)
   end
@@ -180,7 +180,7 @@ calendar:
   puts("update: #{schedule_relative_path}")
   begin
     git.add(schedule_relative_path)
-    git.commit({m: "スケジュールに#{event_date.month}/#{event_date.day}(#{wday_s[event_date.wday]})の予定を追加"}, schedule_relative_path)
+    git.commit({m: "chore: スケジュールに#{event_date.month}/#{event_date.day}(#{wday_s[event_date.wday]})の予定を追加"}, schedule_relative_path)
   rescue MiniGit::GitError
     exit(1)
   end

@@ -44,7 +44,7 @@ class FinishMatsuerbSchedule
   def update_schedule(gengo_letter, nendo)
     File.open(path, 'r+') do |f|
       content = f.read
-      regexp = /(\|\s*Matsue.rb定例会#{gengo_letter}#{nendo}\.#{month}(?:\(#\d+\))?\s*\|)\s*参加受付中\s*\|/
+      regexp = /(\|\s*Matsue\.rb定例会#{gengo_letter}#{nendo}\.#{month}(?:\(#\d+\))?\s*\|)\s*参加受付中\s*\|/
       content.gsub!(regexp) { "#{Regexp.last_match(1)} 終了(#{participants}名参加) |" }
       f.rewind
       f.write(content)

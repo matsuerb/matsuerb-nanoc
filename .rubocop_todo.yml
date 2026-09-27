@@ -18,7 +18,6 @@ Bundler/OrderedGems:
 Layout/HeredocIndentation:
   Exclude:
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'commands/finish-matsuerb-schedule.rb'
 
 # Offense count: 1
@@ -53,7 +52,6 @@ Layout/SpaceInsideHashLiteralBraces:
 Lint/UnusedBlockArgument:
   Exclude:
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'commands/finish-matsuerb-schedule.rb'
     - 'lib/helper.rb'
 
@@ -87,7 +85,6 @@ Naming/FileName:
   Exclude:
     - 'Rakefile.rb'
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'commands/finish-matsuerb-schedule.rb'
 
 # Offense count: 4
@@ -96,7 +93,6 @@ Naming/FileName:
 Naming/HeredocDelimiterNaming:
   Exclude:
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'commands/finish-matsuerb-schedule.rb'
 
 # Offense count: 1
@@ -110,7 +106,6 @@ Naming/MethodParameterName:
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Security/YAMLLoad:
   Exclude:
-    - 'commands/create-member.rb'
     - 'lib/helper.rb'
 
 # Offense count: 1
@@ -167,7 +162,6 @@ Style/FrozenStringLiteralComment:
     - 'Guardfile'
     - 'Rules'
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'commands/finish-matsuerb-schedule.rb'
     - 'lib/default.rb'
     - 'lib/helper.rb'
@@ -198,7 +192,6 @@ Style/HashEachMethods:
 Style/HashSyntax:
   Exclude:
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'commands/finish-matsuerb-schedule.rb'
     - 'lib/helper.rb'
 
@@ -276,7 +269,6 @@ Style/RedundantInterpolation:
 # Configuration parameters: AllowMultipleReturnValues.
 Style/RedundantReturn:
   Exclude:
-    - 'commands/create-member.rb'
     - 'lib/helper.rb'
 
 # Offense count: 2
@@ -319,7 +311,6 @@ Style/StringLiterals:
   Exclude:
     - 'Gemfile'
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'commands/finish-matsuerb-schedule.rb'
     - 'lib/helper.rb'
     - 'test/helper_test.rb'
@@ -347,7 +338,6 @@ Style/TrailingCommaInArrayLiteral:
 Style/TrailingCommaInHashLiteral:
   Exclude:
     - 'commands/create-matsuerb.rb'
-    - 'commands/create-member.rb'
     - 'lib/helper.rb'
     - 'test/helper_test.rb'
 

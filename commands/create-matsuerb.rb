@@ -13,7 +13,7 @@ end
 # new one is created just before the previous year's section.
 def insert_matsuerb_schedule_row(schedule_content, event_date, event_number, doorkeeper_id)
   gengo_letter, nendo = gengo_letter_and_nendo(event_date)
-  gengo_jp = GENGO_JP_BY_LETTER.fetch(gengo_letter) { raise "unknown gengo letter: #{gengo_letter}" }
+  gengo_jp = gengo(event_date, :jp)
   era_nendo = "#{gengo_letter}#{nendo}"
   month2 = event_date.strftime('%m')
   link =

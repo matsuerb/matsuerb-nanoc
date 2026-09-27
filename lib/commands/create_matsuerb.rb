@@ -2,10 +2,10 @@
 
 require 'date'
 require 'fileutils'
-require_relative '../gengo'
-require_relative '../matsuerb_git'
-require_relative '../create_matsuerb_news'
-require_relative '../create_matsuerb_schedule'
+require_relative 'gengo'
+require_relative 'matsuerb_git'
+require_relative 'create_matsuerb_news'
+require_relative 'create_matsuerb_schedule'
 
 # Implements the create-matsuerb command: creates news for a periodic
 # Matsue.rb hackathon and adds a corresponding row to content/schedule.html.

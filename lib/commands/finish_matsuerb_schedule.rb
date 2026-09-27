@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'date'
-require_relative '../gengo'
-require_relative '../matsuerb_git'
+require_relative 'gengo'
+require_relative 'matsuerb_git'
 
 # Implements the finish-matsuerb-schedule command: marks a periodic
 # Matsue.rb hackathon as finished in content/schedule.html.

@@ -5,6 +5,7 @@ require 'fileutils'
 require_relative 'gengo'
 require_relative 'matsuerb_git'
 require_relative 'parse_event_date'
+require_relative 'project_path'
 require_relative 'create_matsuerb_news'
 require_relative 'create_matsuerb_schedule'
 
@@ -13,7 +14,7 @@ require_relative 'create_matsuerb_schedule'
 class CreateMatsuerb
   def initialize(opts, args, cmd)
     @opts = opts
-    @git = MiniGit::Capturing.new(File.expand_path('../..', __dir__))
+    @git = MiniGit::Capturing.new(PROJECT_ROOT)
     @event_date = parse_event_date(args, cmd)
     @created_date = opts[:date] ? Date.parse(opts[:date]) : Date.today
   end

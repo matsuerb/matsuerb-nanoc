@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'gengo'
+require_relative 'project_path'
 
 # Inserts a new "参加受付中" row for a periodic Matsue.rb hackathon into
 # content/schedule.html, and knows what to commit that change as.
@@ -23,7 +24,7 @@ class CreateMatsuerbSchedule
   end
 
   def path
-    File.expand_path("../../../#{RELATIVE_PATH}", __FILE__)
+    project_path(RELATIVE_PATH)
   end
 
   def commit_message

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'gengo'
+require_relative 'project_path'
 
 # Builds the news article for a periodic Matsue.rb hackathon and knows where
 # to write it and what to commit it as.
@@ -16,7 +17,7 @@ class CreateMatsuerbNews
   end
 
   def output_path
-    File.expand_path("../../../#{relative_path}", __FILE__)
+    project_path(relative_path)
   end
 
   def commit_message

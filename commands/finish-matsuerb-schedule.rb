@@ -1,6 +1,7 @@
 require 'date'
 require 'fileutils'
 require 'minigit'
+require_relative '../lib/gengo'
 
 usage 'finish-matsuerb-schedule EVENT_DATE [options]'
 aliases :fms
@@ -34,7 +35,7 @@ run do |opts, args, cmd|
   output_path = File.expand_path("../../#{relative_path}", __FILE__)
 
   git = MiniGit::Capturing.new(File.expand_path('..', File.dirname(__FILE__)))
-  gengo_en, nendo = event_date.jisx0301.match(/\A([A-Z])(\d+)\./).captures
+  gengo_en, nendo = gengo_letter_and_nendo(event_date)
   month = "%02d" % event_date.month
   branch_name = "chore/closed-#{gengo_en.downcase}#{nendo}#{month}"
   begin

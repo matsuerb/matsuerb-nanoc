@@ -35,7 +35,7 @@ class CreateMatsuerbSchedule
     section_header = "## #{gengo(@event_date, :jp)}#{nendo_label}年"
 
     @content =
-      if @content.include?("#{section_header}\n")
+      if @content =~ section_regexp(section_header)
         insert_into_existing_section(section_header, row)
       else
         insert_into_new_section(section_header, row)
@@ -72,8 +72,15 @@ class CreateMatsuerbSchedule
       "参加受付中 | #{@event_date.strftime('%Y/%m/%d')} 13:00-17:00 | <%= link_to_osslab %>   | 不要   |無料| #{link} |\n"
   end
 
+  # Matches the section header line itself loosely (allowing trailing
+  # annotations such as the historical "## 平成23年 <%# 定例会#13〜23 %>"),
+  # so those don't get treated as a different, unmatched section.
+  def section_regexp(section_header)
+    /(^#{Regexp.escape(section_header)}.*\n\n<div markdown="1" class="table_schedule pb-4" >\n\n\|.*\|\n\|[-|]+\|\n)/
+  end
+
   def insert_into_existing_section(section_header, row)
-    section_re = /(#{Regexp.escape(section_header)}\n\n<div markdown="1" class="table_schedule pb-4" >\n\n\|.*\|\n\|[-|]+\|\n)/
+    section_re = section_regexp(section_header)
     raise "table header for #{section_header} not found in content/schedule.html" unless @content =~ section_re
 
     @content.sub(section_re) { ::Regexp.last_match(1) + row }

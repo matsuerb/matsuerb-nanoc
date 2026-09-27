@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'date'
-require_relative 'gengo'
-require_relative 'matsuerb_git'
+require_relative '../gengo'
+require_relative '../matsuerb_git'
 
 # Implements the finish-matsuerb-schedule command: marks a periodic
 # Matsue.rb hackathon as finished in content/schedule.html.
@@ -13,7 +13,7 @@ class FinishMatsuerbSchedule
     @opts = opts
     @args = args
     @cmd = cmd
-    @git = MiniGit::Capturing.new(File.expand_path('..', __dir__))
+    @git = MiniGit::Capturing.new(File.expand_path('../..', __dir__))
     @event_date = parse_event_date
   end
 
@@ -34,7 +34,7 @@ class FinishMatsuerbSchedule
   end
 
   def path
-    File.expand_path("../../#{RELATIVE_PATH}", __FILE__)
+    File.expand_path("../../../#{RELATIVE_PATH}", __FILE__)
   end
 
   def participants

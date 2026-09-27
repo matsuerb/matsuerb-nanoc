@@ -2,19 +2,34 @@ require 'date'
 require 'fileutils'
 require 'minigit'
 
-def gengo(type)
+GENGO_JP_BY_LETTER = {
+  'M' => '明治',
+  'T' => '大正',
+  'S' => '昭和',
+  'H' => '平成',
+  'R' => '令和',
+}.freeze
+
+# Returns [gengo_letter, nendo] for the given date, e.g. ['R', '08'] for
+# 2026-10-10. Uses Date#jisx0301 so this stays correct across era changes.
+def gengo_letter_and_nendo(date)
+  date.jisx0301.match(/\A([A-Z])(\d+)\./).captures
+end
+
+def gengo(date, type)
+  letter, = gengo_letter_and_nendo(date)
   case type
   when :jp
-    '令和'
+    GENGO_JP_BY_LETTER.fetch(letter) { raise "unknown gengo letter: #{letter}" }
   when :en
-    'R'
+    letter
   else
     raise
   end
 end
 
-def nengo(year, type)
-  n = '%02d' % (year - 2018)
+def nengo(date, type)
+  _, n = gengo_letter_and_nendo(date)
   case type
   when :jp
     n == '01' ? '元' : n
@@ -34,8 +49,9 @@ end
 # listed in reverse chronological order); if that year has no section yet, a
 # new one is created just before the previous year's section.
 def insert_matsuerb_schedule_row(schedule_content, event_date, event_number, doorkeeper_id)
-  reiwa_year = event_date.year - 2018
-  nengo_en = '%02d' % reiwa_year
+  gengo_letter, nendo = gengo_letter_and_nendo(event_date)
+  gengo_jp = GENGO_JP_BY_LETTER.fetch(gengo_letter) { raise "unknown gengo letter: #{gengo_letter}" }
+  era_nendo = "#{gengo_letter}#{nendo}"
   month2 = event_date.strftime('%m')
   link =
     if doorkeeper_id
@@ -43,9 +59,9 @@ def insert_matsuerb_schedule_row(schedule_content, event_date, event_number, doo
     else
       ''
     end
-  row = "| Matsue.rb定例会R#{nengo_en}.#{month2}(##{event_number})| 参加受付中 | #{event_date.strftime('%Y/%m/%d')} 13:00-17:00 | <%= link_to_osslab %>   | 不要   |無料| #{link} |\n"
+  row = "| Matsue.rb定例会#{era_nendo}.#{month2}(##{event_number})| 参加受付中 | #{event_date.strftime('%Y/%m/%d')} 13:00-17:00 | <%= link_to_osslab %>   | 不要   |無料| #{link} |\n"
 
-  section_header = "## 令和#{reiwa_year}年"
+  section_header = "## #{gengo_jp}#{nendo.to_i}年"
 
   if schedule_content.include?("#{section_header}\n")
     section_re = /(#{Regexp.escape(section_header)}\n\n<div markdown="1" class="table_schedule pb-4" >\n\n\|.*\|\n\|[-|]+\|\n)/
@@ -105,9 +121,9 @@ run do |opts, args, cmd|
 
   created_date = opts[:date] ? Date.parse(opts[:date]) : Date.today
 
-  nengo_jp = nengo(event_date.year, :jp)
-  nengo_en = nengo(event_date.year, :en)
-  basename = "matsuerb_#{gengo(:en).downcase}#{nengo_en}#{event_date.strftime('%m')}.html"
+  nengo_jp = nengo(event_date, :jp)
+  nengo_en = nengo(event_date, :en)
+  basename = "matsuerb_#{gengo(event_date, :en).downcase}#{nengo_en}#{event_date.strftime('%m')}.html"
   relative_path =
     'content/news/' + created_date.strftime('%Y/%m/%d/') + basename
   output_path = File.expand_path("../../#{relative_path}", __FILE__)
@@ -140,8 +156,8 @@ run do |opts, args, cmd|
   end
   File.write(output_path, <<-EOS)
 ---
-title: 「Matsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}」開催のお知らせ
-description: #{gengo(:jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
+title: 「Matsue.rb定例会#{gengo(event_date, :en)}#{nengo_en}.#{event_date.strftime('%m')}」開催のお知らせ
+description: #{gengo(event_date, :jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(event_date, :en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
 created_at: #{created_date.strftime('%Y/%m/%d')}
 kind: article
 publish: true
@@ -152,8 +168,8 @@ calendar:
   year: #{event_date.year}
   month: #{event_date.month}
   day: #{event_date.day}
-  summary: Matsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}
-  description: #{gengo(:jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(:en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
+  summary: Matsue.rb定例会#{gengo(event_date, :en)}#{nengo_en}.#{event_date.strftime('%m')}
+  description: #{gengo(event_date, :jp)}#{nengo_jp}年#{event_date.month}月#{event_date.day}日(#{wday_s[event_date.wday]})にMatsue.rb定例会#{gengo(event_date, :en)}#{nengo_en}.#{event_date.strftime('%m')}を開催します。
   start_time: "13:00"
   end_time: "17:00"
   location: 島根県松江市朝日町478番地18　松江テルサ別館2階

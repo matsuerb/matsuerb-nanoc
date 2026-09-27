@@ -2,6 +2,7 @@ require 'date'
 require 'fileutils'
 require 'minigit'
 require_relative '../lib/gengo'
+require_relative '../lib/matsuerb_git'
 require_relative '../lib/create_matsuerb_news'
 require_relative '../lib/create_matsuerb_schedule'
 
@@ -19,19 +20,19 @@ class CreateMatsuerb
 
   def run
     branch_name = "chore/add-teirei-#{@event_date.year}-#{'%02d' % @event_date.month}-news"
-    git_checkout_branch(branch_name)
+    MatsuerbGit.checkout_branch(@git, branch_name)
 
     news = CreateMatsuerbNews.new(@event_date, @created_date, @opts[:id])
     FileUtils.mkdir_p(File.dirname(news.output_path))
     File.write(news.output_path, news.content)
     puts("create: #{news.relative_path}")
-    git_commit(news.relative_path, news.commit_message)
+    MatsuerbGit.commit(@git, news.relative_path, news.commit_message)
 
     schedule = CreateMatsuerbSchedule.new(@event_date, @opts[:id])
     schedule.insert_row!
     File.write(schedule.path, schedule.content)
     puts("update: #{schedule.relative_path}")
-    git_commit(schedule.relative_path, schedule.commit_message)
+    MatsuerbGit.commit(@git, schedule.relative_path, schedule.commit_message)
   end
 
   private
@@ -42,19 +43,6 @@ class CreateMatsuerb
     puts('ERROR: you must specify EVENT_DATE')
     puts
     puts(@cmd.help)
-    exit(1)
-  end
-
-  def git_checkout_branch(branch_name)
-    @git.checkout(b: branch_name)
-  rescue MiniGit::GitError
-    exit(1)
-  end
-
-  def git_commit(relative_path, message)
-    @git.add(relative_path)
-    @git.commit({m: message}, relative_path)
-  rescue MiniGit::GitError
     exit(1)
   end
 end

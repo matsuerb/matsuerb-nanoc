@@ -2,6 +2,7 @@ require 'date'
 require 'fileutils'
 require 'minigit'
 require_relative '../lib/gengo'
+require_relative '../lib/matsuerb_git'
 
 # Implements the finish-matsuerb-schedule command: marks a periodic
 # Matsue.rb hackathon as finished in content/schedule.html.
@@ -19,11 +20,11 @@ class FinishMatsuerbSchedule
   def run
     gengo_letter, nendo = gengo_letter_and_nendo(@event_date)
     branch_name = "chore/closed-#{gengo_letter.downcase}#{nendo}#{month}"
-    git_checkout_branch(branch_name)
+    MatsuerbGit.checkout_branch(@git, branch_name)
 
     update_schedule(gengo_letter, nendo)
     puts("update: #{RELATIVE_PATH}")
-    git_commit(RELATIVE_PATH, 'chore: スケジュールを更新')
+    MatsuerbGit.commit(@git, RELATIVE_PATH, 'chore: スケジュールを更新')
   end
 
   private
@@ -58,19 +59,6 @@ class FinishMatsuerbSchedule
       f.write(content)
       f.truncate(f.pos)
     end
-  end
-
-  def git_checkout_branch(branch_name)
-    @git.checkout(b: branch_name)
-  rescue MiniGit::GitError
-    exit(1)
-  end
-
-  def git_commit(relative_path, message)
-    @git.add(relative_path)
-    @git.commit({m: message}, relative_path)
-  rescue MiniGit::GitError
-    exit(1)
   end
 end
 

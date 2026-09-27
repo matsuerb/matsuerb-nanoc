@@ -16,7 +16,7 @@ class CreateMatsuerbNews
   end
 
   def output_path
-    File.expand_path("../../#{relative_path}", __FILE__)
+    File.expand_path("../../../#{relative_path}", __FILE__)
   end
 
   def commit_message

@@ -23,7 +23,7 @@ class CreateMatsuerbSchedule
   end
 
   def path
-    File.expand_path("../../#{RELATIVE_PATH}", __FILE__)
+    File.expand_path("../../../#{RELATIVE_PATH}", __FILE__)
   end
 
   def commit_message

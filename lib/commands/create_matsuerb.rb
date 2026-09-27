@@ -14,7 +14,7 @@ class CreateMatsuerb
     @opts = opts
     @args = args
     @cmd = cmd
-    @git = MiniGit::Capturing.new(File.expand_path('..', __dir__))
+    @git = MiniGit::Capturing.new(File.expand_path('../..', __dir__))
     @event_date = parse_event_date
     @created_date = opts[:date] ? Date.parse(opts[:date]) : Date.today
   end

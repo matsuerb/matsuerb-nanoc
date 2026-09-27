@@ -57,7 +57,7 @@ class CreateMatsuerbSchedule
   end
 
   def next_event_number
-    @content.scan(/\(#(\d+)\)/).map { |m| m[0].to_i }.max + 1
+    (@content.scan(/\(#(\d+)\)/).map { |m| m[0].to_i }.max || 0) + 1
   end
 
   def schedule_row(event_number)

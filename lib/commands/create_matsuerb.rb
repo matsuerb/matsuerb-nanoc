@@ -4,6 +4,7 @@ require 'date'
 require 'fileutils'
 require_relative 'gengo'
 require_relative 'matsuerb_git'
+require_relative 'parse_event_date'
 require_relative 'create_matsuerb_news'
 require_relative 'create_matsuerb_schedule'
 
@@ -12,10 +13,8 @@ require_relative 'create_matsuerb_schedule'
 class CreateMatsuerb
   def initialize(opts, args, cmd)
     @opts = opts
-    @args = args
-    @cmd = cmd
     @git = MiniGit::Capturing.new(File.expand_path('../..', __dir__))
-    @event_date = parse_event_date
+    @event_date = parse_event_date(args, cmd)
     @created_date = opts[:date] ? Date.parse(opts[:date]) : Date.today
   end
 
@@ -34,16 +33,5 @@ class CreateMatsuerb
     File.write(schedule.path, schedule.content)
     puts("update: #{schedule.relative_path}")
     MatsuerbGit.commit(@git, schedule.relative_path, schedule.commit_message)
-  end
-
-  private
-
-  def parse_event_date
-    Date.parse(@args.first)
-  rescue StandardError
-    puts('ERROR: you must specify EVENT_DATE')
-    puts
-    puts(@cmd.help)
-    exit(1)
   end
 end

@@ -3,6 +3,7 @@
 require 'date'
 require_relative 'gengo'
 require_relative 'matsuerb_git'
+require_relative 'parse_event_date'
 
 # Implements the finish-matsuerb-schedule command: marks a periodic
 # Matsue.rb hackathon as finished in content/schedule.html.
@@ -11,10 +12,8 @@ class FinishMatsuerbSchedule
 
   def initialize(opts, args, cmd)
     @opts = opts
-    @args = args
-    @cmd = cmd
     @git = MiniGit::Capturing.new(File.expand_path('../..', __dir__))
-    @event_date = parse_event_date
+    @event_date = parse_event_date(args, cmd)
   end
 
   def run
@@ -39,15 +38,6 @@ class FinishMatsuerbSchedule
 
   def participants
     @opts[:participants] || 0
-  end
-
-  def parse_event_date
-    Date.parse(@args.first)
-  rescue StandardError
-    puts('ERROR: you must specify EVENT_DATE')
-    puts
-    puts(@cmd.help)
-    exit(1)
   end
 
   def update_schedule(gengo_letter, nendo)

@@ -72,6 +72,11 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Max: 85
 
+# Offense count: 1
+# Configuration parameters: CountAsOne.
+Metrics/ClassLength:
+  Max: 119
+
 # Offense count: 2
 # Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
 Metrics/MethodLength:

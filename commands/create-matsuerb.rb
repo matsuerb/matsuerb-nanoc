@@ -1,4 +1,4 @@
-require_relative '../lib/commands/create_matsuerb'
+require_relative '../command_lib/create_matsuerb'
 
 usage 'create-matsuerb EVENT_DATE [options]'
 aliases :cm

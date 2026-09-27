@@ -32,7 +32,7 @@ class CreateMatsuerbSchedule
 
   def insert_row!
     row = schedule_row(next_event_number)
-    section_header = "## #{gengo(@event_date, :jp)}#{nendo.to_i}年"
+    section_header = "## #{gengo(@event_date, :jp)}#{nendo_label}年"
 
     @content =
       if @content.include?("#{section_header}\n")
@@ -47,6 +47,13 @@ class CreateMatsuerbSchedule
   def nendo
     _, n = gengo_letter_and_nendo(@event_date)
     n
+  end
+
+  # Section headers use bare numbers ("令和8年"), not the zero-padded form
+  # used elsewhere ("R08"), but still need the era's first year spelled out
+  # as "元" (matching nengo(:jp)) rather than "1".
+  def nendo_label
+    nendo == '01' ? '元' : nendo.to_i.to_s
   end
 
   def next_event_number

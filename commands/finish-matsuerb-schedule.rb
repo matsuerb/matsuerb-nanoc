@@ -1,4 +1,4 @@
-require_relative '../lib/commands/finish_matsuerb_schedule'
+require_relative '../command_lib/finish_matsuerb_schedule'
 
 usage 'finish-matsuerb-schedule EVENT_DATE [options]'
 aliases :fms

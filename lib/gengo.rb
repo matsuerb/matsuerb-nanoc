@@ -10,6 +10,12 @@ GENGO_JP_BY_LETTER = {
   'R' => '令和'
 }.freeze
 
+WDAY_JA = %w[日 月 火 水 木 金 土].freeze
+
+def wday_ja(date)
+  WDAY_JA[date.wday]
+end
+
 # Returns [gengo_letter, nendo] for the given date, e.g. ['R', '08'] for
 # 2026-10-10. Uses Date#jisx0301 so this stays correct across era changes.
 def gengo_letter_and_nendo(date)

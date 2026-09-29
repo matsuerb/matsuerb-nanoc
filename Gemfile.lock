@@ -30,7 +30,7 @@ GEM
     eventmachine (1.2.7)
     ffi (1.17.4)
     http_parser.rb (0.8.1)
-    icalendar (2.12.4)
+    icalendar (2.12.5)
       base64
       ice_cube (~> 0.16)
       logger

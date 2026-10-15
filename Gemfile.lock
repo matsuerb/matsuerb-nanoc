@@ -30,11 +30,10 @@ GEM
     eventmachine (1.2.7)
     ffi (1.17.4)
     http_parser.rb (0.8.1)
-    icalendar (2.12.5)
+    icalendar (2.13.0)
       base64
       ice_cube (~> 0.16)
       logger
-      ostruct
     ice_cube (0.17.0)
     immutable-ruby (0.2.0)
       concurrent-ruby (~> 1.1)
@@ -100,7 +99,6 @@ GEM
       listen (~> 3.0)
       nanoc-cli (~> 4.14, >= 4.14.7)
       nanoc-core (~> 4.14, >= 4.14.7)
-    ostruct (0.6.3)
     parallel (1.28.0)
     parser (3.3.12.0)
       ast (~> 2.4.1)
